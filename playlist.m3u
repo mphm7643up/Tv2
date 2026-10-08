@@ -41,10 +41,11 @@ http://tvsen5.aynascope.net/RtvHD/index.m3u8#skym3u.dev
 http://tvsen5.aynascope.net/maasrangatv/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Bangladeshi Channels",Boishakhi TV
 https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8#skym3u.dev
-#EXTINF:-1 group-title="Bangladeshi Channels",Mohona TV
-https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8#skym3u.dev
-#EXTINF:-1 group-title="Indian Bengali",Star Jalsha
+#EXTINF:-1 group-title="Bangladeshi Channels",Mohona TV 
+https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8#skym3u.dev  #EXTINF:-1 group-title="Indian Bengali",Star Jalsha
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8#skym3u.dev
+#EXTINF:-1 group-title="Kids",Nickelodeon
+https://তোমার-অরিজিনাল-লিংক
 #EXTINF:-1 group-title="Indian Bengali",Zee Bangla
 http://27.124.71.27/Zee_Bangla/tracks-v1a1/mono.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Indian Bengali",Colors Bangla
