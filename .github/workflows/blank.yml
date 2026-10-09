@@ -1,0 +1,35 @@
+
+name: Update IPTV Playlist
+
+on:
+  push:
+    paths:
+      - 'playlist.m3u'
+      - '.github/workflows/playlist.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  playlist-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get playlist
+        uses: actions/checkout@v4
+
+      - name: Check playlist exists
+        run: |
+          if [ ! -f playlist.m3u ]; then
+            echo "playlist.m3u not found!"
+            exit 1
+          fi
+
+      - name: Validate playlist
+        run: |
+          if ! head -n 1 playlist.m3u | grep -q '#EXTM3U'; then
+            echo "Invalid M3U playlist header"
+            exit 1
+          fi
+          echo "Playlist file found and header is valid."
