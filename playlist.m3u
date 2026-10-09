@@ -53,7 +53,7 @@ http://27.124.71.27/Zee_Bangla/tracks-v1a1/mono.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Indian Bengali",Colors Bangla
 http://103.114.11.37:8081/Colors-bangla/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Indian Bengali",Sony Aath
-https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8#skym3u.dev
+https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 #EXTINF:-1 group-title="Indian Bengali",Star Jalsha Movies
 https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Indian Bengali",Colors Bangla Cinema
