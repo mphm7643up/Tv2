@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 group-title="Bangladeshi Channels",B TV
+https://live.btvlive.gov.bd/live/ccffe451-e702-43b1-a84e-c7cddf47fe63/BD/355ba051-9a60-48aa-adcf-5a6c64da8c5c/index.m3u8
 #EXTINF:-1 group-title="Bangladeshi Channels",Jamuna TV
 https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Bangladeshi Channels",Independent TV
