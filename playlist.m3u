@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 group-title="Bangladeshi Channels", Parves TV
-https://statiics.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTAvMTQvMjAyNiAxOjAwOjM2IEFNJmhhc2hfdmFsdWU9akloTkdlYmY0aFphNGQrYWdkQkpDdz09JnZhbGlkbWludXRlcz02MCZpZD01
+https://d1rc86nwwc9fag.cloudfront.net/260723/smil:zeebangla.smil/chunklist_b2628000.m3u8
 #EXTINF:-1 group-title="Bangladeshi Channels",Jamuna TV
 https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Bangladeshi Channels",Independent TV
@@ -60,12 +60,12 @@ https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Bangladeshi Channels",Asian TV
 https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
 #EXTINF:-1 group-title="Bangladeshi Channels", Global TV
-https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8
+https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/tracks-v1a1/mono.ts.m3u8
 ...........................................
 #EXTINF:-1 group-title="Indian Bengali",Star Jalsha
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Indian Bengali",Zee Bangla
-https://bold-sky-a350.tasinazad234.workers.dev/v/9a1677928e744d0e9a3aae0c39d038be/playlist.m3u8?t=WjjyYtEVumYNZBVGQNjolE3qyNStbiDiiTqmbzm9ZHj6OrvTRz57oBalNWrKR6AbTzzATM9i26Nl3h_0NQT-_EeNsC9rh9-0BL9meqKgsgcUA_2VEtBDxfpQfDFHs6jk4conyl0OgYCVApnR1zcq8rwnMwo48IImEk4kIZUkZQ
+https://d1rc86nwwc9fag.cloudfront.net/260723/smil:zeebangla.smil/chunklist_b2628000.m3u8
 #EXTINF:-1 group-title="Indian Bengali",Colors Bangla
 http://103.114.11.37:8081/Colors-bangla/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Indian Bengali",Sony Aath
