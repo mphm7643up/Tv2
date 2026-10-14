@@ -92,3 +92,5 @@ https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
 ..............................................
 #EXTINF:-1 group-title="Kids",rongeentv
 https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Kids",ZBcatun
+https://server.zillarbarta.com/zbcatun/tracks-v1a1/mono.m3u8
