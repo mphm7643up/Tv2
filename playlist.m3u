@@ -96,6 +96,8 @@ https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
 https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Kids",ZBcatun
 https://server.zillarbarta.com/zbcatun/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Kids",DORONTU TV
+http://103.135.253.32:8080/DORONTU-TV/index.m3u8
 ..............................................
 #EXTINF:-1 group-title="Hindi Channels",Zoom 
 https://d2esfk1pb9cdob.cloudfront.net/chunklist_0.m3u8
