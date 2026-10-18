@@ -1,10 +1,10 @@
 #EXTM3U
-#EXTINF:-1 group-title="Bangladeshi Channels", Parves TV
-https://d1rc86nwwc9fag.cloudfront.net/260723/smil:zeebangla.smil/chunklist_b2628000.m3u8
 #EXTINF:-1 group-title="Bangladeshi Channels",Jamuna TV
 https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Bangladeshi Channels",Independent TV
 https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8#skym3u.dev
+#EXTINF:-1 group-title="Bangladeshi Channels", Star News 
+http://103.135.253.32:8080/Star-News/index.m3u8
 #EXTINF:-1 group-title="Bangladeshi Channels",Ekattor HD
 https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8#skym3u.dev
 #EXTINF:-1 group-title="Bangladeshi Channels",Channel 24 HD
