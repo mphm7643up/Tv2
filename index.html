@@ -1,650 +1,299 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PARVES HASSAN— WordPress Designer & Digital Marketing Specialist</title>
-<meta name="description" content="PARVES - ওয়ার্ডপ্রেস ওয়েব ডিজাইনার ও ডিজিটাল মার্কেটিং স্পেশালিস্ট। ৩৫০+ ক্লায়েন্টের বিশ্বস্ত পার্টনার।" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla:ital@0;1&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-<script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js" data-auto-replace-svg="nest"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PARVEZ AI</title>
+
 <style>
-:root{
-  --bg:#f8fafc;--dark:#0f172a;--blue:#2563eb;--blue-hover:#1d4ed8;
-  --cyan:#06b6d4;--violet:#7c3aed;--yt-red:#ff0000;
-  --slate-950:#090d16;--slate-900:#0f172a;--slate-800:#1e293b;
-  --slate-700:#334155;--slate-600:#475569;--slate-500:#64748b;
-  --slate-400:#94a3b8;--slate-300:#cbd5e1;--slate-200:#e2e8f0;
-  --slate-100:#f1f5f9;--slate-50:#f8fafc;
-  --emerald:#10b981;--amber:#f59e0b;
-  --shadow-sm:0 2px 8px rgba(15,23,42,.06);
-  --shadow:0 10px 30px -10px rgba(15,23,42,.15);
-  --shadow-lg:0 25px 50px -12px rgba(15,23,42,.18);
-  --grad: linear-gradient(135deg,var(--blue),var(--cyan),var(--violet));
-  --bn-font:'Hind Siliguri','Noto Sans Bengali',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0;font-family:var(--bn-font)}
-html{scroll-behavior:smooth}
+*{box-sizing:border-box}
 body{
-  font-family:var(--bn-font);
-  background:var(--bg);color:var(--slate-800);
-  line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased;
-  font-weight:400;letter-spacing:.01em;
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#0d0b18;
+ color:white;
 }
-:lang(bn),[lang="bn"]{font-family:var(--bn-font)}
-h1,h2,h3,h4,h5{font-family:'Hind Siliguri','Noto Sans Bengali',sans-serif;color:var(--slate-900);line-height:1.3;font-weight:700;letter-spacing:-.005em}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-.gradient-text{
-  background:var(--grad);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+header{
+ padding:18px;
+ background:#171329;
+ border-bottom:1px solid #30264c;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
 }
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:13px 24px;border-radius:12px;font-weight:600;
-  font-family:var(--bn-font);font-size:15px;cursor:pointer;border:none;
-  transition:all .25s ease;white-space:nowrap;
+.logo{
+ font-size:23px;
+ font-weight:bold;
+ color:#a78bfa;
 }
-.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 25px -8px rgba(37,99,235,.55)}
-.btn-primary:hover{background:var(--blue-hover);transform:translateY(-2px)}
-.btn-outline{background:#fff;color:var(--slate-900);border:1.5px solid var(--slate-200)}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
-.btn-red{background:var(--yt-red);color:#fff;box-shadow:0 10px 25px -8px rgba(255,0,0,.5)}
-.btn-red:hover{background:#cc0000;transform:translateY(-2px)}
-.section{padding:90px 0}
-.section-kicker{
-  display:inline-block;font-size:13px;font-weight:600;color:var(--blue);
-  background:rgba(37,99,235,.08);padding:6px 14px;border-radius:999px;margin-bottom:14px;letter-spacing:.3px;
+.status{font-size:12px;color:#a78bfa}
+.container{
+ max-width:850px;
+ margin:auto;
+ padding:18px;
 }
-.section-title{font-size:clamp(26px,3.8vw,40px);margin-bottom:14px;font-weight:700}
-.section-sub{color:var(--slate-500);max-width:640px;margin:0 auto;font-size:16px}
-.section-head{text-align:center;margin-bottom:55px}
-
-/* NAVBAR */
-.nav{position:sticky;top:0;z-index:100;background:rgba(248,250,252,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--slate-200)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1200px;margin:0 auto}
-.logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:24px;color:var(--slate-900)}
-.logo span{color:var(--blue)}
-.nav-links{display:flex;gap:26px;align-items:center}
-.nav-links a{font-size:15px;color:var(--slate-600);font-weight:500;transition:color .2s}
-.nav-links a:hover{color:var(--blue)}
-.nav-cta{display:flex;align-items:center;gap:14px}
-.hamburger{display:none;background:none;border:none;font-size:24px;color:var(--slate-900);cursor:pointer}
-@media(max-width:960px){
-  .nav-links{display:none}
-  .hamburger{display:block}
-  .nav-cta .btn{display:none}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:20px;gap:18px;border-bottom:1px solid var(--slate-200);box-shadow:var(--shadow)}
-  .nav-links.open .mobile-cta{display:inline-flex}
+.settings{
+ background:#19152b;
+ padding:15px;
+ border-radius:14px;
+ margin-bottom:15px;
 }
-.mobile-cta{display:none}
-
-/* HERO */
-.hero{padding:70px 0 90px;position:relative;overflow:hidden;background:radial-gradient(ellipse at top right,rgba(124,58,237,.08),transparent 50%),radial-gradient(ellipse at bottom left,rgba(6,182,212,.08),transparent 50%),var(--bg)}
-.hero::before{content:"";position:absolute;top:10%;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,.15),transparent 70%);border-radius:50%;z-index:0;animation:float 6s ease-in-out infinite}
-.hero::after{content:"";position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(6,182,212,.15),transparent 70%);border-radius:50%;z-index:0;animation:float 8s ease-in-out infinite reverse}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:1}
-.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--slate-200);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;color:var(--slate-700);box-shadow:var(--shadow-sm)}
-.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 4px rgba(16,185,129,.2);animation:pulseDot 2s infinite}
-@keyframes pulseDot{0%,100%{box-shadow:0 0 0 4px rgba(16,185,129,.2)}50%{box-shadow:0 0 0 9px rgba(16,185,129,.05)}}
-.hero h1{font-size:clamp(32px,4.8vw,58px);margin:20px 0;font-weight:700;line-height:1.2}
-.hero p.intro{font-size:17px;color:var(--slate-600);margin-bottom:30px;max-width:560px}
-.hero p.intro b{color:var(--slate-900);font-weight:700}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
-.hero-img-wrap{position:relative;display:flex;justify-content:center;align-items:center;min-height:480px}
-.glow-ring{position:absolute;width:90%;max-width:430px;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 0deg,var(--blue),var(--cyan),var(--violet),var(--blue));filter:blur(50px);opacity:.35;animation:spin 12s linear infinite;z-index:0}
-@keyframes spin{to{transform:rotate(360deg)}}
-.blob{position:absolute;width:85%;max-width:400px;aspect-ratio:1;border-radius:42% 58% 70% 30% / 45% 45% 55% 55%;background:linear-gradient(135deg,rgba(37,99,235,.12),rgba(124,58,237,.12));animation:morph 8s ease-in-out infinite;z-index:0}
-@keyframes morph{0%,100%{border-radius:42% 58% 70% 30% / 45% 45% 55% 55%}50%{border-radius:58% 42% 30% 70% / 55% 55% 45% 45%}}
-.hero-img-wrap img.hero-photo{position:relative;z-index:2;width:100%;max-width:460px;height:auto;background:transparent;filter:drop-shadow(0 25px 50px rgba(37,99,235,.25))}
-.float-badge{position:absolute;background:#fff;border:1px solid var(--slate-200);padding:10px 14px;border-radius:14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-weight:600;font-size:13px;color:var(--slate-900);z-index:3;animation:floaty 4s ease-in-out infinite}
-.float-badge i{font-size:18px}
-.float-badge.fb1{top:6%;left:-10px;animation-delay:0s}
-.float-badge.fb1 i{color:#21759b}
-.float-badge.fb2{top:42%;right:-20px;animation-delay:1s}
-.float-badge.fb2 i{color:#1877f2}
-.float-badge.fb3{bottom:8%;left:0;animation-delay:2s}
-.float-badge.fb3 i{color:#10b981}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:560px}
-.stat{background:#fff;border:1px solid var(--slate-200);border-radius:16px;padding:18px 14px;box-shadow:var(--shadow-sm);transition:all .25s;text-align:center;position:relative;overflow:hidden}
-.stat::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .3s;z-index:0}
-.stat:hover{transform:translateY(-4px);border-color:transparent}
-.stat:hover::before{opacity:1}
-.stat:hover .val,.stat:hover .lbl{color:#fff}
-.stat .val{font-family:'Hind Siliguri',sans-serif;font-size:22px;font-weight:800;color:var(--slate-900);position:relative;z-index:1;transition:color .25s}
-.stat .lbl{font-size:13px;color:var(--slate-500);margin-top:4px;position:relative;z-index:1;transition:color .25s}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:30px;text-align:center}.hero-img-wrap{order:-1;min-height:380px}.hero-img-wrap img.hero-photo{max-width:300px}.hero-ctas,.badge{justify-content:center}.hero p.intro{margin-left:auto;margin-right:auto}.stats{margin:0 auto}.float-badge.fb1{left:5%}.float-badge.fb2{right:5%}.float-badge.fb3{left:15%}}
-@media(max-width:480px){.hero{padding:40px 0 60px}.hero h1{font-size:32px}.stats{grid-template-columns:1fr 1fr}.stats .stat:nth-child(3){grid-column:1/-1}.hero-img-wrap{min-height:340px}.float-badge{padding:8px 11px;font-size:12px}.float-badge i{font-size:15px}}
-
-
-/* MARQUEE */
-.marquee{background:var(--slate-900);color:#fff;padding:20px 0;overflow:hidden;position:relative}
-.marquee-track{display:flex;gap:60px;animation:scroll 28s linear infinite;white-space:nowrap}
-.marquee-track span{font-size:17px;font-weight:600;display:inline-flex;align-items:center;gap:60px}
-.marquee-track i{color:var(--cyan)}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
-.about-img-wrap{position:relative}
-.about-img{border-radius:24px;box-shadow:var(--shadow-lg);width:100%}
-.years-badge{position:absolute;bottom:-20px;right:-20px;background:#fff;padding:16px 22px;border-radius:18px;box-shadow:var(--shadow-lg);display:flex;gap:12px;align-items:center;border:1px solid var(--slate-200)}
-.years-badge i{font-size:26px;color:var(--blue)}
-.years-badge .txt{font-weight:700;color:var(--slate-900);font-size:15px;line-height:1.2}
-.about h2{font-size:clamp(24px,3.3vw,36px);margin:14px 0 18px}
-.about .story{color:var(--slate-600);margin-bottom:28px;font-size:16px}
-.about .story b{color:var(--slate-900)}
-.highlights{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.hl{background:#fff;border:1px solid var(--slate-200);border-radius:14px;padding:16px;transition:all .25s;box-shadow:var(--shadow-sm)}
-.hl:hover{transform:translateY(-4px);border-color:var(--blue)}
-.hl .t{font-weight:700;color:var(--slate-900);margin-bottom:4px;font-size:15px}
-.hl .d{font-size:13px;color:var(--slate-500)}
-@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:40px}.years-badge{right:10px;bottom:-15px}}
-@media(max-width:480px){.highlights{grid-template-columns:1fr}}
-
-/* SERVICES */
-.services{background:#fff}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc{background:var(--slate-50);border:1px solid var(--slate-200);border-radius:20px;padding:30px 26px;transition:all .3s;position:relative;overflow:hidden}
-.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent;background:#fff}
-.svc .svc-ic{width:56px;height:56px;border-radius:14px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;box-shadow:0 10px 20px -8px rgba(37,99,235,.5)}
-.svc h3{font-size:19px;margin-bottom:10px}
-.svc p{color:var(--slate-500);font-size:14.5px;margin-bottom:20px}
-.svc .order-btn{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--blue);font-size:14px;transition:gap .2s}
-.svc .order-btn:hover{gap:10px}
-@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
-
-/* SKILLS — modern card grid with logo + circular badge */
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto}
-.skill-card{background:#fff;border:1px solid var(--slate-200);border-radius:18px;padding:24px;transition:all .3s;position:relative;overflow:hidden}
-.skill-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
-.skill-card::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .3s;z-index:0;border-radius:18px;padding:1.5px;mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
-.skill-card:hover::before{opacity:1}
-.skill-top{display:flex;align-items:center;gap:14px;margin-bottom:16px;position:relative;z-index:1}
-.skill-logo{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;background:var(--slate-50);flex-shrink:0}
-.skill-logo i{line-height:1}
-.skill-meta{flex:1}
-.skill-meta .n{font-weight:700;color:var(--slate-900);font-size:16px}
-.skill-meta .role{font-size:12px;color:var(--slate-500);margin-top:2px}
-.skill-bar{height:8px;background:var(--slate-100);border-radius:999px;overflow:hidden;position:relative;z-index:1}
-.skill-bar .fill{height:100%;background:var(--grad);border-radius:999px;width:0;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
-.skill-pct{font-weight:700;color:var(--blue);font-size:14px;margin-top:8px;display:block;position:relative;z-index:1}
-@media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:500px){.skills-grid{grid-template-columns:1fr}}
-
-/* PROJECTS */
-.projects{background:#fff}
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.proj{background:var(--slate-50);border-radius:20px;overflow:hidden;border:1px solid var(--slate-200);transition:all .3s}
-.proj:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.proj .thumb{aspect-ratio:1/1;overflow:hidden;background:var(--slate-200)}
-.proj .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.proj:hover .thumb img{transform:scale(1.08)}
-.proj .body{padding:20px}
-.proj .cat{display:inline-block;background:rgba(37,99,235,.1);color:var(--blue);font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:10px}
-.proj h3{font-size:17px;margin-bottom:14px}
-.proj .live{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:600;font-size:14px;transition:gap .2s}
-.proj .live:hover{gap:10px}
-@media(max-width:900px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.proj-grid{grid-template-columns:1fr}}
-
-/* YOUTUBE */
-.youtube{text-align:center;background:linear-gradient(135deg,#fff5f5,#fff)}
-.youtube i.yt{font-size:70px;color:var(--yt-red);margin-bottom:18px}
-.youtube p{max-width:640px;margin:14px auto 28px;color:var(--slate-600);font-size:16px}
-
-/* YT SLIDER */
-.yt-slider-container{max-width:1100px;margin:40px auto 0;position:relative}
-.yt-slider-viewport{overflow:hidden;border-radius:16px}
-.yt-slider-track{display:flex;transition:transform .5s cubic-bezier(.16,1,.3,1);gap:20px}
-.yt-slider-slide{flex:0 0 calc((100% - 40px)/3);min-width:0}
-.yt-embed-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;box-shadow:var(--shadow);background:#000}
-.yt-embed-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.yt-nav{display:flex;justify-content:center;gap:12px;margin-top:24px}
-.yt-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--slate-200);background:#fff;color:var(--slate-900);cursor:pointer;font-size:16px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center}
-.yt-nav button:hover{background:var(--yt-red);color:#fff;border-color:var(--yt-red);transform:translateY(-2px)}
-@media(max-width:900px){.yt-slider-slide{flex:0 0 calc((100% - 20px)/2)}.yt-slider-track{gap:20px}}
-@media(max-width:560px){.yt-slider-slide{flex:0 0 100%}.yt-slider-track{gap:0}}
-
-/* REVIEWS — slider, 3 per view */
-.rev-slider-container{max-width:1100px;margin:0 auto;position:relative}
-.rev-viewport{overflow:hidden}
-.rev-track{display:flex;transition:transform .55s cubic-bezier(.16,1,.3,1);gap:22px}
-.rev-slide{flex:0 0 calc((100% - 44px)/3);min-width:0}
-.rev{background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:26px;box-shadow:var(--shadow-sm);transition:all .3s;position:relative;height:100%}
-.rev:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.rev .quote-i{font-size:28px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
-.rev .stars{color:var(--amber);margin-bottom:10px;font-size:14px}
-.rev .q{color:var(--slate-700);font-size:14.5px;margin-bottom:18px;line-height:1.7}
-.rev .person{display:flex;align-items:center;gap:12px}
-.rev .person img{width:46px;height:46px;border-radius:50%;object-fit:cover}
-.rev .person .n{font-weight:700;color:var(--slate-900);font-size:15px}
-.rev .person .r{font-size:12px;color:var(--slate-500)}
-.rev-nav{display:flex;justify-content:center;gap:12px;margin-top:30px;align-items:center}
-.rev-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--slate-200);background:#fff;color:var(--slate-900);cursor:pointer;font-size:16px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center}
-.rev-nav button:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-2px)}
-.rev-dots{display:flex;gap:8px;align-items:center}
-.rev-dots span{width:8px;height:8px;border-radius:50%;background:var(--slate-300);cursor:pointer;transition:all .25s}
-.rev-dots span.active{background:var(--blue);width:24px;border-radius:999px}
-@media(max-width:900px){.rev-slide{flex:0 0 calc((100% - 22px)/2)}}
-@media(max-width:600px){.rev-slide{flex:0 0 100%}.rev-track{gap:0}}
-
-/* CONTACT */
-.contact{background:var(--slate-900);color:#fff}
-.contact h2{color:#fff}
-.contact .section-sub{color:var(--slate-400)}
-.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;margin-top:50px}
-.c-info h3{color:#fff;font-size:22px;margin-bottom:14px}
-.c-info p.lead{color:var(--slate-400);margin-bottom:28px}
-.c-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
-.c-item .ic{width:44px;height:44px;border-radius:12px;background:rgba(37,99,235,.15);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.c-item .lbl{font-size:13px;color:var(--slate-400);margin-bottom:2px}
-.c-item .val{color:#fff;font-weight:600;font-size:15px;word-break:break-word}
-.c-item .val a:hover{color:var(--cyan)}
-.c-form{background:#fff;border-radius:20px;padding:30px;color:var(--slate-900);box-shadow:var(--shadow-lg)}
-.c-form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{margin-bottom:14px}
-.field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px;color:var(--slate-700)}
-.field input,.field textarea{width:100%;padding:12px 14px;border:1.5px solid var(--slate-200);border-radius:10px;font-family:var(--bn-font);font-size:15px;background:var(--slate-50);transition:all .2s}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(37,99,235,.1)}
-.field textarea{resize:vertical;min-height:110px}
-.c-form .btn{width:100%;justify-content:center;margin-top:6px}
-@media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:30px}.c-form .row{grid-template-columns:1fr}.c-form{padding:24px}}
-
-/* TOAST */
-.toast{position:fixed;bottom:24px;right:24px;background:var(--emerald);color:#fff;padding:16px 22px;border-radius:14px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:10px;font-weight:600;transform:translateY(120px);opacity:0;transition:all .4s;z-index:200;max-width:90vw}
-.toast.show{transform:translateY(0);opacity:1}
-
-/* FOOTER */
-.footer{background:var(--slate-950);color:var(--slate-400);padding:50px 0 24px;text-align:center}
-.footer .logo{color:#fff;margin-bottom:14px;font-size:26px}
-.footer .socials{display:flex;justify-content:center;gap:14px;margin:22px 0}
-.footer .socials a{width:42px;height:42px;border-radius:50%;background:var(--slate-800);color:#fff;display:flex;align-items:center;justify-content:center;transition:all .25s}
-.footer .socials a:hover{background:var(--blue);transform:translateY(-3px)}
-.footer .copy{font-size:13px;border-top:1px solid var(--slate-800);padding-top:20px;margin-top:20px}
-
-/* WhatsApp floating */
-.fab-wa{position:fixed;bottom:24px;left:24px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 10px 30px -6px rgba(37,211,102,.6);z-index:99;transition:transform .25s}
-.fab-wa:hover{transform:scale(1.08)}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.16,1,.3,1)}
-.reveal.in{opacity:1;transform:translateY(0)}
-
-@media(max-width:600px){.section{padding:60px 0}.section-head{margin-bottom:40px}}
+input,button{
+ border:0;
+ outline:0;
+ border-radius:9px;
+ padding:13px;
+}
+#apiKey{
+ width:100%;
+ background:#29233e;
+ color:white;
+ margin:10px 0;
+}
+button{
+ cursor:pointer;
+ background:linear-gradient(120deg,#7654f5,#bd55d9);
+ color:white;
+ font-weight:bold;
+}
+.chat{
+ height:55vh;
+ min-height:300px;
+ overflow-y:auto;
+ padding:12px;
+ background:#151222;
+ border-radius:14px;
+}
+.msg{
+ padding:13px;
+ margin:12px 0;
+ border-radius:12px;
+ max-width:90%;
+ line-height:1.6;
+ white-space:pre-wrap;
+ overflow-wrap:anywhere;
+}
+.user{
+ background:#6547c9;
+ margin-left:auto;
+}
+.ai{
+ background:#29243b;
+ margin-right:auto;
+}
+.input-area{
+ display:flex;
+ gap:8px;
+ margin-top:14px;
+}
+#message{
+ flex:1;
+ min-width:0;
+ background:#29233e;
+ color:white;
+}
+.actions{
+ display:flex;
+ justify-content:space-between;
+ margin-top:12px;
+}
+.small{
+ font-size:12px;
+ color:#aaa;
+ margin-top:12px;
+}
+button:disabled{opacity:.5}
 </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#home" class="logo">PARVES<span>.</span></a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#home">হোম</a>
-      <a href="#about">পরিচয়</a>
-      <a href="#services">সার্ভিস</a>
-      <a href="#skills">দক্ষতা</a>
-      <a href="#projects">প্রজেক্ট</a>
-      <a href="#youtube">ইউটিউব</a>
-      <a href="#contact">যোগাযোগ</a>
-      <a href="https://wa.me/8801743839807" class="btn btn-primary mobile-cta"><i class="fab fa-whatsapp"></i> ফ্রি কনসালটেশন</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="https://wa.me/8801743839807" class="btn btn-primary"><i class="fab fa-whatsapp"></i> ফ্রি কনসালটেশন</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
-    </div>
-  </div>
+<header>
+ <div class="logo">✦ PARVEZ AI</div>
+ <div class="status">● AI ONLINE</div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div class="reveal">
-      <span class="badge"><span class="dot"></span> নতুন প্রজেক্টের জন্য উপলব্ধ</span>
-      <h1>ডিজিটাল <span class="gradient-text">ব্র্যান্ড</span> তৈরি করি যা সেলস বৃদ্ধি করে</h1>
-      <p class="intro">আমি <b>PARVES HASSAN</b> — ওয়ার্ডপ্রেস ও ডিজিটাল মার্কেটিং স্পেশালিস্ট। ৩৫০+ উদ্যোক্তার সাথে কাজ করে ১৫০০+ হাই-কনভার্টিং ল্যান্ডিং পেজ তৈরি করেছি।</p>
-      <div class="hero-ctas">
-        <a href="https://wa.me/880170000000" class="btn btn-primary"><i class="fab fa-whatsapp"></i> ফ্রি কনসালটেশন</a>
-        <a href="#projects" class="btn btn-outline"><i class="fas fa-arrow-right"></i> প্রজেক্ট দেখুন</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="val">২+ কোটি</div><div class="lbl">মাসিক সেলস</div></div>
-        <div class="stat"><div class="val">১৪০০+</div><div class="lbl">প্রজেক্ট সম্পন্ন</div></div>
-        <div class="stat"><div class="val">অন-টাইম</div><div class="lbl">ডেলিভারি</div></div>
-      </div>
-    </div>
-    <div class="hero-img-wrap reveal">
-      <div class="glow-ring"></div>
-      <div class="blob"></div>
-      <div class="float-badge fb1"><i class="fab fa-wordpress"></i> WordPress Expert</div>
-      <div class="float-badge fb2"><i class="fab fa-facebook"></i> Meta Ads</div>
-      <div class="float-badge fb3"><i class="fas fa-chart-line"></i> ৫+ কোটি সেলস</div>
-      <img class="hero-photo" src="https://res.cloudinary.com/sskgltnb/image/upload/f_auto,q_auto/nnnw" alt="PARVES HASSAN" />
-    </div>
-  </div>
-</section>
+<div class="container">
 
-<!-- MARQUEE -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee"></div>
+ <div class="settings">
+  <b>⚙ API Settings</b>
+  <input
+   type="password"
+   id="apiKey"
+   placeholder="এখানে আপনার Gemini API Key দিন"
+   autocomplete="off"
+  >
+  <button onclick="clearKey()">API Key মুছুন</button>
+  <div class="small">
+   API Key শুধু এই ব্রাউজার সেশনে ব্যবহার হবে।
+   পেজ রিফ্রেশ করলে আবার দিতে হবে।
+  </div>
+ </div>
+
+ <div class="chat" id="chat">
+  <div class="msg ai">
+   আসসালামু আলাইকুম! আমি PARVEZ AI।
+
+   আমাকে যেকোনো প্রশ্ন করতে পারো।
+  </div>
+ </div>
+
+ <div class="input-area">
+  <input
+   id="message"
+   placeholder="এখানে আপনার প্রশ্ন লিখুন..."
+   onkeydown="if(event.key==='Enter') sendMessage()"
+  >
+  <button id="sendBtn" onclick="sendMessage()">Send ➤</button>
+ </div>
+
+ <div class="actions">
+  <button onclick="newChat()">＋ নতুন চ্যাট</button>
+  <button onclick="clearChat()">চ্যাট মুছুন</button>
+ </div>
+
+ <div class="small">
+  PARVEZ AI © 2026 | Powered by Gemini AI
+ </div>
+
 </div>
 
-<!-- ABOUT -->
-<section class="section about" id="about">
-  <div class="container about-grid">
-    <div class="about-img-wrap reveal">
-      <img class="about-img" src="https://res.cloudinary.com/sskgltnb/image/upload/f_auto,q_auto/nnfd" alt="About" />
-      <div class="years-badge"><i class="fas fa-award"></i><div class="txt">৪+ বছর<br>অভিজ্ঞতা</div></div>
-    </div>
-    <div class="reveal">
-      <span class="section-kicker">আমার পরিচয়</span>
-      <h2>আধুনিক ও কাস্টম <span class="gradient-text">ওয়েব ডিজাইন</span> ও ডিজিটাল গ্রোথ এর গল্প</h2>
-      <p class="story">বিগত ৪ বছরে আমি Elementor ও কাস্টম প্লাগইনের সাহায্যে <b>২০০+ ই-কমার্স</b>, <b>১৫০০+ ল্যান্ডিং পেজ</b>, <b>১০০+ এজেন্সি সাইট</b> ও ২০+ কোর্স সেলিং প্ল্যাটফর্ম ডিজাইন করেছি। আমার তৈরি ফানেল থেকে ক্লায়েন্টরা প্রতি মাসে ৫+ কোটি টাকা সেলস জেনারেট করছেন।</p>
-      <div class="highlights" id="highlights"></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section services" id="services">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-kicker">সার্ভিসসমূহ</span>
-      <h2 class="section-title">যেসব <span class="gradient-text">সেবা</span> প্রদান করি</h2>
-      <p class="section-sub">আপনার ব্যবসায়িক লক্ষ্য পূরণে আমার ৬টি প্রিমিয়াম সার্ভিস</p>
-    </div>
-    <div class="svc-grid" id="svcGrid"></div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section" id="skills" style="background:linear-gradient(180deg,#fff,var(--slate-50))">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-kicker">টেক স্ট্যাক</span>
-      <h2 class="section-title">আমার <span class="gradient-text">দক্ষতাসমূহ</span></h2>
-      <p class="section-sub">যে টুলগুলো ব্যবহার করে কাজ করি প্রতিদিন</p>
-    </div>
-    <div class="skills-grid reveal" id="skillsGrid"></div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="section projects" id="projects">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-kicker">পোর্টফোলিও</span>
-      <h2 class="section-title">সাম্প্রতিক <span class="gradient-text">প্রজেক্টসমূহ</span></h2>
-      <p class="section-sub">আমার তৈরি কিছু লাইভ ওয়েবসাইট দেখুন</p>
-    </div>
-    <div class="proj-grid" id="projGrid"></div>
-  </div>
-</section>
-   
-        </div>
-      </div>
-      <div class="yt-nav">
-        <button id="ytPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-        <button id="ytNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="section" id="reviews" style="background:var(--slate-50)">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-kicker">ক্লায়েন্ট রিভিউ</span>
-      <h2 class="section-title">কী বলছেন <span class="gradient-text">ক্লায়েন্টরা</span></h2>
-      <p class="section-sub">সন্তুষ্ট ক্লায়েন্টদের কিছু মতামত</p>
-    </div>
-    <div class="rev-slider-container reveal">
-      <div class="rev-viewport">
-        <div class="rev-track" id="revTrack"></div>
-      </div>
-      <div class="rev-nav">
-        <button id="revPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-        <div class="rev-dots" id="revDots"></div>
-        <button id="revNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-kicker" style="background:rgba(37,99,235,.2);color:#7ab2ff">যোগাযোগ</span>
-      <h2 class="section-title">চলুন একসাথে <span class="gradient-text">কাজ করি</span></h2>
-      <p class="section-sub">আপনার প্রজেক্ট বা ব্যবসার গ্রোথ নিয়ে কোনো পরিকল্পনা থাকলে নির্দ্বিধায় শেয়ার করতে পারেন।</p>
-    </div>
-    <div class="contact-grid">
-      <div class="c-info reveal">
-        <h3>আজই যোগাযোগ করুন</h3>
-        <p class="lead">নিচের যেকোনো মাধ্যমে আমাকে পেতে পারেন।</p>
-        <div class="c-item"><div class="ic"><i class="fas fa-phone"></i></div><div><div class="lbl">ফোন</div><div class="val"><a href="tel:+880960000000">+880 96000000</a></div></div></div>
-        <div class="c-item"><div class="ic"><i class="fab fa-whatsapp"></i></div><div><div class="lbl">হোয়াটসঅ্যাপ</div><div class="val"><a href="https://wa.me/880170000000">+880 17111111</a></div></div></div>
-        <div class="c-item"><div class="ic"><i class="fas fa-envelope"></i></div><div><div class="lbl">ইমেইল</div><div class="val"><a href="mailto: Parves@outlook.com">Parves.outlook.com</a></div></div></div>
-        <div class="c-item"><div class="ic"><i class="fas fa-globe"></i></div><div><div class="lbl">ওয়েবসাইট</div><div class="val"><a href="https://Parves.com/" target="_blank">Parves.com</a></div></div></div>
-        <div class="c-item"><div class="ic"><i class="fas fa-location-dot"></i></div><div><div class="lbl">ঠিকানা</div><div class="val">বাংলাদেশ</div></div></div>
-      </div>
-      <form class="c-form reveal" id="contactForm">
-        <div class="row">
-          <div class="field"><label>আপনার নাম</label><input type="text" required placeholder="পূর্ণ নাম"></div>
-          <div class="field"><label>ফোন নম্বর</label><input type="tel" required placeholder="01XXXXXXXXX"></div>
-        </div>
-        <div class="field"><label>ইমেইল</label><input type="email" required placeholder="you@example.com"></div>
-        <div class="field"><label>সার্ভিস</label><input type="text" placeholder="যে সার্ভিস প্রয়োজন"></div>
-        <div class="field"><label>বার্তা</label><textarea required placeholder="আপনার প্রজেক্ট সম্পর্কে লিখুন..."></textarea></div>
-        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> বার্তা পাঠান</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="logo">PARVES<span style="color:var(--blue)">.</span></div>
-    <p>ওয়ার্ডপ্রেস ডিজাইনার ও ডিজিটাল মার্কেটিং স্পেশালিস্ট</p>
-    <div class="socials">
-      <a href="https://facebook.com/00000" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.youtube.com/@00" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/000000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://linkedin.com/00000" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    </div>
-    <div class="copy">© 2026 PARVES HASSAN সর্বস্বত্ব সংরক্ষিত।</div>
-  </div>
-</footer>
-
-<a class="fab-wa" href="https://wa.me/8801000000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
-<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span>ধন্যবাদ! আপনার বার্তাটি সফলভাবে পাঠানো হয়েছে। অতিসত্বর আপনার সাথে যোগাযোগ করা হবে।</span></div>
-
 <script>
-const WA = "https://wa.me/88010000000";
 
-// Marquee
-const marqueeItems = ["১৫০০+ ল্যান্ডিং পেজ","২০০+ ই-কমার্স সাইট","৩৫০+ সন্তুষ্ট ক্লায়েন্ট","৪+ বছরের অভিজ্ঞতা"];
-const mhtml = marqueeItems.map(t=>`<span>${t} <i class="fas fa-star-of-life" style="font-size:10px"></i></span>`).join('');
-document.getElementById('marquee').innerHTML = mhtml + mhtml;
+// ==================================
+// API SETTINGS
+// ==================================
 
-// Highlights
-const highlights = [
-  {title:"মাসে ৫+ কোটি সেলস",desc:"ক্লায়েন্টদের রিয়েল ট্র্যাক রেকর্ড",icon:"fa-chart-line"},
-  {title:"২০+ কোর্স প্ল্যাটফর্ম",desc:"এডুটেক ডিজাইন স্পেশালিস্ট",icon:"fa-graduation-cap"},
-  {title:"ফাস্ট ডেলিভারি",desc:"ডেডলাইনের আগেই হ্যান্ডওভার",icon:"fa-bolt"},
-  {title:"ফ্রি সাপোর্ট",desc:"ডেলিভারির পর ৩০ দিন লাইভ সাপোর্ট",icon:"fa-headset"}
-];
-document.getElementById('highlights').innerHTML = highlights.map(h=>`
-  <div class="hl"><div class="t"><i class="fas ${h.icon}" style="color:var(--blue);margin-right:8px"></i>${h.title}</div><div class="d">${h.desc}</div></div>`).join('');
+// Gemini API Key এখানে কোডে লিখতে হবে না।
+// ওয়েবসাইটের API Key ঘরে দিতে হবে।
 
-// Services
-const services = [
-  {icon:"fa-rocket",title:"ল্যান্ডিং পেজ ডিজাইন",desc:"হাই-কনভার্টিং সিঙ্গেল প্রোডাক্ট ল্যান্ডিং পেজ যা আপনার সেলস কয়েকগুণ বৃদ্ধি করতে সাহায্য করবে।"},
-  {icon:"fa-cart-shopping",title:"ই-কমার্স ওয়েবসাইট",desc:"WooCommerce ও Elementor এর প্রফেশনাল ইন্টিগ্রেশন সহ সম্পূর্ণ অনলাইন স্টোর সলিউশন।"},
-  {icon:"fa-code",title:"Laravel ওয়েবসাইট",desc:"নিখুঁত কোডিং, হাই স্পিড ও ডেটা সিকিউরিটি সমৃদ্ধ কাস্টম লারাভেল ওয়েব এপ্লিকেশন।"},
-  {icon:"fa-bullhorn",title:"Facebook Ads",desc:"টার্গেটেড কাস্টমার রিচ করতে অ্যাড সেটআপ, পিক্সেল ট্র্যাকিং ও সম্পূর্ণ মার্কেটিং প্ল্যান।"},
-  {icon:"fa-magnifying-glass-chart",title:"YouTube SEO",desc:"কী-ওয়ার্ড রিসার্চ, এসইও ফ্রেন্ডলি ডেসক্রিপশন ও ভিডিও র‍্যাঙ্ক করানোর আধুনিক কৌশল।"},
-  {icon:"fa-briefcase",title:"পোর্টফোলিও সাইট",desc:"নিজের ব্র্যান্ডিং তৈরিতে প্রফেশনাল পার্সোনাল ও কর্পোরেট পোর্টফোলিও ওয়েবসাইট।"}
-];
-document.getElementById('svcGrid').innerHTML = services.map(s=>`
-  <div class="svc reveal">
-    <div class="svc-ic"><i class="fas ${s.icon}"></i></div>
-    <h3>${s.title}</h3>
-    <p>${s.desc}</p>
-    <a href="${WA}" class="order-btn">অর্ডার করুন <i class="fas fa-arrow-right"></i></a>
-  </div>`).join('');
+const MODEL = "gemini-2.5-flash";
 
-// Skills with logos (Font Awesome brand icons + colors)
-const skills = [
-  {name:"WordPress",role:"CMS Development",level:95,icon:"fab fa-wordpress",color:"#21759b"},
-  {name:"Elementor Pro",role:"Page Builder",level:97,icon:"fas fa-pen-ruler",color:"#92003b"},
-  {name:"WooCommerce",role:"eCommerce",level:92,icon:"fab fa-shopify",color:"#7f54b3"},
-  {name:"Laravel",role:"PHP Framework",level:60,icon:"fab fa-laravel",color:"#ff2d20"},
-  {name:"Facebook Ads",role:"Paid Marketing",level:90,icon:"fab fa-facebook",color:"#1877f2"},
-  {name:"YouTube SEO",role:"Video Marketing",level:88,icon:"fab fa-youtube",color:"#ff0000"},
-  {name:"Google Ads",role:"SEM Specialist",level:80,icon:"fab fa-google",color:"#ea4335"},
-  {name:"Digital Marketing",role:"Growth Strategy",level:92,icon:"fas fa-bullhorn",color:"#f59e0b"},
-  {name:"UI / UX Design",role:"Figma & Adobe XD",level:85,icon:"fab fa-figma",color:"#a259ff"}
-];
-document.getElementById('skillsGrid').innerHTML = skills.map(s=>`
-  <div class="skill-card reveal">
-    <div class="skill-top">
-      <div class="skill-logo" style="background:${s.color}15"><i class="${s.icon}" style="color:${s.color}"></i></div>
-      <div class="skill-meta"><div class="n">${s.name}</div><div class="role">${s.role}</div></div>
-    </div>
-    <div class="skill-bar"><div class="fill" data-level="${s.level}"></div></div>
-    <span class="skill-pct">${s.level}%</span>
-  </div>`).join('');
+let history = [];
+let busy = false;
 
-// Projects
-const projects = [
-  {title:"Shajbazar Beauty Shop",category:"WordPress eCommerce",demo:"https://shajfood.clickthe.shop/",image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioctl3diN4da77Cga9aa3bas0jEgz6zoG6XMHK6wcv9bv89uWgcGHmIOW9w74TOHN7Z3xi4ta6j6Myvgbfca69s7X7j8cLEWL_44TGC4Y6swQfy8VzYBlJwJlrr-goJQ-Azx2eWHHsoyw6bB3yP4DGzgmSl5lEOEHVZh5VP1Fn-eVIcjhnUt7r2smI0QXc/s16000/1%20(2).png"},
-  {title:"Folbitan Fresh Market",category:"WordPress eCommerce",demo:"https://folbitan-demo.phpx.shop/",image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEGDI8p8LuI9iv7hlGbk7n-kValwgsyQ6XgYnSInaWVJAe9yr9amO39CeELpllARQFWa2EZ3wmx3EzG6bSTvyg_VzOS8ilkixpnLEWKpZR7sdAydknVmxubUWSolmv4Po389TaFqnO8Wd1OYFToJimeJTVb9Hxh00IC_ZPJTMR5grcpzaFPqfTaYsutPk/s16000/Folbitan_%E2%80%93_Fresh_Fruit_eCommerce_Template_Backup_File_1.png"},
-  {title:"FalaqFood eCommerce",category:"WordPress eCommerce",demo:"https://falaqfood-demo.phpx.shop/",image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaiRjmEbPoVfV5kVX79clXb-RNGAx63KAyXQFDBwdlAFtdc6pStxTG4fuQv8wqri-8Y0sNT7O755u6wUn_u3O-Gd-_VDUqWZrZEI6nm4uGRCw9oOwLQ9ed3nVVLlawVRAjyjytJ4DCfEm4oE6GYv-8Y7YnNIBCfCHf1rzctZnZXtx83xTME8qtv7yecRY/s16000/FalaqFood_Style_eCommerce_Website_Ready_WordPress_Backup_Project.png"},
-  {title:"GadgetGhor Tech Store",category:"WordPress eCommerce",demo:"https://gadgetghor-demo.phpx.shop/",image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgusYnCO5sNnLm2kyB3W6vMGWxQBPy9eK3sMsOtd1eJmreMJGI3CzC5gU3Gl77Di5ucmSROEjHJBYcvS_ymlPzghBSX_LRF28IRcfT4q_9h8YqXiE_83VmAcUkjmbo4YZskVnSpCVdIXSkQ9WjkiY0u85qk9qZqmtZeyHoHJ3Qw8DhyphenhyphenR0plRmGuuAz6kXw/s16000/gadgetghor_%E2%80%93_Elementor_Gadget_eCommerce_Template_Backup_File.png"},
-  {title:"NoorAbaya Burka Store",category:"WordPress eCommerce",demo:"https://nooraabaya-demo.phpx.shop/",image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcJw8ZuuNGI3TnZWkRkYmzKPTxytzJOS4k9pJIqhO8zXbGOyd6bJO-sQaRbpD8JOqVmIzqK2q0yDWVuIZmxKwGiFHwIzD3bVd6baO3GFo2-mG7CaytcnD5nrMbYqpZpgMi8Rg_uXHuTAyqPKBO_zK3c4ggrco1EwHxRU5RIzP5YB10wXiV4V5ZRTLDCrE/s16000/NoorAbaya_%E2%80%93_Elementor_Burka_eCommerce_Template_Backup_File_1.png"},
-  {title:"Glamour Boutique Store",category:"WordPress eCommerce",demo:"https://glamour-demo.phpx.shop/",image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh86d5K_9EJF1to229RImX6oJzhfRzL-_t3ume2B_ymUPxISmnox6sQZ4tC_fwwB0Pn3z6WYsud49pIb7PPLTstVv-empoB05USOBuSZKEE_6-AfwICm4770upJe22C8Tf-tzK8uGcd5FJE0ydS3Now0RGB4Fv4_NFdHHeIL80MrFP5Sb1efUrgoKmHsEA/s16000/1%20(2).png"}
-];
-document.getElementById('projGrid').innerHTML = projects.map(p=>`
-  <div class="proj reveal">
-    <div class="thumb"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>
-    <div class="body">
-      <span class="cat">${p.category}</span>
-      <h3>${p.title}</h3>
-      <a href="${p.demo}" target="_blank" class="live">লাইভ ডেমো দেখুন <i class="fas fa-arrow-up-right-from-square"></i></a>
-    </div>
-  </div>`).join('');
+const chat = document.getElementById("chat");
+const message = document.getElementById("message");
+const sendBtn = document.getElementById("sendBtn");
 
-// Reviews
-const reviews = [
-  {quote:"পারভেজ ভাইয়ের তৈরি ই-কমার্স ওয়েবসাইটটি অসাধারণ! পিক্সেল ট্র্যাকিং ও চমৎকার স্পিডের কারণে আমার সেলস অনেক বৃদ্ধি পেয়েছে। রিকমেন্ড করছি।",name:"আরিফুর রহমান",role:"উদ্যোক্তা, ঢাকা",avatar:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80"},
-  {quote:"চমৎকার ল্যান্ডিং পেজ ডিজাইন। রেসপন্স স্পিড অনেক ভালো আর পেজের কনভার্সন রেট এক কথায় দুর্দান্ত! ওনার ব্যবহার খুবই অমায়িক।",name:"তাসলিমা সুলতানা",role:"বিউটি শপ ওনার, চট্টগ্রাম",avatar:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80"},
-  {quote:"ক্লিন কোড ও সুপার ফাস্ট ওয়েবসাইট। প্রফেশনালভাবে খুবই অল্প সময়ে কাজ সম্পন্ন করেছেন। ওনার টেকনিক্যাল নলেজ অসাধারণ।",name:"মাহবুবুল আলম",role:"আইটি কনসালটেন্ট, রাজশাহী",avatar:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80"},
-  {quote:"আমি ফেসবুক বিজ্ঞাপনের কাজের জন্য ওনাকে হায়ার করেছিলাম। ওনার স্ট্র্যাটেজির কারণে অনেক কম খরচে আমাদের সর্বোচ্চ সেল এসেছে।",name:"রফিকুল ইসলাম",role:"ফ্যাশন ব্র্যান্ড ওনার, খুলনা",avatar:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&h=120&q=80"},
-  {quote:"ওয়ার্ডপ্রেসের যেকোনো স্পিড অপ্টিমাইজেশন ও সিকিউরিটি ইস্যুর জন্য পারভেজ ভাই সেরা। ওনার তৈরি সাইট এখন বিদ্যুতের গতিতে লোড হয়।",name:"সাদিয়া আফরিন",role:"এজেন্সি ডিরেক্টর, সিলেট",avatar:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80"},
-  {quote:"আমার অনলাইন কোর্সের প্ল্যাটফর্মটি ওনার হাত দিয়ে তৈরি। চমৎকার মেম্বারশিপ ডিজাইন ও স্বয়ংক্রিয় পেমেন্ট গেটওয়ে সিস্টেম দারুণ ছিল।",name:"তানভীর আহমেদ",role:"অনলাইন ইনস্ট্রাক্টর, কুমিল্লা",avatar:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&h=120&q=80"}
-];
-document.getElementById('revTrack').innerHTML = reviews.map(r=>`
-  <div class="rev-slide">
-    <div class="rev">
-      <i class="fas fa-quote-left quote-i"></i>
-      <div class="stars">${'<i class="fas fa-star"></i>'.repeat(5)}</div>
-      <p class="q">${r.quote}</p>
-      <div class="person"><img src="${r.avatar}" alt="${r.name}"><div><div class="n">${r.name}</div><div class="r">${r.role}</div></div></div>
-    </div>
-  </div>`).join('');
-
-// Generic slider factory
-function makeSlider({track, prevBtn, nextBtn, dotsContainer, total, getPerView, autoplayMs}){
-  let idx = 0;
-  const update = () => {
-    const perView = getPerView();
-    const maxIdx = Math.max(0, total - perView);
-    if(idx > maxIdx) idx = maxIdx;
-    if(idx < 0) idx = 0;
-    const slideW = track.children[0].getBoundingClientRect().width;
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    track.style.transform = `translateX(-${idx*(slideW+gap)}px)`;
-    if(dotsContainer){
-      const pages = maxIdx + 1;
-      dotsContainer.innerHTML = Array.from({length:pages},(_,i)=>`<span class="${i===idx?'active':''}" data-i="${i}"></span>`).join('');
-      dotsContainer.querySelectorAll('span').forEach(s=>s.onclick=()=>{idx=+s.dataset.i;update();});
-    }
-  };
-  prevBtn && prevBtn.addEventListener('click',()=>{idx--;update();});
-  nextBtn && nextBtn.addEventListener('click',()=>{idx++;update();});
-  window.addEventListener('resize',update);
-  setTimeout(update,50);
-  if(autoplayMs){
-    let timer = setInterval(()=>{
-      const perView = getPerView();
-      const maxIdx = Math.max(0, total - perView);
-      idx = idx >= maxIdx ? 0 : idx+1;
-      update();
-    }, autoplayMs);
-    track.parentElement.addEventListener('mouseenter',()=>clearInterval(timer));
-  }
+function addMessage(text, type){
+ const div = document.createElement("div");
+ div.className = "msg " + type;
+ div.textContent = text;
+ chat.appendChild(div);
+ chat.scrollTop = chat.scrollHeight;
+ return div;
 }
 
-// Reviews slider
-makeSlider({
-  track: document.getElementById('revTrack'),
-  prevBtn: document.getElementById('revPrev'),
-  nextBtn: document.getElementById('revNext'),
-  dotsContainer: document.getElementById('revDots'),
-  total: reviews.length,
-  getPerView: () => window.innerWidth<=600?1:(window.innerWidth<=900?2:3),
-  autoplayMs: 6000
-});
+function clearKey(){
+ document.getElementById("apiKey").value="";
+}
 
-// YouTube slider
-makeSlider({
-  track: document.getElementById('ytTrack'),
-  prevBtn: document.getElementById('ytPrev'),
-  nextBtn: document.getElementById('ytNext'),
-  dotsContainer: null,
-  total: document.querySelectorAll('#ytTrack .yt-slider-slide').length,
-  getPerView: () => window.innerWidth<=560?1:(window.innerWidth<=900?2:3),
-  autoplayMs: 0
-});
+function newChat(){
+ history=[];
+ chat.innerHTML="";
+ addMessage("নতুন চ্যাট শুরু হয়েছে! কী জানতে চাও?","ai");
+}
 
-// Hamburger
-document.getElementById('hamburger').addEventListener('click', ()=>{
-  document.getElementById('navLinks').classList.toggle('open');
-});
-document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+function clearChat(){
+ if(!confirm("সব চ্যাট মুছে ফেলবেন?")) return;
+ newChat();
+}
 
-// Reveal on scroll + skill bars
-const io = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('in');
-      e.target.querySelectorAll('.fill').forEach(f=>{f.style.width=f.dataset.level+'%'});
-      io.unobserve(e.target);
-    }
+async function sendMessage(){
+
+ if(busy) return;
+
+ const apiKey =
+ document.getElementById("apiKey").value.trim();
+
+ const text = message.value.trim();
+
+ if(!apiKey){
+  alert("প্রথমে Gemini API Key দিন।");
+  return;
+ }
+
+ if(!text) return;
+
+ addMessage(text,"user");
+ message.value="";
+
+ history.push({
+  role:"user",
+  parts:[{text:text}]
+ });
+
+ busy=true;
+ sendBtn.disabled=true;
+ sendBtn.textContent="অপেক্ষা করুন...";
+
+ const loading=addMessage("PARVEZ AI উত্তর তৈরি করছে...","ai");
+
+ try{
+
+  const response=await fetch(
+   `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`,
+   {
+    method:"POST",
+    headers:{
+     "Content-Type":"application/json",
+     "x-goog-api-key":apiKey
+    },
+    body:JSON.stringify({
+     system_instruction:{
+      parts:[{
+       text:"তোমার নাম PARVEZ AI। তুমি একজন সহায়ক AI সহকারী। ব্যবহারকারীর ভাষা অনুযায়ী সহজ, সুন্দর ও নির্ভুল উত্তর দাও।"
+      }]
+     },
+     contents:history
+    })
+   }
+  );
+
+  const data=await response.json();
+
+  if(!response.ok){
+   throw new Error(
+    data.error?.message || "API সংযোগে সমস্যা হয়েছে"
+   );
+  }
+
+  const answer=
+   data.candidates?.[0]?.content?.parts
+    ?.map(p=>p.text || "")
+    .join("")
+    .trim();
+
+  if(!answer){
+   throw new Error("AI কোনো উত্তর দেয়নি।");
+  }
+
+  history.push({
+   role:"model",
+   parts:[{text:answer}]
   });
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-// Form
-document.getElementById('contactForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const t=document.getElementById('toast');
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),4000);
-  e.target.reset();
-});
+  loading.textContent=answer;
+
+ }catch(error){
+
+  loading.textContent="সমস্যা: "+error.message;
+
+  history.pop();
+
+ }finally{
+
+  busy=false;
+  sendBtn.disabled=false;
+  sendBtn.textContent="Send ➤";
+  chat.scrollTop=chat.scrollHeight;
+
+ }
+}
+
 </script>
+
 </body>
 </html>
