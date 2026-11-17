@@ -35,7 +35,7 @@
 </div>
 
 <script>
-// শুধু এই লাইনে নিজের স্ট্রিমের URL বসাও:
+// https://www.youtube.com/live/jmsrDY7XsNo?si=2ZwyFNY28T71umWy:
 const STREAM_URL = "PASTE_YOUR_STREAM_LINK_HERE";
 
 const screen = document.getElementById("screen");
@@ -61,7 +61,7 @@ function startPlayer() {
 
   const host = url.hostname.toLowerCase();
 
-  // YouTube ভিডিও বা লাইভের লিংক
+  // https://www.youtube.com/live/jmsrDY7XsNo?si=2ZwyFNY28T71umWy
   if (host === "youtu.be" || host === "youtube.com" || host.endsWith(".youtube.com")) {
     let videoId = host === "youtu.be"
       ? url.pathname.split("/").filter(Boolean)[0]
