@@ -1,136 +1,337 @@
+
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>লাইভ স্ট্রিম প্লেয়ার</title>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<title>TeraPlay - Video Player</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; min-height: 100vh; padding: 20px;
-    display: grid; place-items: center;
-    background: #080d18; font-family: Arial, sans-serif;
-  }
-  .player {
-    width: 100%; max-width: 1000px; padding: 12px;
-    background: #101a30; border: 1px solid #263d60;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+header {
+    background: #ffffff;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9edf3;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #3158c9;
+}
+
+.logo span {
+    color: #172033;
+}
+
+nav a {
+    text-decoration: none;
+    color: #657087;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.hero {
+    text-align: center;
+    padding: 75px 20px 45px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: #3158c9;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #778196;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 15px 20px 60px;
+}
+
+.player-card {
+    background: white;
+    padding: 32px;
     border-radius: 16px;
-  }
-  .screen {
-    width: 100%; aspect-ratio: 16 / 9; overflow: hidden;
-    background: #000; border-radius: 10px;
-    display: grid; place-items: center;
-  }
-  video, iframe { display: block; width: 100%; height: 100%; border: 0; }
-  .message { color: #ddd; text-align: center; padding: 20px; }
+    border: 1px solid #e9edf3;
+    box-shadow: 0 8px 35px rgba(20,40,90,.05);
+}
+
+.card-title {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #8992a5;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #dce2ec;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    background: #fafbfe;
+}
+
+input:focus {
+    border-color: #3158c9;
+}
+
+button {
+    padding: 15px 25px;
+    background: #3158c9;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background: #2446a8;
+}
+
+.video-box {
+    display: none;
+    margin-top: 25px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+#message {
+    text-align: center;
+    color: #7b8497;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.info-card {
+    background: white;
+    padding: 22px 15px;
+    border: 1px solid #e9edf3;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.info-card .icon {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.info-card p {
+    font-size: 12px;
+    color: #8992a5;
+    line-height: 1.6;
+}
+
+footer {
+    background: white;
+    border-top: 1px solid #e9edf3;
+    padding: 30px 15px;
+    text-align: center;
+    color: #929bad;
+    font-size: 12px;
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 55px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .player-card {
+        padding: 22px 17px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<div class="player">
-  <div class="screen" id="screen">
-    <div class="message">লাইভ স্ট্রিম লোড হচ্ছে...</div>
-  </div>
-</div>
+<header>
+    <div class="logo">Tera<span>Play.</span></div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#player">Video Player</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Watch Videos <span>Anywhere.</span></h1>
+    <p>
+        A simple and convenient video player.<br>
+        Paste your direct video link and start watching.
+    </p>
+</section>
+
+<main class="container">
+
+    <section class="player-card" id="player">
+
+        <div class="card-title">Online Video Player</div>
+
+        <div class="card-desc">
+            Enter your direct video URL below.
+        </div>
+
+        <div class="input-group">
+            <input
+                type="url"
+                id="videoURL"
+                placeholder="Paste your video link here..."
+            >
+
+            <button onclick="playVideo()">▶ Play Video</button>
+        </div>
+
+        <div class="video-box" id="videoBox">
+            <video id="video" controls playsinline></video>
+        </div>
+
+        <p id="message">Ready to play your video.</p>
+
+    </section>
+
+    <section class="info-section" id="about">
+
+        <div class="info-card">
+            <div class="icon">▶️</div>
+            <h3>Easy Playback</h3>
+            <p>Simple and convenient video playback.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">⚡</div>
+            <h3>Fast Interface</h3>
+            <p>Clean and lightweight user experience.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Works on mobile, tablet and desktop.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    © 2026 TeraPlay. All rights reserved.
+</footer>
 
 <script>
-// https://www.youtube.com/live/jmsrDY7XsNo?si=2ZwyFNY28T71umWy:
-const STREAM_URL = "PASTE_YOUR_STREAM_LINK_HERE";
+function playVideo() {
+    const url = document.getElementById("videoURL").value.trim();
+    const video = document.getElementById("video");
+    const box = document.getElementById("videoBox");
+    const message = document.getElementById("message");
 
-const screen = document.getElementById("screen");
-let hlsPlayer = null;
+    try {
+        const parsed = new URL(url);
 
-function showMessage(message) {
-  screen.innerHTML = "";
-  const p = document.createElement("p");
-  p.className = "message";
-  p.textContent = message;
-  screen.appendChild(p);
+        if (!["http:", "https:"].includes(parsed.protocol)) {
+            throw new Error("Invalid URL");
+        }
+
+        video.src = parsed.href;
+        box.style.display = "block";
+        video.load();
+
+        message.textContent = "Video link loaded. Press play to watch.";
+
+        video.onerror = function() {
+            message.textContent =
+            "Unable to play this link. Please use a direct video URL.";
+        };
+
+    } catch(error) {
+        message.textContent = "Please enter a valid video URL.";
+    }
 }
-
-function startPlayer() {
-  let url;
-  try {
-    url = new URL(STREAM_URL);
-    if (!["http:", "https:"].includes(url.protocol)) throw new Error();
-  } catch {
-    showMessage("কোডের STREAM_URL লাইনে একটি সঠিক স্ট্রিমিং লিংক বসাও।");
-    return;
-  }
-
-  const host = url.hostname.toLowerCase();
-
-  // https://www.youtube.com/live/jmsrDY7XsNo?si=2ZwyFNY28T71umWy
-  if (host === "youtu.be" || host === "youtube.com" || host.endsWith(".youtube.com")) {
-    let videoId = host === "youtu.be"
-      ? url.pathname.split("/").filter(Boolean)[0]
-      : url.searchParams.get("v");
-
-    if (!videoId) {
-      const match = url.pathname.match(/\/(?:live|embed|shorts)\/([^/?]+)/);
-      if (match) videoId = match[1];
-    }
-
-    if (!videoId || !/^[\w-]{11}$/.test(videoId)) {
-      showMessage("YouTube ভিডিও আইডি পাওয়া যায়নি।");
-      return;
-    }
-
-    const frame = document.createElement("iframe");
-    frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(videoId);
-    frame.allow = "autoplay; encrypted-media; picture-in-picture";
-    frame.allowFullscreen = true;
-    screen.innerHTML = "";
-    screen.appendChild(frame);
-    return;
-  }
-
-  // Facebook-এর পাবলিক এবং embed-অনুমোদিত ভিডিও
-  if (host === "facebook.com" || host.endsWith(".facebook.com") || host === "fb.watch") {
-    const frame = document.createElement("iframe");
-    frame.src = "https://www.facebook.com/plugins/video.php?href=" + encodeURIComponent(url.href);
-    frame.allow = "autoplay; encrypted-media; picture-in-picture";
-    frame.allowFullscreen = true;
-    screen.innerHTML = "";
-    screen.appendChild(frame);
-    return;
-  }
-
-  // সরাসরি HLS বা ভিডিও ফাইল
-  if (/\.(m3u8|mp4|webm|ogg)$/i.test(url.pathname)) {
-    const video = document.createElement("video");
-    video.controls = true;
-    video.autoplay = true;
-    video.playsInline = true;
-    screen.innerHTML = "";
-    screen.appendChild(video);
-
-    if (/\.m3u8$/i.test(url.pathname)) {
-      if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        video.src = url.href;
-        video.play().catch(() => {});
-      } else if (window.Hls && Hls.isSupported()) {
-        hlsPlayer = new Hls();
-        hlsPlayer.loadSource(url.href);
-        hlsPlayer.attachMedia(video);
-        hlsPlayer.on(Hls.Events.ERROR, (event, data) => {
-          if (data.fatal) showMessage("স্ট্রিম চালানো যায়নি। URL বা CORS অনুমতি পরীক্ষা করো।");
-        });
-      } else {
-        showMessage("এই ব্রাউজারে HLS চালানো যাচ্ছে না।");
-      }
-    } else {
-      video.src = url.href;
-      video.play().catch(() => {});
-    }
-    return;
-  }
-
-  showMessage("এই URL সরাসরি ভিডিও নয়। এই সাইটের অনুমোদিত Embed Player দরকার।");
-}
-
-startPlayer();
 </script>
+
 </body>
 </html>
