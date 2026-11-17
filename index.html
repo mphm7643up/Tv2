@@ -1,249 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MetaScan - Image Metadata Extractor</title>
-
-<script src="https://cdn.jsdelivr.net/npm/exifreader@4.23.5/dist/exif-reader.js"></script>
-
+<title>লাইভ স্ট্রিম প্লেয়ার</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#0b1120;
- color:#fff;
- padding:20px;
-}
-.container{max-width:850px;margin:auto}
-header{text-align:center;padding:25px 0}
-h1{color:#38bdf8;font-size:34px}
-header p{color:#94a3b8}
-.upload{
- border:2px dashed #38bdf8;
- border-radius:15px;
- padding:45px 15px;
- text-align:center;
- background:#111c30;
- cursor:pointer;
-}
-.upload:hover{background:#172943}
-button{
- background:#0284c7;color:white;
- border:0;padding:12px 20px;
- border-radius:8px;cursor:pointer;
- margin:8px 3px;
-}
-button:hover{background:#0369a1}
-input{display:none}
-#preview{
- max-width:100%;max-height:300px;
- margin:20px auto;display:none;
- border-radius:12px;
-}
-#results{margin-top:25px}
-.card{
- background:#172337;
- padding:18px;
- margin:12px 0;
- border-radius:12px;
- overflow-wrap:anywhere;
-}
-.card h3{color:#38bdf8;margin-top:0}
-.item{
- display:flex;justify-content:space-between;
- gap:15px;padding:10px 0;
- border-bottom:1px solid #334155;
-}
-.item span:first-child{color:#94a3b8}
-.item span:last-child{text-align:right}
-a{color:#38bdf8}
-.status{color:#fbbf24}
-footer{text-align:center;color:#64748b;margin:35px 0}
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; padding: 20px;
+    display: grid; place-items: center;
+    background: #080d18; font-family: Arial, sans-serif;
+  }
+  .player {
+    width: 100%; max-width: 1000px; padding: 12px;
+    background: #101a30; border: 1px solid #263d60;
+    border-radius: 16px;
+  }
+  .screen {
+    width: 100%; aspect-ratio: 16 / 9; overflow: hidden;
+    background: #000; border-radius: 10px;
+    display: grid; place-items: center;
+  }
+  video, iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .message { color: #ddd; text-align: center; padding: 20px; }
 </style>
 </head>
-
 <body>
-<div class="container">
 
-<header>
-<h1>MetaScan</h1>
-<p>Image Metadata & GPS Analyzer</p>
-</header>
-
-<div class="upload" id="drop">
-<h2>📸 Upload Your Image</h2>
-<p>ছবি এখানে আপলোড করুন অথবা ক্লিক করুন</p>
-<button type="button" onclick="document.getElementById('file').click()">
-Choose Image
-</button>
-<input type="file" id="file" accept="image/*">
-</div>
-
-<img id="preview" alt="Uploaded image preview">
-
-<div id="results"></div>
-
-<footer>
-MetaScan © 2026 | Privacy First
-</footer>
-
+<div class="player">
+  <div class="screen" id="screen">
+    <div class="message">লাইভ স্ট্রিম লোড হচ্ছে...</div>
+  </div>
 </div>
 
 <script>
-const fileInput = document.getElementById("file");
-const drop = document.getElementById("drop");
-const preview = document.getElementById("preview");
-const results = document.getElementById("results");
+// শুধু এই লাইনে নিজের স্ট্রিমের URL বসাও:
+const STREAM_URL = "PASTE_YOUR_STREAM_LINK_HERE";
 
-fileInput.addEventListener("change", e => {
- if(e.target.files[0]) analyze(e.target.files[0]);
-});
+const screen = document.getElementById("screen");
+let hlsPlayer = null;
 
-drop.addEventListener("dragover", e => {
- e.preventDefault();
- drop.style.background = "#1e3a5f";
-});
-
-drop.addEventListener("dragleave", () => {
- drop.style.background = "#111c30";
-});
-
-drop.addEventListener("drop", e => {
- e.preventDefault();
- drop.style.background = "#111c30";
- const file = e.dataTransfer.files[0];
- if(file) analyze(file);
-});
-
-function escapeHTML(value){
- return String(value).replace(/[&<>"']/g, c => ({
-  "&":"&amp;","<":"&lt;",">":"&gt;",
-  '"':"&quot;","'":"&#39;"
- })[c]);
+function showMessage(message) {
+  screen.innerHTML = "";
+  const p = document.createElement("p");
+  p.className = "message";
+  p.textContent = message;
+  screen.appendChild(p);
 }
 
-function row(name,value){
- return `<div class="item">
- <span>${escapeHTML(name)}</span>
- <span>${escapeHTML(value)}</span>
- </div>`;
-}
-
-async function analyze(file){
- results.innerHTML = "";
- if(!file.type.startsWith("image/")){
-  results.innerHTML = '<p class="status">সঠিক Image ফাইল নির্বাচন করুন।</p>';
-  return;
- }
-
- if(file.size > 25*1024*1024){
-  results.innerHTML = '<p class="status">ফাইল ২৫ MB-এর চেয়ে ছোট হতে হবে।</p>';
-  return;
- }
-
- preview.src = URL.createObjectURL(file);
- preview.style.display = "block";
- results.innerHTML = '<p class="status">Metadata বিশ্লেষণ হচ্ছে...</p>';
-
- const basic = {
-  "File Name":file.name,
-  "File Type":file.type || "Unknown",
-  "File Size":(file.size/1024).toFixed(2)+" KB",
-  "Last Modified":new Date(file.lastModified).toLocaleString()
- };
-
- let tags = {};
- let error = "";
-
- try{
-  tags = await ExifReader.load(file,{expanded:true});
- }catch(e){
-  error = "এই ছবিতে EXIF তথ্য পড়া যায়নি।";
- }
-
- let output = `<div class="card"><h3>📁 File Information</h3>`;
- for(const [k,v] of Object.entries(basic)){
-  output += row(k,v);
- }
- output += `</div>`;
-
- let gpsLink = "";
- let gpsFound = false;
- let lat = null, lon = null;
-
- const gps = tags.gps || {};
- if(gps.Latitude && gps.Longitude){
-  lat = Number(gps.Latitude.description ?? gps.Latitude.value);
-  lon = Number(gps.Longitude.description ?? gps.Longitude.value);
-  if(Number.isFinite(lat) && Number.isFinite(lon)){
-   gpsFound = true;
-   gpsLink = `https://www.google.com/maps?q=${lat},${lon}`;
+function startPlayer() {
+  let url;
+  try {
+    url = new URL(STREAM_URL);
+    if (!["http:", "https:"].includes(url.protocol)) throw new Error();
+  } catch {
+    showMessage("কোডের STREAM_URL লাইনে একটি সঠিক স্ট্রিমিং লিংক বসাও।");
+    return;
   }
- }
 
- if(gpsFound){
-  output += `<div class="card"><h3>📍 GPS Location</h3>`;
-  output += row("Latitude",lat);
-  output += row("Longitude",lon);
-  output += `<p><a href="${gpsLink}" target="_blank" rel="noopener">Open coordinates in Google Maps</a></p></div>`;
- }else{
-  output += `<div class="card"><h3>📍 GPS Location</h3>
-  <p class="status">GPS Location Not Available</p>
-  <p>ছবিতে GPS তথ্য পাওয়া যায়নি।</p></div>`;
- }
+  const host = url.hostname.toLowerCase();
 
- const groups = ["exif","file","iptc","xmp","thumbnail","interoperability"];
- for(const group of groups){
-  const data = tags[group];
-  if(!data || typeof data !== "object") continue;
+  // YouTube ভিডিও বা লাইভের লিংক
+  if (host === "youtu.be" || host === "youtube.com" || host.endsWith(".youtube.com")) {
+    let videoId = host === "youtu.be"
+      ? url.pathname.split("/").filter(Boolean)[0]
+      : url.searchParams.get("v");
 
-  output += `<div class="card"><h3>📷 ${escapeHTML(group.toUpperCase())} Metadata</h3>`;
+    if (!videoId) {
+      const match = url.pathname.match(/\/(?:live|embed|shorts)\/([^/?]+)/);
+      if (match) videoId = match[1];
+    }
 
-  for(const [key,value] of Object.entries(data)){
-   let display = value?.description ?? value?.value ?? value;
-   if(Array.isArray(display)) display = display.join(", ");
-   if(typeof display === "object"){
-    display = JSON.stringify(display);
-   }
-   if(display !== undefined && display !== null){
-    output += row(key,display);
-   }
+    if (!videoId || !/^[\w-]{11}$/.test(videoId)) {
+      showMessage("YouTube ভিডিও আইডি পাওয়া যায়নি।");
+      return;
+    }
+
+    const frame = document.createElement("iframe");
+    frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(videoId);
+    frame.allow = "autoplay; encrypted-media; picture-in-picture";
+    frame.allowFullscreen = true;
+    screen.innerHTML = "";
+    screen.appendChild(frame);
+    return;
   }
-  output += `</div>`;
- }
 
- if(error){
-  output += `<div class="card">${escapeHTML(error)}</div>`;
- }
+  // Facebook-এর পাবলিক এবং embed-অনুমোদিত ভিডিও
+  if (host === "facebook.com" || host.endsWith(".facebook.com") || host === "fb.watch") {
+    const frame = document.createElement("iframe");
+    frame.src = "https://www.facebook.com/plugins/video.php?href=" + encodeURIComponent(url.href);
+    frame.allow = "autoplay; encrypted-media; picture-in-picture";
+    frame.allowFullscreen = true;
+    screen.innerHTML = "";
+    screen.appendChild(frame);
+    return;
+  }
 
- results.innerHTML = output;
+  // সরাসরি HLS বা ভিডিও ফাইল
+  if (/\.(m3u8|mp4|webm|ogg)$/i.test(url.pathname)) {
+    const video = document.createElement("video");
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    screen.innerHTML = "";
+    screen.appendChild(video);
 
- window.metadataReport = {
-  file:basic,
-  metadata:tags,
-  gps:gpsFound ? {latitude:lat,longitude:lon} : null
- };
+    if (/\.m3u8$/i.test(url.pathname)) {
+      if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        video.src = url.href;
+        video.play().catch(() => {});
+      } else if (window.Hls && Hls.isSupported()) {
+        hlsPlayer = new Hls();
+        hlsPlayer.loadSource(url.href);
+        hlsPlayer.attachMedia(video);
+        hlsPlayer.on(Hls.Events.ERROR, (event, data) => {
+          if (data.fatal) showMessage("স্ট্রিম চালানো যায়নি। URL বা CORS অনুমতি পরীক্ষা করো।");
+        });
+      } else {
+        showMessage("এই ব্রাউজারে HLS চালানো যাচ্ছে না।");
+      }
+    } else {
+      video.src = url.href;
+      video.play().catch(() => {});
+    }
+    return;
+  }
 
- results.insertAdjacentHTML("beforeend",`
- <div class="card">
- <h3>⬇️ Export Report</h3>
- <button onclick="downloadReport()">Download JSON</button>
- </div>`);
+  showMessage("এই URL সরাসরি ভিডিও নয়। এই সাইটের অনুমোদিত Embed Player দরকার।");
 }
 
-function downloadReport(){
- const data = JSON.stringify(window.metadataReport,null,2);
- const blob = new Blob([data],{type:"application/json"});
- const url = URL.createObjectURL(blob);
- const a = document.createElement("a");
- a.href = url;
- a.download = "metascan-report.json";
- a.click();
- URL.revokeObjectURL(url);
-}
+startPlayer();
 </script>
 </body>
 </html>
