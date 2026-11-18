@@ -1,335 +1,74 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TeraPlay - Video Player</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ImageSearch AI</title>
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+  background:#080d19;color:white;
+  font-family:Arial;text-align:center;
+  padding:30px 15px;
 }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: #f5f7fb;
-    color: #172033;
+h1{color:#55a0ff}
+.box{
+  max-width:500px;margin:40px auto;
+  padding:35px 15px;background:#152238;
+  border:2px dashed #55a0ff;border-radius:18px;
 }
-
-header {
-    background: #ffffff;
-    padding: 20px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e9edf3;
+button{
+  background:#2879ed;color:white;
+  border:0;padding:13px 20px;
+  border-radius:9px;margin:10px;
+  cursor:pointer;
 }
-
-.logo {
-    font-size: 25px;
-    font-weight: 800;
-    color: #3158c9;
-}
-
-.logo span {
-    color: #172033;
-}
-
-nav a {
-    text-decoration: none;
-    color: #657087;
-    margin-left: 25px;
-    font-size: 14px;
-}
-
-.hero {
-    text-align: center;
-    padding: 75px 20px 45px;
-}
-
-.hero h1 {
-    font-size: 43px;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-}
-
-.hero h1 span {
-    color: #3158c9;
-}
-
-.hero p {
-    margin-top: 15px;
-    color: #778196;
-    line-height: 1.7;
-    font-size: 15px;
-}
-
-.container {
-    max-width: 850px;
-    margin: auto;
-    padding: 15px 20px 60px;
-}
-
-.player-card {
-    background: white;
-    padding: 32px;
-    border-radius: 16px;
-    border: 1px solid #e9edf3;
-    box-shadow: 0 8px 35px rgba(20,40,90,.05);
-}
-
-.card-title {
-    font-size: 21px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.card-desc {
-    font-size: 13px;
-    color: #8992a5;
-    margin-bottom: 25px;
-}
-
-.input-group {
-    display: flex;
-    gap: 12px;
-}
-
-input {
-    flex: 1;
-    min-width: 0;
-    padding: 16px;
-    border: 1px solid #dce2ec;
-    border-radius: 9px;
-    outline: none;
-    font-size: 14px;
-    background: #fafbfe;
-}
-
-input:focus {
-    border-color: #3158c9;
-}
-
-button {
-    padding: 15px 25px;
-    background: #3158c9;
-    color: white;
-    border: none;
-    border-radius: 9px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-button:hover {
-    background: #2446a8;
-}
-
-.video-box {
-    display: none;
-    margin-top: 25px;
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-video {
-    width: 100%;
-    display: block;
-}
-
-#message {
-    text-align: center;
-    color: #7b8497;
-    font-size: 13px;
-    margin-top: 20px;
-}
-
-.info-section {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 18px;
-    margin-top: 25px;
-}
-
-.info-card {
-    background: white;
-    padding: 22px 15px;
-    border: 1px solid #e9edf3;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.info-card .icon {
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
-.info-card h3 {
-    font-size: 14px;
-    margin-bottom: 7px;
-}
-
-.info-card p {
-    font-size: 12px;
-    color: #8992a5;
-    line-height: 1.6;
-}
-
-footer {
-    background: white;
-    border-top: 1px solid #e9edf3;
-    padding: 30px 15px;
-    text-align: center;
-    color: #929bad;
-    font-size: 12px;
-}
-
-@media(max-width:600px) {
-    header {
-        padding: 18px 5%;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .hero {
-        padding-top: 55px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .player-card {
-        padding: 22px 17px;
-    }
-
-    .input-group {
-        flex-direction: column;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    .info-section {
-        grid-template-columns: 1fr;
-    }
-}
+img{max-width:100%;max-height:300px;
+  margin:20px auto;border-radius:12px}
+a{color:#75b5ff;display:block;margin:20px}
 </style>
 </head>
-
 <body>
 
-<header>
-    <div class="logo">Tera<span>Play.</span></div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#player">Video Player</a>
-        <a href="#about">About</a>
-    </nav>
-</header>
+<h1>✦ ImageSearch AI</h1>
+<p>Upload an image to find public image sources</p>
 
-<section class="hero">
-    <h1>Watch Videos <span>Anywhere.</span></h1>
-    <p>
-        A simple and convenient video player.<br>
-        Paste your direct video link and start watching.
-    </p>
-</section>
-
-<main class="container">
-
-    <section class="player-card" id="player">
-
-        <div class="card-title">Online Video Player</div>
-
-        <div class="card-desc">
-            Enter your direct video URL below.
-        </div>
-
-        <div class="input-group">
-            <input
-                type="url"
-                id="videoURL"
-                placeholder="Paste your video link here..."
-            >
-
-            <button onclick="playVideo()">▶ Play Video</button>
-        </div>
-
-        <div class="video-box" id="videoBox">
-            <video id="video" controls playsinline></video>
-        </div>
-
-        <p id="message">Ready to play your video.</p>
-
-    </section>
-
-    <section class="info-section" id="about">
-
-        <div class="info-card">
-            <div class="icon">▶️</div>
-            <h3>Easy Playback</h3>
-            <p>Simple and convenient video playback.</p>
-        </div>
-
-        <div class="info-card">
-            <div class="icon">⚡</div>
-            <h3>Fast Interface</h3>
-            <p>Clean and lightweight user experience.</p>
-        </div>
-
-        <div class="info-card">
-            <div class="icon">📱</div>
-            <h3>Responsive Design</h3>
-            <p>Works on mobile, tablet and desktop.</p>
-        </div>
-
-    </section>
-
-</main>
-
-<footer>
-    © 2026 TeraPlay. All rights reserved.
-</footer>
+<div class="box">
+<input type="file" id="file" accept="image/*">
+<br>
+<img id="preview" hidden>
+<br>
+<button onclick="search()">Search Image</button>
+<div id="links"></div>
+</div>
 
 <script>
-function playVideo() {
-    const url = document.getElementById("videoURL").value.trim();
-    const video = document.getElementById("video");
-    const box = document.getElementById("videoBox");
-    const message = document.getElementById("message");
+const file=document.getElementById('file');
+const preview=document.getElementById('preview');
 
-    try {
-        const parsed = new URL(url);
+file.onchange=()=>{
+ const f=file.files[0];
+ if(!f)return;
+ if(!f.type.startsWith('image/') || f.size>10*1024*1024){
+  alert('Select a valid image under 10 MB');
+  file.value='';
+  return;
+ }
+ preview.src=URL.createObjectURL(f);
+ preview.hidden=false;
+ document.getElementById('links').innerHTML='';
+};
 
-        if (!["http:", "https:"].includes(parsed.protocol)) {
-            throw new Error("Invalid URL");
-        }
-
-        video.src = parsed.href;
-        box.style.display = "block";
-        video.load();
-
-        message.textContent = "Video link loaded. Press play to watch.";
-
-        video.onerror = function() {
-            message.textContent =
-            "Unable to play this link. Please use a direct video URL.";
-        };
-
-    } catch(error) {
-        message.textContent = "Please enter a valid video URL.";
-    }
+function search(){
+ if(!file.files[0]){
+  alert('Upload an image first');
+  return;
+ }
+ document.getElementById('links').innerHTML=`
+ <p>Choose a search service:</p>
+ <a href="https://lens.google.com/" target="_blank">Google Lens ↗</a>
+ <a href="https://www.bing.com/visualsearch" target="_blank">Bing Visual Search ↗</a>
+ <p>Upload your image on the selected service.</p>`;
 }
 </script>
 
