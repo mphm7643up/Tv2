@@ -1,775 +1,453 @@
-
 <!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PARVES TV - Live TV Streaming</title>
-<meta name="description" content="Watch live TV, sports, Bangla, Hindi and entertainment channels on PARVES TV.">
-<meta name="theme-color" content="#101426">
-<link rel="icon" href="https://i.ibb.co.com/PvnVqbdS/cpt-1469868507562.jpg">
+<html lang="en" class="astro-WBW5VBLW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+      (() => {
+        const isIPad =
+          /iPad/.test(navigator.userAgent) ||
+          (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.10.0/video-js.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.10.0/video.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.7.2/dash.all.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+        if (isIPad) {
+          document.documentElement.classList.add("is-ipad");
+        }
+      })();
+    </script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
 
-<style>
-:root {
- --bg:#0b1020;
- --panel:#151d35;
- --panel2:#1c2745;
- --accent:#668cff;
- --accent2:#a477ff;
- --text:#f2f5ff;
- --muted:#a6b1cc;
- --border:#2c395d;
-}
+    <link rel="preload" href="https://cfcdn.apowersoft.info/astro/lightpdf/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cfcdn.apowersoft.info/astro/lightpdf/fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cfcdn.apowersoft.info/astro/lightpdf/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cfcdn.apowersoft.info/astro/lightpdf/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
-* {box-sizing:border-box}
+    <!-- Google Tools @Yanko -->
+    <meta name="google-site-verification" content="-7mZwIn9W7PrpKzq_o-aX2Lccu5UvliRdXLt1euQYiY">
+    <!-- Google Drive 验证 -->
+    <meta name="google-site-verification" content="WCjopefJip2sQAEEJxZCBJEpiUNBoISsenK9VYQDlc4">
+    <title>AI-Powered Free Online PDF Editor, Converter & Reader - LightPDF</title>
 
-body {
- margin:0;
- padding:18px;
- background:var(--bg);
- color:var(--text);
- font-family:Arial,'Segoe UI',sans-serif;
-}
+<link rel="canonical" href="https://lightpdf.com/">
 
-.main-container {
- display:flex;
- gap:18px;
- max-width:1800px;
- margin:auto;
- flex-wrap:wrap;
- justify-content:center;
-}
+<meta name="description" content="Powered by AI, LightPDF provides free cloud-based services to view, edit, convert, sign, annotate, merge, manage and share PDF easily and helps you solve all PDF problems.">
 
-.player-section {
- flex:3.7;
- min-width:320px;
- padding:18px;
- border-radius:14px;
- background:var(--panel);
- border:1px solid var(--border);
-}
+<meta name="robots" content="index, follow">
 
-.header-wrapper {
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:14px;
- margin-bottom:15px;
- flex-wrap:wrap;
-}
 
-.logo-header {
- font-size:27px;
- font-weight:900;
- letter-spacing:2px;
- color:var(--accent);
- white-space:nowrap;
-}
 
-.header-server-switcher {
- flex:1;
- min-width:230px;
- background:var(--bg);
- border:1px solid var(--border);
- padding:10px;
- border-radius:10px;
- display:flex;
- flex-direction:column;
- gap:8px;
-}
 
-.server-title {
- color:#a98aff;
- font-size:14px;
- font-weight:bold;
- text-align:center;
-}
 
-.server-stacked-notices {
- display:flex;
- flex-direction:column;
- gap:5px;
-}
 
-.server-inline-notice {
- overflow:hidden;
- white-space:nowrap;
- background:#1c2948;
- border:1px solid var(--border);
- border-radius:5px;
- padding:4px;
-}
+<link rel="apple-touch-icon" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/favicon@48w.1f86f507.png"><link rel="bookmark" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/favicon@48w.1f86f507.png"><link rel="Shortcut Icon" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/favicon@48w.1f86f507.png">
+<meta content="en-US" property="og:locale"><meta content="website" property="og:type"><meta content="AI-Powered Free Online PDF Editor, Converter &#38; Reader - LightPDF" property="og:title"><meta content="https://webusupload.aoscdn.com/lightpdf/wp-content/uploads/2025/04/x600.png" property="og:image"><meta content="200" property="og:image:width"><meta content="200" property="og:image:height"><meta content="https://webusupload.aoscdn.com/lightpdf/wp-content/uploads/2025/04/x600.png" property="og:image:secure_url"><meta content="Powered by AI, LightPDF provides free cloud-based services to view, edit, convert, sign, annotate, merge, manage and share PDF easily and helps you solve all PDF problems." property="og:description"><meta content="https://lightpdf.com/" property="og:url"><meta content="AI-Powered Free Online PDF Editor, Converter &#38; Reader - LightPDF" property="og:site_name"><meta content="summary_large_image" name="twitter:card"><meta content="Powered by AI, LightPDF provides free cloud-based services to view, edit, convert, sign, annotate, merge, manage and share PDF easily and helps you solve all PDF problems." name="twitter:description"><meta content="AI-Powered Free Online PDF Editor, Converter &#38; Reader - LightPDF" name="twitter:title"><meta content="https://webusupload.aoscdn.com/lightpdf/wp-content/uploads/2025/04/x600.png" name="twitter:image">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://lightpdf.com/#website","url":"https://lightpdf.com","inLanguage":"en"},{"@type":"CollectionPage","@id":"https://lightpdf.com/#webpage","url":"https://lightpdf.com/","name":"AI-Powered Free Online PDF Editor, Converter & Reader - LightPDF","isPartOf":{"@id":"https://lightpdf.com/#website"},"inLanguage":"en","description":"Powered by AI, LightPDF provides free cloud-based services to view, edit, convert, sign, annotate, merge, manage and share PDF easily and helps you solve all PDF problems."}]}</script>
 
-.server-inline-notice marquee {
- color:#a9c0ff;
- font-size:11px;
- font-weight:bold;
-}
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://lightpdf.com/#organization","name":"LightPDF","url":"https://lightpdf.com/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://lightpdf.com/#logo","inLanguage":"en-US","url":"https://webusupload.aoscdn.com/lightpdf/wp-content/uploads/2022/08/600.png","width":512,"height":512,"caption":"LightPDF"},"image":{"@id":"https://lightpdf.com/#logo"}},{"@type":"WebSite","@id":"https://lightpdf.com/#website","url":"https://lightpdf.com/","name":"LightPDF – Edit, Convert, Sign, Collaborate on PDF Files On the Cloud","inLanguage":"en-US","description":"LightPDF provides cloud-based service to view, edit, convert, sign, annotate, merge, manage and share PDF easily.","publisher":{"@id":"https://lightpdf.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://lightpdf.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://lightpdf.com/#webpage","url":"https://lightpdf.com/","name":"LightPDF – Edit, Convert, Sign, Collaborate on PDF Files On the Cloud","isPartOf":{"@id":"https://lightpdf.com/#website"},"inLanguage":"en-US","about":{"@id":"https://lightpdf.com/#organization"},"description":"LightPDF provides cloud-based service to view, edit, convert, sign, annotate, merge, manage and share PDF easily."}]}</script>
+    
 
-.server-buttons-wrap {
- display:flex;
- gap:7px;
- justify-content:center;
- flex-wrap:wrap;
-}
+    <script>(function() {
+    var clickIdKey = 'clickid';
+    function getImapctClickIdFromUrl() {
+        if (!window || !window.location) return '';
+        var searchParams = new URLSearchParams(window.location.search);
+        var clickid = searchParams.get(clickIdKey);
+        return clickid;
+    }
+    
+    function saveImapctClickIdInline() {
+        var clickid = getImapctClickIdFromUrl();
+        if (!clickid) return;
+        if (!localStorage) {
+            return;
+        }
+        localStorage.setItem(clickIdKey, clickid);
+    }
+    saveImapctClickIdInline();
+})();</script>
+    <script>(function(){function getCookie(cookieName){let cookie={};document.cookie.split(";").forEach(function(el){let[key,value]=el.split("=");if(key.indexOf(cookieName)>-1){cookie[key.trim()]=value}});return Object.values(cookie)}window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}var json_consent_status;var cookievalue=getCookie("consentstatus");gtag("consent","default",{region:['AT','BE','BG','CY','CZ','DE','DK','EE','ES','FI','FR','GR','HR','HU','IE','IS','IT','LI','LT','LU','LV','MT','NL','NO','PL','PT','RO','SE','SI','SK'],'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});if(cookievalue.length!=0){if(cookievalue=='granted'){gtag("consent","update",{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'})}else{gtag("consent","update",{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'})}}function setCookies(json_consent_status){var currentDate=new Date();var expirationDate=new Date(currentDate);expirationDate.setFullYear(currentDate.getFullYear()+1);var expires=expirationDate.toUTCString();document.cookie="consentstatus="+json_consent_status+";expires="+expires+";path=/"}document.addEventListener('click',function(e){const dom=e.target.closest('.cookie-tip button:not(#accept-cookie-btn)');if(dom===null)return;gtag('consent','update',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});json_consent_status='denied';setCookies(json_consent_status)});document.addEventListener('click',function(e){const dom=e.target.closest('#accept-cookie-btn');if(dom===null)return;gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});json_consent_status='granted';setCookies(json_consent_status)})})();</script>
+    <div id="g_id_onload" style="position:fixed;top:85px;right:20px;z-index:99999999"></div>
+<script>(function(){const disableMobile = true;
 
-.server-btn,.cat-btn,.q-btn,.btn {
- cursor:pointer;
- border:1px solid var(--border);
- border-radius:7px;
- background:var(--panel2);
- color:white;
- font-weight:bold;
- transition:.2s;
-}
+  window.wxGoogleAutoLoginOpt = {"disableMobile": disableMobile};
+})();</script>
+    <script></script>
+<script>!function(){function a(a){for(var b=d.cookie.split(";"),c=0;c<b.length;c++){var e=b[c].trim().split(a+"=");if(2===e.length&&""===e[0])return e[1]}return""}function b(a){return encodeURIComponent(a)}var c="//cdnweb.aoscdn.com/wxhawk.js",d=document,e=[];try{var f=d.location,g=d.getElementsByTagName("head")[0],h=d.createElement("script"),i=d.referrer,j=f.search.substr(1);j&&e.push(j);var k=a("_ga");if(k&&e.push("appgaid="+b(k)),i&&e.push("__referer__="+b(i)),e.push("__href__="+b(f.href)),e&&e.length>0){var l=c.indexOf("?")>0?"&":"?";c=c+l+e.join("&")}h.async=!0,h.src=c,g.appendChild(h)}catch(m){}}(window);</script>
+<script>window.dataLayer = window.dataLayer || [];
+    dataLayer.push({'google_analytics_id':'G-LLD57EWEH7'});
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KSL26ZD');
+    ;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MCFLF92');
+    ;;</script>
+    <script id="profitwell-js" data-pw-auth="a370678f3b30d5339b8d3c3d6782a613">
+  if (localStorage.getItem("passport_api_token")) {
+    (function(i,s,o,g,r,a,m){i[o]=i[o]||function(){(i[o].q=i[o].q||[]).push(arguments)};
+      a=s.createElement(g);m=s.getElementsByTagName(g)[0];a.async=1;a.src=r+'?auth='+
+      s.getElementById(o+'-js').getAttribute('data-pw-auth');m.parentNode.insertBefore(a,m);
+    })(window,document,'profitwell','script','https://public.profitwell.com/js/profitwell.js');
+  }
+</script>
+    
+    
+    
+  <link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/about.15f0570c.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/index.997b2919.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/index.62ad47d4.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/index.ab495584.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/CustomContent.79815c96.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/CustomContent.ab306d42.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/pricing.52e077ce.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/intelligent-analysis.05090197.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/tools.0a7d4b15.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/my-account.49fac185.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/referral.bb056ba8.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/my-account.c900e640.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/my-account.92e368a8.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/web-pdf-sdk.1adb7d8f.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/my-account.4db65118.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/my-account.0ef0183f.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/docs.76960d2e.css" />
+<link rel="stylesheet" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/pricing.c9290ed1.css" /><script type="module" src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/hoisted.92876f68.js"></script>
+<script>
+  window.hostEnv = {
+      language: document.documentElement.lang,
+      clients: {"wechat":"wx2a012acee18ae7cb","qq":"101326744","dingtalk":"dingoarddsoxkrznkrv9oc","google":"803827820086-29fu6euek0jgp2c7po9bijklfjjgigg4.apps.googleusercontent.com","facebook":"1412904766262836","apple":"com.wangxutech.lightpdfServicesID"},
+      product_id: '227',
+      forceBindPhone: {"tutorial":"https://lightpdf.cn/binding-failed.html?nocache=1"},
+  }</script>
+<script>
+(function(self, undefined) {if (!("defineProperty"in Object&&function(){try{var e={}
+return Object.defineProperty(e,"test",{value:42}),!0}catch(t){return!1}}()
+)) {!function(e){var t=Object.prototype.hasOwnProperty.call(Object.prototype,"__defineGetter__"),r="A property cannot both have accessors and be writable or have a value";Object.defineProperty=function n(o,i,f){if(e&&(o===window||o===document||o===Element.prototype||o instanceof Element))return e(o,i,f);if(null===o||!(o instanceof Object||"object"==typeof o))throw new TypeError("Object.defineProperty called on non-object");if(!(f instanceof Object))throw new TypeError("Property description must be an object");var c=String(i),a="value"in f||"writable"in f,p="get"in f&&typeof f.get,s="set"in f&&typeof f.set;if(p){if(p===undefined)return o;if("function"!==p)throw new TypeError("Getter must be a function");if(!t)throw new TypeError("Getters & setters cannot be defined on this javascript engine");if(a)throw new TypeError(r);Object.__defineGetter__.call(o,c,f.get)}else o[c]=f.value;if(s){if(s===undefined)return o;if("function"!==s)throw new TypeError("Setter must be a function");if(!t)throw new TypeError("Getters & setters cannot be defined on this javascript engine");if(a)throw new TypeError(r);Object.__defineSetter__.call(o,c,f.set)}return"value"in f&&(o[c]=f.value),o}}(Object.defineProperty);}if (!("object"==typeof globalThis
+)) {!function(){function e(e){return e&&e.Object==Object&&e}var t=e("object"==typeof c&&c),o=e("object"==typeof window&&window),b=e("object"==typeof self&&self),l=e("object"==typeof global&&global),c=t||o||b||l||Function("return this")();try{Object.defineProperty(c,"globalThis",{configurable:!0,enumerable:!1,writable:!0,value:c})}catch(n){c.globalThis=c}}();}})('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
+</script></head>
+  
+    <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var r=(i,c,n)=>{let s=async()=>{await(await i())()},t=new IntersectionObserver(e=>{for(let o of e)if(o.isIntersecting){t.disconnect(),s();break}});for(let e of n.children)t.observe(e)};(self.Astro||(self.Astro={})).visible=r;window.dispatchEvent(new Event("astro:visible"));})();;(()=>{var d;{let h={0:t=>t,1:t=>JSON.parse(t,a),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,a)),5:t=>new Set(JSON.parse(t,a)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},a=(t,e)=>{if(t===""||!Array.isArray(e))return e;let[r,n]=e;return r in h?h[r](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var o;if(!this.hydrator||!this.isConnected)return;let e=(o=this.parentElement)==null?void 0:o.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),n={},c=this.querySelectorAll("template[data-astro-template]");for(let s of c){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("name")||"default"]=s.innerHTML)}let l=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),a):{};await this.hydrator(this)(this.Component,l,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,r)=>{r.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let n=this.getAttribute("renderer-url"),[c,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),o=this.getAttribute("component-export")||"default";if(!o.includes("."))this.Component=c[o];else{this.Component=c;for(let s of o.split("."))this.Component=this.Component[s]}return this.hydrator=l,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var i=t=>{let e=async()=>{await(await t())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};(self.Astro||(self.Astro={})).idle=i;window.dispatchEvent(new Event("astro:idle"));})();</script>
+  <script>window._localeContext = {"CookiesTipV1TitlePrivacy":"We value your privacy","CookiesTipV1Description":"We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.","CookiesTipV1ButtonCustomize":"Customize","CookiesTipV1ButtonAcceptAll":"Accept All","CookiesTipV1PreferencesTitle":"Customize Consent Preferences","CookiesTipV1PreferencesDescription":"We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.","CookiesTipV1PreferencesShortText":"We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.<br>The cookies that are categorized as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site.","CookiesTipV1PreferencesFullText":"We also use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your prior consent.<br>You can choose to enable or disable some or all of these cookies but disabling some of them may affect your browsing experience.","CookiesTipV1ButtonShowMore":"Show more","CookiesTipV1ButtonShowLess":"Show less","CookiesTipV1CategoryNecessary":"Necessary","CookiesTipV1CategoryNecessaryDesc":"Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.","CookiesTipV1CategoryNecessaryAlwaysActive":"Always Active","CookiesTipV1CategoryFunctional":"Functional","CookiesTipV1CategoryFunctionalDesc":"Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.","CookiesTipV1CategoryAnalytics":"Analytics","CookiesTipV1CategoryAnalyticsDesc":"Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.","CookiesTipV1CategoryPerformance":"Performance","CookiesTipV1CategoryPerformanceDesc":"Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.","CookiesTipV1ButtonSavePreferences":"Save My Preferences","Cancel":"Cancel","Confirm":"Confirm","Password":"Password","Please enter password":"Please enter password","Wrong password, please re-enter":"Wrong password, please re-enter","download_error_message":"Download failed, please try again later","File ready. Share or download.":"File ready. Share or download.","Save to phone":"Save to phone","file_preview_download":"Download","termsOfUse":"Terms of Service","and":"and","privacyPolicy":"Privacy Policy","readAndAccept":"I agree to the","readTips":"Please read and tick the boxes if you agree.","passwordPlaceholder":"Password","accountRequired":"Please enter your email","accountCorrectedRequired":"Email is invalid","correctedVeriCode":"Please enter the correct verification code","passwordRequired":"Please enter a password","wrongPasswordFormat":"Password must be 6-20 characters!","signupFirst":"Invalid email or password. Please try again.","accountExisted":"Email Already in Use","wrongVeriCode":"Invalid Verification","veriCodeExLimit":"Too Many requests(5 times limit)","veriCodeVerifiedLimit":"Too Many requests, please try again later","wrongPassword":"Please enter the correct password","wrongPasswordConfirmed":"Passwords do not match!","resetPasswordExLimit":"Password reset too frequently","networkError":"Network error, please try again later","googleTranslate":"Continue with Google","passwordLogin":"Login","otherLogin":"Or","acountPlaceholder":"Email","forgetPassword":"Forgot password?","signIn":"Login","noAccount":"Not a member?","goToSignup":"Sign up now!","getCaptcha":"Send","resendAfter":"Resend after {timeCount}s","resend":"Resend","verificationCode":"Verification Code","nextStep":"Next","backtoLogin":"Back to Login","newPasswordRequired":"Please enter a new password","actionDone":"Done","backToLastStep":"Back","resetPasswordSuccessfully":"Password Reset Successfully!","resetPasswordTitle":"Forgot password?","createAccount":"Create a new LightPDF Account","sendTipsAndNews":"Send me tips and news","agreeAndSignup":"Sign up","hadAccount":"Already a member?","goToSignin":"Log in here!","paymentSuccess":"Payment successful","home.hero.eyebrow":"<span>AI-Powered</span> PDF","home.placeholder.empty":"Make PDF Easy","home.hero.title":"Simplify Every Step of Your Document Workflow","home.hero.description":"Your all-in-one AI-powered PDF solution to edit, convert, annotate, sign, organize, chat, and more — available on Web, Mobile & Desktop.","home.explore All Tools":"Explore All Tools","home.aiFeatures.title":"AI for PDF, <span>Smart All the Way</span>","home.aiFeatures.aiAgent.description":"The first AI agent that can handle various PDF tasks: convert formats, merge and compress files, remove watermarks, and more, saving you time and streamlining workflows.","home.aiFeatures.aiAgent.cta":"Chat with AI Agent","home.aiFeatures.aiAgent.title":"PDF AI Agent","home.aiFeatures.generatePdf.description":"Generate professional PDFs directly from text using AI, quickly transforming your ideas into neatly formatted, ready-to-use documents.","home.aiFeatures.generatePdf.cta":"AI Generate PDF","home.aiFeatures.generatePdf.title":"AI PDF Generator","home.aiFeatures.translatePdf.description":"Translate PDF documents across multiple languages using AI while preserving the original layout, formatting, and structure.","home.aiFeatures.translatePdf.cta":"AI Translate PDF","home.aiFeatures.translatePdf.title":"AI PDF Translator","home.aiFeatures.removeWatermarks.description":"AI automatically detects and removes watermarks from PDFs, helping you clean up documents efficiently while keeping the content intact and professional.","home.aiFeatures.removeWatermarks.cta":"AI Remove Watermarks","home.aiFeatures.removeWatermarks.title":"AI Watermark Remover","home.tools.ai.cta":"Try AI Tools Now","home.useCases.title":"Fast, Easy PDF Editing <span>Solution for All Needs</span>","home.useCases.students.label":"For Students","home.useCases.students.title":"Get Your Study Done Faster","home.useCases.students.description":"Highlight notes, fill forms, merge research papers, and turn PDFs into editable files. Make homework, projects, and study prep way easier for students.","home.useCases.educators.label":"For Educators","home.useCases.educators.title":"Make Class Less Stressful","home.useCases.educators.description":"Edit worksheets, textbooks, and lesson plans, create handouts, add comments, and grade assignments quickly to save time and stay on top of your classes.","home.useCases.itService.label":"For IT Service","home.useCases.itService.title":"Keep IT Documents Under Control","home.useCases.itService.description":"Organize and secure company documents, control access permissions, and batch process files, so IT teams can spend less time on paperwork and more on critical IT projects.","home.useCases.professionals.label":"For Professionals","home.useCases.professionals.title":"Work Smarter, Not Harder","home.useCases.professionals.description":"Edit contracts, convert and combine reports, compress files, and archive PDFs for quick access, keeping all your documents organized and easy to manage.","home.advantages.value.title":"Ultimate Vaule, Half the Price","home.advantages.value.description":"Professional PDF editing + All AI tools included in one single Pro Plan. Get everything you need for half the cost of other editors.","home.advantages.performance.title":"Lightning-Fast & Lightweight","home.advantages.performance.description":"Experience zero-lag editing and rapid batch processing. A simple, intuitive interface designed to handle your files in seconds.","home.advantages.platforms.title":"One Account, All Platforms","home.advantages.platforms.description":"Seamlessly access your Pro benefits across Windows, Mac, iOS, Android, and Web. Stay synced and productive on any device.","home.advantages.aiEditor.title":"The Smarter AI PDF Editor","home.advantages.aiEditor.description":"Boost your productivity with our all-in-one AI PDF editor: read, edit, convert, organize and summarize any document with the power of advanced AI at your fingertips.","home.advantages.title":"What Makes LightPDF <span>Stand Out?</span>","Available for":"Available for","home.testimonials.title":"Trusted by <span>5M+ Users and Enterprises</span>","home.compliance.title":"Secure, Compliant, and Professional AI PDF Solution","home.compliance.description":"LightPDF is designed for secure and reliable document workflows, with a strong focus on data protection and compliance. It meets globally recognized standards, including GDPR, ISO 27701, ISO, and PDF Association guidelines.","home.testimonials.techradar.name":"Techradar ","home.testimonials.techradar.title":"Multi-platform and a host of AI tools to make your life easier","home.testimonials.techradar.quote":"I use PDF editors on a daily basis, and even though the best free PDF editors will suffice for basic tasks, I would highly recommend investing in an all-in-one AI PDF editor like LightPDF. It's powerful, versatile, and fantastically easy to use.","home.testimonials.makeuseof.name":"Makeuseof","home.testimonials.makeuseof.title":"LightPDF Now Comes With Integrated AI Capabilities","home.testimonials.makeuseof.quote":"LightPDF supports a huge range of different features. So, whether you’re looking for a new tool to help you be more productive with PDFs than ever before, or are looking for a replacement for your old software that just isn’t cutting it anymore, then LightPDF is a great option regardless of your needs.","home.testimonials.pcmag.name":"PCmag","home.testimonials.pcmag.title":"LightPDF has editing tools, AI-powered integrations","home.testimonials.pcmag.quote":"Imagine your boss sends you a 50-page PDF of legal jargon that you need to translate into a new list of employee benefits. You no longer have to start from scratch; just ask LightPDF’s AI to help you summarize the PDF’s main points. You can even use OCR to search the original document and make annotations as needed.","home.testimonials.easeus.name":"Easeus","home.testimonials.easeus.title":"A trusted software partner","home.testimonials.easeus.quote":"EaseUS places great importance on product quality, innovation, and long-term user value. LightPDF distinguishes itself with its advanced AI capabilities and well-structured feature set, enabling a more efficient and intelligent approach to document management.","home.testimonials.trustpilot.name":"Tom’s Guide","home.testimonials.trustpilot.title":"The best PDF editor lets you handle documents like a pro","home.testimonials.trustpilot.quote":"After testing a dozen different platforms, we found LightPDF to be one of the best PDF editors to alter text, change images, annotate PDFs and beyond.","home.testimonials.capterra.name":"Uptodown","home.testimonials.capterra.title":"Best PDF Editing Tool Available Today","home.testimonials.capterra.quote":"LightPDF is a powerful and user-friendly solution that makes working with PDF documents effortless. You can edit text and images, convert files between formats, sign documents, and annotate with ease.","home.bottomCta.title":"Your All-in-One PDF Toolkit, <span>Powered by AI</span>","home.bottomCta.description":"Edit, convert, sign, OCR, and more – make PDF tasks easier,  faster, and smarter.","home.hero.badgeFreeTools":"30+ free tools","home.tools.title":"All PDF Tools You Need","home.tools.ai.title":"AI Tools","home.tools.ai.description":"Handle documents faster and smarter with AI.","home.tools.ai.chatWithPdf":"Ask questions about multiple document to get instant answers and key insights.","home.tools.ai.chatWithPdftitle":"Chat with PDF","home.tools.ai.summarizePdf":"Transform long documents into concise summaries, or structured notes in seconds, ","home.tools.ai.summarizePdftitle":"Summarize PDF","home.tools.ai.aiMindmap":"Convert documents, text or URL into visual mindmaps to quickly understand structure and ideas at a glance.","home.tools.ai.aiMindmaptitle":"AI MindMap","home.tools.edit.title":"Edit","home.tools.edit.description":"Edit PDFs as easy as Microsoft Word.","home.tools.edit.editText":"Add, delete, or modify text, adjust fonts, sizes, colors, styles without affecting the layout.","home.tools.edit.editTexttitle":"Edit Text","home.tools.edit.editImage":"Add, replace, or adjust images in PDFs instantly with simple clicks.","home.tools.edit.editImagetitle":"Edit Image","home.tools.edit.editElements":"Insert hyperlinks, shapes, watermarks, headers/footers, and more directly into your PDFs.","home.tools.edit.editElementstitle":"Edit Elements","home.tools.edit.cta":"Edit PDF Now","home.tools.convert.title":"Convert","home.tools.convert.description":"Convert files from and to PDF in 20+ formats effortlessly.","home.tools.convert.formats":"Convert PDF to Word, Excel, PPT, PNG, Markdown, HTML, and more, or turn any file back into PDF.","home.tools.convert.formatstitle":"20+ Formats","home.tools.convert.batchConversion":"Process dozens of files at once to save time and boost productivity.","home.tools.convert.batchConversiontitle":"Batch Conversion","home.tools.convert.perfectAccuracy":"Preserve original layouts, fonts, images, and formatting perfectly in every conversion. ","home.tools.convert.perfectAccuracytitle":"Perfect Accuracy","home.tools.convert.cta":"Convert PDF Now","home.tools.annotate.title":"Annotate","home.tools.annotate.description":"Annotate your PDF for clearer collaboration and faster reviews.","home.tools.annotate.highlightComment":"Emphasize key points and leave comments directly on the PDF.","home.tools.annotate.highlightCommenttitle":"Highlight & Comment","home.tools.annotate.drawMarkup":"Use shapes, lines, and freehand drawing to illustrate ideas clearly.","home.tools.annotate.drawMarkuptitle":"Draw & Markup","home.tools.annotate.collaborativeReview":"Share annotated PDFs with colleagues for faster feedback and decision-making.","home.tools.annotate.collaborativeReviewtitle":"Collaborative Review","home.tools.annotate.cta":"Annotate PDF Now","home.tools.organize.title":"Organize","home.tools.organize.description":"Easy PDF organization and compression.","home.tools.organize.managePages":"Reorder, rotate, insert, or delete pages to structure your PDF effortlessly.","home.tools.organize.managePagestitle":"Manage Pages","home.tools.organize.cropCutResize":"Trim margins, cut pages into sections, and adjust sizes for a clean, professional layout.","home.tools.organize.cropCutResizetitle":"Crop, Cut & Resize","home.tools.organize.mergeSplitCompress":"Combine, divide, and reduce file sizes without losing quality for easier sharing and storage.","home.tools.organize.mergeSplitCompresstitle":"Merge, Split & Compress","home.tools.organize.cta":"Organize PDF Now","home.tools.ocr.title":"OCR","home.tools.ocr.description":"Extract text in PDFs with AI OCR.","home.tools.ocr.recognizeText":"Convert scanned documents, handwritten notes, or images into editable and searchable text precisely.","home.tools.ocr.recognizeTexttitle":"Recognize Text with AI","home.tools.ocr.languageSupport":"Accurately recognize English, Chinese, Japanese, Korean, Arabic, and many more scripts.","home.tools.ocr.languageSupporttitle":"20+ Language Support","home.tools.ocr.batchProcessing":"Extract text from multiple files at once for fast, efficient results.","home.tools.ocr.batchProcessingtitle":"Batch Processing","home.tools.ocr.cta":"OCR PDF Now","home.tools.esign.title":"E-Sign","home.tools.esign.description":"E-Sign PDFs with ease","home.tools.esign.signAnywhere":"Add handwritten or digital signatures to PDFs anytime.","home.tools.esign.signAnywheretitle":"Sign Anywhere","home.tools.esign.fillAndSign":"Complete forms and add signatures without printing or scanning.","home.tools.esign.fillAndSigntitle":"Fill & Sign Forms","home.tools.esign.fastSimple":"Sign documents in seconds with a few clicks, no extra tools required.","home.tools.esign.fastSimpletitle":"Fast & Simple","home.tools.esign.cta":"E-Sign PDF Now","home.tools.protect.title":"Protect","home.tools.protect.description":"Protect your PDF and sensitive information.","home.tools.protect.addPassword":"Secure your PDFs with password to prevent unauthorized viewing, editing, or printing.","home.tools.protect.addPasswordtitle":"Add password","home.tools.protect.addWatermarks":"Easily add watermarks, logos, or signatures for branding, marketing or ownership.","home.tools.protect.addWatermarkstitle":"Add Watermarks","home.tools.protect.eraseRedact":"Permanently erase or mark sensitive text with customizable colors. ","home.tools.protect.eraseRedacttitle":"Erase & Redact","home.tools.protect.cta":"Protect PDF Now","User Guide":"User Guide","whatsNew":"What's New","Blog":"Blog","lightpdf_ai_abstract":"As a potential LightPDF user, I want to clearly understand how LightPDF, including its AI-powered tools, fits into my real, day-to-day work and study, and how it can efficiently handle everything from messy input files such as scanned PDFs, client documents, research papers, and contracts to polished outputs.\n\nExplain the experience step by step, from the moment I open or upload a document to producing a finished, usable result: how I convert PDF between multiple formats, edit PDF text (replace/redact), add annotation, insert e-signature, split/merge/manage pages, remove watermarks, OCR, download or share the final result, and what concrete benefits I get.\n\nExplain what AI tools I can use: including AI-powered features like PDF AI agent, summarizer, generation, presentation/mind map creation, watermark removal, OCR, and PDF translation, describe in detail what I actually do as a user, how LightPDF automates/simplifies tasks, and how my workflow becomes faster, easier, and less error-prone in practice.\n\nExplain how LightPDF supports common real-world scenarios such as: \nstudying, completing assignments, preparing reports, office work, HR processing, freelancing, small business operations, project planning, presentations, and remote collaboration.\n\nInclude what outputs I have and how I use them: \nPDFs, documents, mind maps, slides, or pictures, and how these outputs fit naturally into my workflow with other tools.\n\nClarify how LightPDF handles file security, privacy, and temporary storage in simple terms.\n\nConclude this simply and concretely, as if you were describing the real, everyday experience of using LightPDF for the first time to make my work and study simpler, smarter, and more effective.","home.nav.aiTools":"AI Tools","home.nav.pdfAiAgent":"PDF AI Agent","home.nav.pdfWatermarkRemover":"PDF Watermark Remover","home.nav.aiPdfGenerator":"AI PDF Generator","home.nav.pdfTranslation":"PDF Translation","home.nav.aiSummarizer":"AI Summarizer","home.nav.more":"More","home.nav.platforms":"Platforms","home.nav.windowsApp":"Windows App","home.nav.macApp":"Mac App","home.nav.iosApp":"iOS App","home.nav.androidApp":"Android App","home.nav.webApp":"Web App","home.nav.chromeEdgeExtension":"Chrome/Edge Extension","home.nav.useCases":"Use Cases","home.nav.education":"Education","home.nav.healthcare":"Healthcare","home.nav.legal":"Legal","home.nav.insurance":"Insurance","home.nav.resources":"Resources","home.nav.blog":"Blog","home.nav.guide":"Guide","newhomewhatsnew":"What's New","home.nav.pricing":"Pricing","home.nav.account":"Account","navChatdoc":"Chatdoc","ai_pdf":"AI PDF Generator","doc_maker":"Doc Maker","home.nav.company":"Company","home.nav.aboutUs":"About us","home.nav.contactUs":"Contact us","home.nav.earnFreeCredits":"Earn free credits","home.nav.affiliateProgram":"Affiliate program","newsLetterUnvailidEmail":"Please enter a valid email address","newsLetterSubmitted":"You are now subscribed! Thank you","newsLettersSubmitFail":"Failed to subscribe, please try it again","follow us":"Follow us","newsLettersPlaceholder":"Enter your email","newsLettersSubmitBtn":"Subscribe","terms":"Terms","privacy":"Privacy","Cookies Policy":"Cookies Policy","License Agreement":"License Agreement","Consulting Service":"Consulting Service","Vip Agreement":"Vip Agreement","home.footer.copyright":"Copyright © 2026 LightPDF All Rights Reserved.","home.hero.summaryButton":"Get an AI summary of LightPDF","language_name":"English","Make PDF Easy":"Make PDF Easy","light_pdf_header_three_free":"Start Free Trial","tools_function_text4":"Upgrade to Pro","headerDownload":"Download","light_pdf_header_login":"Login","vipCloud":"Cloud","002784":"PDF Tools","Credits":"Credits","userInfoAccount":"My Account","001168":"Exit","popup_buy_v2_text2":"Unlock all premium PDF and AI features to edit, convert, generate, and more advanced tools","popup_buy_v2_text1":"Batch upload and process multiple files, no size limits","popup_buy_v2_text3":"Remove watermarks from photos and PDFs","popup_buy_v2_text4":"Convert, edit, annotate, eSign, redact, secure PDFs, and more","popup_buy_v2_text5":"AI Creates presentations, PDFs, and mindmaps","popup_buy_v2_text6":"ChatPDF & Summarize PDFs, URLs, webpages, and more file types","popup_buy_v2_text7":"AI translates PDFs and documents in 20+languages","popup_buy_v2_text8":"Turn scans and images into editable text with OCR","popup_buy_v2_text9":"One premium account across Web, Windows, Mac, Android & iOS","popup_buy_v2_text10":"Flexible support via live chat or tickets","popup_buy_v2_text11":"Not satisfied? We offer a money back guarantee","popup_buy_v2_text12":"One-time purchase, credits never expire until used","popup_buy_v2_text13":"Credits usable across Web, Windows, Mac, Android & iOS","popup_buy_v2_text14":"Full access to all premium PDF& AI features","popup_buy_v2_enjoy":"Upgrade to Enjoy","popup_buy_v2_premium":"Upgrade to Premium","pricing_page_business_popup":"You’re already a Premium member and can’t purchase again. To get the Team version, please contact our Sales team.","pricing_page_team_user5":"Contact Sales","yearly_features1":"Chat, summarize, analyze, and ask PDFs","yearly_features2":"Remove watermarks from PDFs & images","yearly_features3":"Generate PDFs with simple prompts","yearly_features4":"Turn ideas into presentations","yearly_features5":"Create mindmaps from docs/text/URLs","yearly_features6":"Translate PDFs in 20+ languages","perpetual_features1":"Chat, summarize, analyze, and ask PDFs","perpetual_features2":"Remove watermarks from PDFs & images","perpetual_features3":"Generate PDFs with simple prompts","perpetual_features4":"Turn ideas into presentations","perpetual_features5":"Create mindmaps from docs/text/URLs","perpetual_features6":"Translate PDFs in 20+ languages","promotion_yearly_features1":"Chat, summarize, analyze, and ask PDFs","promotion_yearly_features2":"Remove watermarks from PDFs & images","promotion_yearly_features3":"Generate PDFs with simple prompts","promotion_yearly_features4":"Turn ideas into presentations","promotion_yearly_features5":"Create mindmaps from docs/text/URLs","promotion_yearly_features6":"Translate PDFs in 20+ languages","promotion_perpetual_features1":"Chat, summarize, analyze, and ask PDFs","promotion_perpetual_features2":"Remove watermarks from PDFs & images","promotion_perpetual_features3":"Generate PDFs with simple prompts","promotion_perpetual_features4":"Turn ideas into presentations","promotion_perpetual_features5":"Create mindmaps from docs/text/URLs","promotion_perpetual_features6":"Translate PDFs in 20+ languages","month_introduce1":"1-month access to PDF tools","month_introduce2":"1,000 AI credits, 1-month validity","month_features1":"Chat, summarize, analyze, and ask PDFs","month_features2":"Remove watermarks from PDFs & images","month_features3":"Generate PDFs with simple prompts","month_features4":"Turn ideas into presentations","month_features5":"Create mindmaps from docs/text/URLs","month_features6":"Translate PDFs in 20+ languages","yearly_introduce1":"1-year access to PDF tools","yearly_introduce2":"1,000 AI credits/month, 1-month validity","perpetual_introduce1":"Lifetime access to PDF tools","perpetual_introduce2":"40000 credits received instantly","promotion_buy_introduce_year":"Full access to all PDF tools and AI features","promotion_buy_introduce_lifetime":"Full access to all PDF tools and AI features","500_introduce1":"Low-cost way to try it out","500_introduce2":"One-time purchase, lifetime validity","1000_introduce1":"Best for consistent usage","1000_introduce2":"One-time purchase, lifetime validity","5000_introduce1":"Maximum savings per credit","5000_introduce2":"One-time purchase, lifetime validity","Buy Now":"Buy Now","Start 3-Day Free Trial":"Start 3-Day Free Trial","Subscribe Now":"Subscribe Now","pricing_page_available":"Available","pricing_page_skip_free":"Skip the trial, save $5","pricing_page_ai_features":"AI features:","pricing_page_view_all_features":"View all features & credit rules","Skip the trial, save $5":"Skip the trial, save $5","Fiftydescriberemove":"Valid for 1 week · process up to 10 files","Fiftydescriberemoveeditpdf":"Valid for 1 week · process up to 16 files","pricing_page_ai_credits":"AI Credits","Choose a Plan":"Choose the Right Plan","quota_limit_popup":"Your credits are insufficient. Buy more to continue","Got it":"Got it","image_page_process_fail":"Processing failed","image_page_process_fail_info":"Please try again, if the error persists, please contact us.","try_again":"Try again","contact US":"Contact us","three_free_introduce1":"All AI tools","three_free_introduce2":"Unlimited downloads","three_free_introduce3":"Batch processing","three_free_introduce4":"Recognize text with OCR","three_free_introduce5":"Remove/Erase watermark from PDF","three_free_introduce6":"Remove watermark from image","three_free_introduce7":"PDF translation","three_free_introduce8":"AI create mindmaps","three_free_introduce9":"Chat with any documents","three_free_introduce10":"AI PPT maker","three_free_introduce11":"Resize PDF","three_free_introduce12":"Compress PDF","three_free_introduce13":"Cloud storage","three_free_introduce14":"And more...","three_free_popup_title":"Unlock all Pro features","image_watermark_remover_footer_banner_seo4":"Download Free","image_watermark_remover_footer_banner_seo2":"Remove Watermark Now","Download LightPDF APP for higher productivity":"Download LightPDF APP for Higher Productivity","Click Here":"Click Here","GET IT ON":"GET IT ON","Download on the":"Download on the","newhomeDownload":"Download","PDF Tools Docs":"PDF Tools","navAiTools":"AI Tools","tools_hub_document_editing":"Edit Files","tools_hub_document_processing":"AI File Processing","nav developers":"Developers","nav pricing":"Pricing","three_free_banner":"3 Days of Full Access, Completely Free – Start Your LightPDF Trial Now ->","neweidtimage":"New: Edit Image Text — Change Text Without Recreating the Design","PdfRemoveWatemarkBannerTipClick":"Try It Free","edit_pdf_banner_tip_click":"Try Now","PdfRemoveWatemarkBannerTipMobile":"Free Download the App","Products":"Products","navDesktop":"Desktop","LightPDF":"LightPDF","navMobileApp":"Mobile APP","navScannerV1":"Phone Scanner","Cloud":"Cloud","Document Cloud":"Document Cloud","API Document":"API Document","PricePlan":"Pricing","navPdfTools":"PDF Tools","pdf from word":"PDF to Word ","pdf_to_word_subtitle":"Convert Scanned PDF to editable Word documents online with high precision and preserved formatting.","agent_placeholder_text5":"Convert to {ext}","pdf from ppt":"PDF to PPT ","Easy PDF to PPT Conversion Online":"Easy PDF to PPT Conversion Online","pdf to excel":"PDF to Excel ","Professional PDF to Excel converter":"Professional PDF to Excel converter","pdf from txt":"PDF to TXT ","Magically Convert PDF to TXT in Seconds":"Magically Convert PDF to TXT in Seconds","pdf_to_rtf":"PDF to RTF","pdf_to_rtf_subtitle":"Transform PDF to RTF documents in simple clicks","pdf from png":"PDF to PNG ","Convert PDF to PNG with High Quality":"Convert PDF to PNG with High Quality","pdf from jpg":"PDF to JPG ","Convert PDF to JPG With The Best Quality":"Convert PDF to JPG With The Best Quality","pdfToLongImgLinkTitle":"PDF to Long Image","pdfToLongImgDesc":"One-Click Convert PDF to Long Image in JPG & PNG. Perfect for Seamless Sharing and Viewing","agent_placeholder_text6":"Convert to long image","pdfToPdfaTitle":"PDF to PDF/A","pdfToPdfaContent":"Convert PDF documents to PDF/A for archiving and long-term preservation. Convert to a specific PDF/A ISO conformance level.","pdf_to_markdown":"PDF to Markdown","pdf_to_markdown_subtitle":"Convert PDF to Markdown and get clean, editable content in seconds. Ideal for documentation, blogs, knowledge bases, or developer workflows","pdf_to_scan":"PDF to Scanned PDF","pdf_to_scan_subtitle":"Turn any digital PDF into a realistic scanned-style document.","word to pdf":"Word to PDF ","Convert Word to PDF files with accuracy":"Convert Word to PDF files with accuracy","ppt to pdf":"PPT to PDF ","Convert PPT to PDF in One Click":"Convert PPT to PDF in One Click","excel to pdf":"Excel to PDF ","Instant Convert Excel to PDF":"Instant Convert Excel to PDF","txt_to_pdf":"TXT to PDF","txt_to_pdf_subtitle":"Quickly turn your TXT files into clean, professional PDF documents. Perfect for notes, reports, ebooks, and more","rtf_to_pdf":"RTF to PDF","rtf_to_pdf_subtitle":"Effortless convert your PDF files into editable RTF documents in seconds","markdown_to_pdf":"Markdown to PDF","markdown_to_pdf_subtitle":"Quickly convert your Markdown files into high-quality PDFs that preserve code blocks, tables, images, and more","odp_to_pdf":"ODP to PDF","odp_to_pdf_subtitle":"Convert ODP to PDF online fast without installation, ready to share","ods_to_pdf":"ODS to PDF","ods_to_pdf_subtitle":"Convert ODS documents to PDF online using a simple, secure process","odt_to_pdf":"ODT to PDF","odt_to_pdf_subtitle":"Convert ODT to PDF online instantly with no software installation needed","HTML to PDF":"HTML to PDF","Reliable conversion of HTML to PDF format":"Reliable conversion of HTML to PDF format","agent_placeholder_text7":"Convert https://lightpdf.com to PDF","epub to pdf":"EPUB to PDF","Convert EPUB to PDF in One Click":"Convert EPUB to PDF in One Click","OFD to PDF":"OFD to PDF","High-quality conversion of OFD files to PDF format":"High-quality conversion of OFD files to PDF format","CAJ to PDF":"CAJ to PDF","High-quality conversion of CAJ files to PDF format":"High-quality conversion of CAJ files to PDF format","jpg to pdf":"JPG to PDF ","Best Way to Convert JPG to PDF":"Best Way to Convert JPG to PDF","png to pdf":"PNG to PDF ","Powerful PNG to PDF Converter":"Powerful PNG to PDF Converter","svg_to_pdf":"SVG to PDF","svg_to_pdf_subtitle":"Convert SVG to PDF online and turn vector graphics into PDF easily","tiff_to_pdf":"TIFF to PDF","tiff_to_pdf_subtitle":"Convert TIFF to PDF online without software, running smoothly in your browser","heic_to_pdf":"HEIC to PDF","heic_to_pdf_subtitle":"Turn HEIC photos into easy-to-use PDF file in seconds","webp_to_pdf":"WebP to PDF","webp_to_pdf_subtitle":"Quickly convert WebP to PDF online with accurate, seamless processing","cad to pdf":"CAD to PDF ","Fast and Easy CAD to PDF Conversion":"Fast and Easy CAD to PDF Conversion","ai agent":"LightPDF AI Agent","agent_page_meta":"No skills needed, all you have to do is ask, LightPDF AI agent handles the rest. Edit, Convert, compress, remove watermark, and more.","ai_pdf_subtitle":"Use our free AI PDF maker to create polished and professional PDFs for any project, with zero effort.","agent_placeholder_text2":"Enter your idea, e.g. create an AI application plan for digital marketing","ai_ppt":"AI Presentation Maker","ai_ppt_subtitle":"Simply describe what you want to make, and our AI Presentation Maker will generate stunning slides just for you. Perfect for students, teachers & businesses!","invoice_generator":"AI Invoice Generator","invoice_generator_subtitle":"Generate accurate, professional invoices instantly with AI. Reduce manual work, avoid billing errors, and get paid faster with clean, customizable invoices.","nav chatpdf":"ChatPDF","chatdocFilesSupported":" ✨PDF, Word, Excel, PPT, EPUB, TXT, webpage (url), scanned files supported","navMindmap":"AI Create Mindmaps","mindmapDes":"Convert document content into structured mindmaps with AI","navSummary":"AI Summarizer","summaryDes":"Distill and summarize the content of a document.","agent_placeholder_text4":"Summarize the key ideas","navAnalysis":"AI Analysis","analysisDes":"Conduct an in-depth analysis and interpretation of document information.","chatyoutube_header":"ChatYouTube","chatyoutube_subtitle":"Summarize any YouTube video with AI, chat with the transcript, and export the summary as a PDF. Get key takeaways, ask questions, and convert YouTube to PDF with one click.","pdf_form_filler":"PDF Form Filler","pdf_form_filler_subtitle":"Create fillable PDFs, add form fields, and fill forms faster with Smart Fill and ready-made templates.","heic_to_jpg":"HEIC to JPG","heic_to_jpg_subtitle":"Quickly convert HEIC to JPG online — fast, simple, and device-friendly","heic_to_png":"HEIC to PNG","heic_to_png_subtitle":"Convert HEIC to PNG online for accurate and crisp conversions","agent_placeholder_text8":"Convert to PNG","webp_to_png":"WebP to PNG","webp_to_png_subtitle":"Convert WebP to PNG online with no downloads and clear image results","agent_placeholder_text9":"Convert to PNG","png_to_webp":"PNG to WebP","png_to_webp_subtitle":"Convert PNG to WebP fast and secure directly in your browser","agent_placeholder_text10":"Convert to WebP","edit_pdf":"Edit PDF","edit_pdf_subtitle":"Edit PDF files instantly in your browser with LightPDF’s free online editor. Add, delete, change, and highlight text in one place — ideal for fast edits, no installation required","word_editor":"Word Editor","word_editor_subtitle":"Edit Word documents directly in your browser. No installation needed","markdown_editor":"Markdown Editor ","markdown_editor_subtitle":"Edit Markdown files online and see your changes instantly with a live preview.","replace_pdf_text":"Replace PDF Text","replace_pdf_text_subtitle":"Find and edit text in your PDF instantly. No reformatting, no hassle","agent_placeholder_text11":"Upload a file and enter your request, e.g. find “PDF” and replace all with “LightPDF”","edit_text_in_scanned_pdf":"Scanned PDF Text Editor","edit_text_in_scanned_pdf_subtitle":"Replace or remove text in scanned PDFs on selected pages or across the entire document.","PDF Eraser":"PDF Eraser","removeWatermarkV2Content":"Delete watermark, logo, text, sensitive info and any undesired info from PDF in seconds","remove_handwriting_from_pdf":"PDF Handwriting Remover","remove_handwriting_from_pdf_subtitle":"Remove handwritten text, notes & annotations from scanned PDFs while preserving the original layout and quality.","pdf_remove_annotations":"Remove PDF Annotations","pdf_remove_annotations_subtitle":"Easily remove annotations from pdf online and erase comments in seconds.","annotate pdf":"Annotate PDF ","AnnotatePdfSubTitle":"Annotate and Save PDF Files online","make_pdf_fillable":"Make PDF Fillable","make_pdf_fillable_subtitle":"Convert PDF to fillable form, add interactive fields, and turn PDF into editable PDF in seconds.","fill_out_w9":"Fill Out W-9","fill_out_w9_subtitle":"Fill out your W-9 form online for free, add taxpayer details, sign the certification, and download the finished PDF.","fill_out_w4":"Fill Out W-4","fill_out_w4_subtitle":"Fill out your W-4 form online, complete the required fields, add your signature, and download the finished PDF.","watermark pdf":"Watermark PDF ","Add Text or Image Watermark to PDF":"Add Text or Image Watermark to PDF","agent_placeholder_text13":"Upload a file and enter your request, e.g. add a text watermark “Watermark”, font Arial, size 50, black color, 25% opacity, placed below PDF content, centered on the page, displayed diagonally","removeWatermarkTitle":"PDF Watermark Remover","removeWatermarkContent":"Remove and delete image & text watermark from PDF online in simple clicks","agent_placeholder_text14":"Remove PDF watermark","edit_metadata":"Metadata Editor ","edit_metadata_subtitle":"Edit metadata in PDF, Word, Excel, and PowerPoint files while preserving the original format","split pdf":"Split PDF ","Split PDF File into Single Page Files or by Page Intervals":"Split PDF File into Single Page Files or by Page Intervals","agent_placeholder_text15":"Upload a file and enter your request, e.g. extract pages “1–2, 5” and merge them into one file","mergePdf":"Merge PDF","Combine PDF Files in the Order You Specify":"Combine PDF Files in the Order You Specify","agent_placeholder_text16":"Merge into one PDF file","crop_pdf":"Crop PDF","crop_pdf_info_title":"Crop PDF online in seconds. Auto-trim margins or any unwanted parts from PDF.","cut_pdf":"Cut PDF","cut_pdf_subtitle":"Easily cut or divide a single PDF page into two or more pages. Ideal for scanned books, double-page layouts, or A3 pages you want to split into A4","rotate pdf":"Rotate PDF ","Rotate PDF Document Online":"Rotate PDF Document Online","agent_placeholder_text17":"Rotate pages 90 degrees clockwise","remove_pdf_pages":"Remove PDF Pages","remove_pdf_pages_subtitle":"Instantly remove unwanted pages from PDFs online for free","agent_placeholder_text12":"Upload a file and enter your request, e.g. delete page 1 and pages 3–5","deskew_pdf":"Deskew PDF","deskew_pdf_subtitle":"Automatically straighten pdf scans, align tilted pages, and deskew pdf files online instantly.","compress pdf":"Compress PDF ","Compress PDF Document Online":"Compress PDF to a specific file size such as 100KB, 200KB, 1MB, or any value you enter — quickly and without losing quality.","agent_placeholder_text22":"Compress PDF","resize pdf":"Resize PDF","resize_pdf_subtitle":"Effortlessly change PDF page size and dimension without affecting quality","agent_placeholder_text23":"Adjust page size to A4","PdfScanner":"PDF Scanner","scan OCR Powered. Scan, Edit and Share On the Go  ":"AI-Powered. Scan, edit and save  any document in PDF/JPG/TXT with ease","repair_pdf":"Repair PDF","repair_pdf_subtitle":"Recover corrupted, unreadable, or broken PDFs in seconds","agent_placeholder_text25":"Repair PDF","flatten_pdf":"Flatten PDF","flatten_pdf_subtitle":"Preserve your PDF’s formatting by flattening it, no lost fonts, no layout shifts","agent_placeholder_text26":"Flatten PDF","make_pdf_searchable":"Make PDF Searchable","make_pdf_searchable_subtitle":"Easily transform any PDF into a fully searchable document & find what you need instantly","agent_placeholder_text27":"Convert to searchable document","text_to_outlines":"Text to outlines","text_to_outlines_subtitle":"Make your fonts uneditable and display-perfect across any system or printer","agent_placeholder_text28":"Convert PDF to outlines","protect pdf":"Protect PDF ","Encrypt Your PDF with a Password":"Encrypt Your PDF with a Password","agent_placeholder_text29":"Upload a file and enter your request, e.g. protect PDF, password: LightPDF","unlock pdf":"Unlock PDF ","Remove Security from PDF Online":"Remove Security from PDF Online","agent_placeholder_text30":"Upload a file and enter your request, e.g. unlock PDF, password: LightPDF","sign pdf":"Sign PDF ","signPdfSub":"Sign PDF Document Online","PDF Comparison":"PDF Comparison","Quickly compare differences between two PDFs":"Quickly compare differences between two PDFs","PDF Redaction":"PDF Redaction","Redaction Remove visible text and graphics permanently":"Remove visible text and graphics permanently","headerConvertApi":"PDF Conversion API","ChatDoc API":"ChatPDF API","PDFtoWordAPIEntry":"PDF to Word API","headerOcrApi":"OCR API","PDF Editing API":"PDF Editing API","Photo Cropping API":"Photo Cropping API","Remove Watermark api doc":"PDF Watermark Removal API","lightPDFImageWatermarkRemoverAPI":"Image Watermark Remover API","headerPdfEditSDK":"PDF Editing SDK","ADvertHeaderapi":"PDF Editing Web SDK","Web PDF Editing API":"Web PDF Editing API","image_watermark_remover_header":"AI Image Watermark Remover","image_watermark_remover_info_title":"Quickly remove watermarks, text, logos, stamps, unwanted objects, or people from photos in batches.","agent_placeholder_text32":"Remove watermark from image","ai_logo_remover_header":"AI Logo Remover","ai_logo_remover_info_title":"Effortlessly and precisely remove logo from image with LightPDF AI logo remover","agent_placeholder_text33":"Remove logo from image","ai_sticker_remover_header":"AI sticker remover","ai_sticker_remover_info_title":"Remove sticker & emoji from image with LightPDF AI sticker remover. Restore clean and orginal clarity effortlessly.","agent_placeholder_text34":"Remove emojis from image","Image_text_remover_header":"Image Text Remover","Image_text_remover_info_title":"Automatically remove text watermarks from photo in seconds with AI","agent_placeholder_text35":"Remove text from image","edit_text_in_image":"Image Text Editor","edit_text_in_image_subtitle":"Change or remove existing text in photos, screenshots, and graphics directly in your browser.","remove_handwriting_from_image":"Image Handwriting Remover","remove_handwriting_from_image_subtitle":"Remove handwritten notes, pen marks, answers and scribbles from images while preserving printed text.\n","ocr pdf":"OCR ","ocr_subtitle":"Convert scanned PDFs and images to editable Word, Excel, PDF, PowerPoint, Markdown or TXT files","agent_placeholder_text24":"Convert to editable text","image_to_text":"Image to Text","image_to_text_subtitle":"Convert images to text and get editable content quickly. Ideal for documents, notes, and receipts","jpg_to_word":"JPG to Word","jpg_to_word_subtitle":"Turn JPG images into editable Word files fast. Suitable for forms, receipts, and scanned notes","image_to_excel":"Image to Excel","image_to_excel_subtitle":"Convert images to Excel and get editable spreadsheets quickly. Ideal for reports, data, and office files","screenshot_to_text":"Screenshot to Text ","screenshot_to_text_subtitle":"Turn screenshots into editable text files with batch processing and live editing online.","handwriting_to_text":"Handwriting to Text ","handwriting_to_text_subtitle":"Convert handwritten PDFs and images into editable text without typing them manually","cursive_to_text":"Cursive To Text ","cursive_to_text_subtitle":"Use advanced handwriting ocr to convert cursive scripts to text.","enhance_scanned_pdf":"Enhance Scanned PDF","enhance_scanned_pdf_subtitle":"Improve scanned PDF quality, sharpen blurry text, and make your documents clearer in just a few clicks.","scanned_pdf_cleaner":"Clean Up PDF","scanned_pdf_cleaner_subtitle":"Use an online PDF cleaner to whiten blurry text and fix discolored pages in seconds.","remove_shadow_pdf":"PDF Shadow Remover","remove_shadow_pdf_subtitle":"Remove shadows from PDF files and scanned documents online in just a few clicks.","auto_crop_pdf":"Crop Scanned PDF","auto_crop_pdf_subtitle":"Crop scanned PDF and images online, trim margins and remove unwanted blank space in seconds","handwritten_notes_enhancer":"Handwritten Notes Enhancer","handwritten_notes_enhancer_subtitle":"Clean up handwritten notes, improve handwriting clarity, and make scanned or photographed note PDFs easier to read in just a few click","document_data_extraction":"Document Data Extractor","document_data_extraction_subtitle":"Extract data from PDFs and images to XLSX,CSV, or JSON with AI-powered field and table recognition.","bank_statement_to_excel":"Bank Statement to Excel","bank_statement_to_excel_subtitle":"Extract bank statement data from PDFs or images, then review and export it to XLSX, CSV, or JSON","invoice_to_excel":"Invoice to Excel","invoice_to_excel_subtitle":"Use invoice OCR to extract, edit, and export invoice data as XLSX, CSV, or JSON.","receipt_ocr":"Receipt OCR","receipt_ocr_subtitle":"Extract receipt data from PDFs, scans, photos, and faded prints to XLSX, CSV, or JSON.","purchase_order_ocr":"Purchase Order OCR","purchase_order_ocr_subtitle":"Extract vendor details, PO numbers, dates, totals, and line items from PDF or image purchase orders.","pdfTranslateTitle":"PDF Translation","pdfTranslateContent":"Multi-language supported, keep the layout of the original document","agent_placeholder_text3":"Upload a file and enter your request, e.g. translate into English","image_translator_panel_title":"Image Translation","image_translator_subtitle":"Translate photo online while preserving original layouts, styles, and text alignment.","scanned_pdf_translator":"Translate Scanned PDF","scanned_pdf_translator_subtitle":"Translate scanned PDFs into English or other languages while preserving the original layout.","convert from pdf":"Convert from PDF","convert to pdf":"Convert to PDF","image_convert":"Image Conversion","sidemenu_group1_item1":"Analyze & Create","sidemenu_group1_item5":"Translation","sidemenu_group1_item2":"Image Tools","sidemenu_group1_item4":"Data Extraction","sidemenu_group1_item3":"OCR Tools","Edit Documents":"Edit Documents","Organize PDF":"Organize PDF","Optimize PDF":"Optimize PDF","PDF Security":"PDF Security","tools_hub_scan_enhancement":"Scan Enhancement","tools_hub_format_conversion":"Convert"}</script>
+  
+      
 
-.server-btn {
- padding:6px 13px;
- font-size:12px;
-}
-
-.server-btn:hover,.cat-btn:hover,.q-btn:hover,.btn:hover {
- border-color:var(--accent);
- color:#fff;
- background:#354b80;
-}
-
-.server-btn.active,.cat-btn.active,.q-btn.active {
- background:linear-gradient(120deg,var(--accent),var(--accent2));
- border-color:transparent;
- color:white;
-}
-
-.channel-list-container {
- flex:2.1;
- display:flex;
- flex-direction:column;
- min-width:300px;
-}
-
-.category-bar {
- display:flex;
- gap:7px;
- width:100%;
- margin-bottom:12px;
- overflow-x:auto;
- padding-bottom:6px;
-}
-
-.cat-btn {
- padding:9px 14px;
- border-radius:20px;
- font-size:12px;
- white-space:nowrap;
- flex-shrink:0;
-}
-
-.channel-list {
- display:grid;
- grid-template-columns:repeat(4,minmax(0,1fr));
- gap:10px;
- height:72vh;
- overflow-y:auto;
- background:var(--panel);
- padding:13px;
- border:1px solid var(--border);
- border-radius:12px 12px 0 0;
- align-content:start;
-}
-
-.ch-btn {
- background:var(--panel2);
- padding:9px;
- border-radius:9px;
- cursor:pointer;
- text-align:center;
- border:1px solid var(--border);
- display:flex;
- flex-direction:column;
- align-items:center;
- justify-content:center;
- gap:7px;
- width:100%;
- height:98px;
- transition:.2s;
-}
-
-.ch-btn:hover {
- background:#29395f;
- border-color:var(--accent);
- transform:translateY(-2px);
-}
-
-.ch-btn img {
- width:49px;
- height:49px;
- object-fit:contain;
-}
-
-.ch-btn strong {
- font-size:12px;
- color:#c6d3ff;
- white-space:nowrap;
- overflow:hidden;
- text-overflow:ellipsis;
- width:100%;
-}
-
-.social-footer {
- display:flex;
- gap:9px;
- background:var(--panel);
- padding:12px;
- border:1px solid var(--border);
- border-top:0;
- border-radius:0 0 12px 12px;
- justify-content:center;
- flex-wrap:wrap;
-}
-
-.social-btn {
- padding:9px 14px;
- border-radius:7px;
- text-decoration:none;
- font-weight:bold;
- font-size:12px;
- color:white;
-}
-
-.telegram-btn {background:#168bd0}
-.facebook-btn {background:#2468d8}
-.whatsapp-btn {background:#159c62}
-
-.video-box {
- width:100%;
- aspect-ratio:16/9;
- background:#000;
- border-radius:10px;
- overflow:hidden;
- position:relative;
- border:1px solid var(--border);
-}
-
-#my-video,#clappr-container,#html5-video,#custom-iframe {
- width:100%!important;
- height:100%!important;
- border:0;
- position:absolute;
- inset:0;
-}
-
-.modes {
- display:flex;
- gap:8px;
- margin-top:14px;
- justify-content:center;
- flex-wrap:wrap;
- align-items:center;
-}
-
-.btn {
- padding:9px 14px;
- font-size:12px;
-}
-
-.quality-buttons-wrap {
- display:flex;
- gap:5px;
- background:var(--bg);
- padding:5px;
- border:1px solid var(--border);
- border-radius:8px;
- flex-wrap:wrap;
-}
-
-.q-btn {
- padding:6px 9px;
- font-size:11px;
-}
-
-.pip-btn {
- background:#7555ce;
-}
-
-.input-box {
- display:flex;
- gap:9px;
- max-width:1800px;
- margin:18px auto 10px;
-}
-
-#customUrlInput {
- flex:1;
- min-width:0;
- padding:14px;
- background:var(--panel);
- border:1px solid var(--border);
- color:white;
- border-radius:8px;
- outline:none;
-}
-
-#customUrlInput:focus {
- border-color:var(--accent);
-}
-
-.play-btn {
- background:linear-gradient(120deg,var(--accent),var(--accent2));
- border:0;
- padding:13px 25px;
- border-radius:8px;
- cursor:pointer;
- font-weight:bold;
- color:white;
-}
-
-.empty-message {
- text-align:center;
- color:var(--muted);
- grid-column:1/-1;
- padding:20px;
-}
-
-::-webkit-scrollbar {width:5px;height:5px}
-::-webkit-scrollbar-thumb {
- background:#45547d;
- border-radius:10px;
-}
-
-@media(max-width:700px) {
- body {padding:9px}
- .player-section {padding:12px}
- .logo-header {font-size:23px}
- .channel-list {height:55vh;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:9px}
- .ch-btn {height:90px;padding:6px}
- .ch-btn img {width:43px;height:43px}
- .ch-btn strong {font-size:11px}
- .input-box {margin-top:12px}
- .play-btn {padding:12px}
-}
-
-@media(max-width:380px) {
- .channel-list {grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-</style>
+  <astro-island uid="1jYJkC" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/index.e9805835.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Header&quot;,&quot;value&quot;:true}" await-children=""><!--[--><header class="w-full h-60px xl:h-70px bg-white fixed top-0 z-50 px-16px xl:px-20px border-b border-#f6f6f6 border-solid"><div class="header-v2-nav w-full h-full flex items-center text-[length:var(--header-nav-compact-fontSize)] [--header-nav-item-padding:var(--header-nav-compact-itemPadding)] [&amp;_.header-v2-nav-item]:px-[var(--header-nav-item-padding)] [@media(min-width:1400px)]:text-[length:var(--header-nav-desktop-fontSize)] [@media(min-width:1400px)]:[--header-nav-item-padding:var(--header-nav-desktop-itemPadding)] [@media(min-width:1601px)]:text-[length:var(--header-nav-wide-fontSize)] [@media(min-width:1601px)]:[--header-nav-item-padding:var(--header-nav-wide-itemPadding)]" style="--header-nav-wide-fontSize:16px;--header-nav-wide-gap:8px;--header-nav-wide-itemPadding:8px;--header-nav-desktop-fontSize:15px;--header-nav-desktop-gap:7.5px;--header-nav-desktop-itemPadding:7.5px;--header-nav-compact-fontSize:12px;--header-nav-compact-gap:4px;--header-nav-compact-itemPadding:6px;"><div class="w-fit h-full shrink-0 cursor-pointer" style=""><img src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/logo-en.7d9267a8.svg" alt="logo" class="w-140px xl:w-150px h-full"></div><div class="ml-24px header-v2-nav-content h-full relative hidden xl:flex items-center"><ul class="header-v2-nav-list h-full flex items-center gap-[var(--header-nav-compact-gap)] [@media(min-width:1400px)]:gap-[var(--header-nav-desktop-gap)] [@media(min-width:1601px)]:gap-[var(--header-nav-wide-gap)]"><li class="w-fit h-full relative group"><button type="button" class="header-v2-nav-item w-full h-full flex items-center justify-center cursor-pointer border-0 bg-transparent p-0 font-inherit" aria-expanded="false"><span class="whitespace-nowrap font-500 text-[1em] leading-[1em] text-#2d2d33 [@media(hover:hover)_and_(pointer:fine)]:group-hover:text-#0270FE transition-colors duration-300">AI Tools</span><!--[--><!--]--><svg class="inline-block w-12px h-12px ml-4px transition-transform duration-300" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="f604t0-a" style="mask-type:alpha;" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><path fill="#D9D9D9" d="M0 0h12v12H0z"></path></mask><g mask="url(#f604t0-a)"><path d="M.75 3.375 6 8.625l5.25-5.25" stroke="currentColor" stroke-width="1.241" stroke-linecap="round" stroke-linejoin="round"></path></g></svg></button><!----></li><li class="w-fit h-full relative group"><button type="button" class="header-v2-nav-item w-full h-full flex items-center justify-center cursor-pointer border-0 bg-transparent p-0 font-inherit" aria-expanded="false"><span class="whitespace-nowrap font-500 text-[1em] leading-[1em] text-#2d2d33 [@media(hover:hover)_and_(pointer:fine)]:group-hover:text-#0270FE transition-colors duration-300">Edit Files</span><!--[--><!--]--><svg class="inline-block w-12px h-12px ml-4px transition-transform duration-300" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="f604t0-a" style="mask-type:alpha;" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><path fill="#D9D9D9" d="M0 0h12v12H0z"></path></mask><g mask="url(#f604t0-a)"><path d="M.75 3.375 6 8.625l5.25-5.25" stroke="currentColor" stroke-width="1.241" stroke-linecap="round" stroke-linejoin="round"></path></g></svg></button><!----></li><li class="w-fit h-full relative group"><button type="button" class="header-v2-nav-item w-full h-full flex items-center justify-center cursor-pointer border-0 bg-transparent p-0 font-inherit" aria-expanded="false"><span class="whitespace-nowrap font-500 text-[1em] leading-[1em] text-#2d2d33 [@media(hover:hover)_and_(pointer:fine)]:group-hover:text-#0270FE transition-colors duration-300">AI File Processing</span><!--[--><!--]--><svg class="inline-block w-12px h-12px ml-4px transition-transform duration-300" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="f604t0-a" style="mask-type:alpha;" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><path fill="#D9D9D9" d="M0 0h12v12H0z"></path></mask><g mask="url(#f604t0-a)"><path d="M.75 3.375 6 8.625l5.25-5.25" stroke="currentColor" stroke-width="1.241" stroke-linecap="round" stroke-linejoin="round"></path></g></svg></button><!----></li><!----><li class="w-fit h-full relative group"><button type="button" class="header-v2-nav-item w-full h-full flex items-center justify-center cursor-pointer border-0 bg-transparent p-0 font-inherit" aria-expanded="false"><span class="whitespace-nowrap font-500 text-[1em] leading-[1em] text-#2d2d33 [@media(hover:hover)_and_(pointer:fine)]:group-hover:text-#0270FE transition-colors duration-300">Products</span><!--[--><!--]--><svg class="inline-block w-12px h-12px ml-4px transition-transform duration-300" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="f604t0-a" style="mask-type:alpha;" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><path fill="#D9D9D9" d="M0 0h12v12H0z"></path></mask><g mask="url(#f604t0-a)"><path d="M.75 3.375 6 8.625l5.25-5.25" stroke="currentColor" stroke-width="1.241" stroke-linecap="round" stroke-linejoin="round"></path></g></svg></button><!----></li><!----><!----><!----><li class="w-fit h-full relative group"><div class="header-v2-nav-item w-full h-full flex items-center justify-center cursor-pointer"><span class="font-500 text-[1em] leading-[1em] text-#2d2d33 group-hover:text-#0270FE transition-all duration-300">Developers</span><!--[--><span class="ml-4px w-39px h-20px bg-no-repeat bg-center bg-cover bg-[url(/src/assets/icons/nav-pop/api.svg)]"></span><!--]--><svg class="inline-block w-12px h-12px ml-4px group-hover:rotate-180 group-hover:text-#0270FE transition-all duration-300" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="f604t0-a" style="mask-type:alpha;" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><path fill="#D9D9D9" d="M0 0h12v12H0z"></path></mask><g mask="url(#f604t0-a)"><path d="M.75 3.375 6 8.625l5.25-5.25" stroke="currentColor" stroke-width="1.241" stroke-linecap="round" stroke-linejoin="round"></path></g></svg></div><!----></li><li class="w-fit h-full"><a class="header-v2-nav-item w-full h-full flex items-center justify-center font-500 text-[1em] leading-[1em] text-#2d2d33 hover:text-#0270FE transition-all duration-300 cursor-pointer" href="/pricing"><span>Pricing</span></a></li></ul></div><div class="block xl:hidden h-full ml-7px"><div class="w-fit h-full relative"><div class="w-full h-full px-12px flex items-center justify-center cursor-pointer"><span class="text-#2d2d33 font-500 text-16px leading-16px transition-all duration-300">PDF Tools</span><!--[--><!--]--><svg class="inline-block w-12px h-12px ml-4px transition-all duration-300 text-#2d2d33" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="f604t0-a" style="mask-type:alpha;" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><path fill="#D9D9D9" d="M0 0h12v12H0z"></path></mask><g mask="url(#f604t0-a)"><path d="M.75 3.375 6 8.625l5.25-5.25" stroke="currentColor" stroke-width="1.241" stroke-linecap="round" stroke-linejoin="round"></path></g></svg></div><!----></div></div><div class="ml-auto pl-16px shrink-0 hidden xl:block"><div class="w-fit flex items-center gap-16px"><div><!--[--><button class="group/custom transition-all ease-in-out duration-200 relative h-42px w-full px-8px rounded-8px bg-gradient-to-r from-#035efe via-#028dfd to-#035efe bg-[length:200%_100%] bg-[position:100%_0] md:hover:bg-[position:0_0] text-[var(--theme-text-color)] text-16px lg:px-12px 1xl:px-14px 2xl:px-16px h-35px! md:h-42px!" style="--theme-text-color:#FFFFFF;--theme-disable-color:#9CC9FF;--theme-disable-text-color:#FFFFFF;"><!--[--><div class="flex items-center gap-8px"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M9.51411 1.63518L7.23208 5.46372C6.85742 6.09153 6.03813 6.28852 5.41953 5.89821V5.89821L2.99758 4.37103C2.11478 3.81318 1.02117 4.46861 1 5.43242V5.43242V5.48765C1.00184 5.5751 1.01289 5.66532 1.03314 5.75737V5.75737L2.84845 12.9183C3.06478 13.8848 3.9218 14.5707 4.91139 14.5707V14.5707H16.3528C17.3424 14.5707 18.1994 13.8848 18.4167 12.9183V12.9183L20.2311 5.75737C20.2513 5.66532 20.2624 5.5751 20.2642 5.48673V5.48673V5.43242C20.244 4.46861 19.1494 3.81318 18.2666 4.37103V4.37103L15.8447 5.89821C15.227 6.28852 14.4077 6.09153 14.0331 5.46372V5.46372L11.7501 1.63518C11.4979 1.21173 11.0652 1 10.6326 1V1C10.199 1 9.76634 1.21173 9.51411 1.63518" stroke="white" stroke-width="1.6"></path></svg><span class="text-white group-hover:text-#0270FE text-14px md:text-16px lg:text-12.6px 1xl:text-14px 2xl:text-16px transition-all duration-300 font-[Poppins] font-500 leading-16px relative z-1">Upgrade to Pro</span></div><!--]--></button><!--]--></div><div><div class="drop cursor-pointer relative header-account-entry-logout" data-v-1a9ff509><!----><div class="shrink-0 whitespace-nowrap" data-v-1a9ff509><span class="text-black whitespace-nowrap text-16px lg:text-12.6px 1xl:text-14px 2xl:text-16px transition-all duration-300 hover:text-#0270FE font-[Poppins]" data-v-1a9ff509>Login</span></div><div class="drop-menu header-account-menu" style="display:none;" data-v-1a9ff509><!----></div></div></div></div></div><div class="absolute right-24px block xl:hidden"><svg class="inline-block" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10"><path d="M1.25 3.75h17.5M1.25 10.126h17.5M1.25 16.625h17.5"></path></g></svg></div></div></header><!----><div class="tip w-full mt-60px xl:mt-70px cursor-pointer left-0 top-0 z-3 fixed overflow-hidden" role="banner" aria-label="Promotion Banner" style="display:none;" data-v-3318092a><img src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/headerBannerDesktop--en@3840w.bb744cd2.png" class="hidden md:block absolute top-0 left-0 w-full h-full object-cover object-top -z-1" alt="Banner Background" fetchpriority="high" data-v-3318092a><img src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/headerBannerMobile--en@750w.8d6c6b76.png" class="block md:hidden absolute top-0 left-0 w-full h-full object-cover object-top -z-1" alt="Banner Background" fetchpriority="high" data-v-3318092a><div class="relative z-2 h-46px w-full flex items-center justify-center gap-24px overflow-hidden px-12px md:h-52px" data-v-3318092a><span class="promotion-banner-text block min-w-0 max-w-full truncate whitespace-nowrap text-20px leading-26px md:hidden" style="color:#FF2F8C;webkit-text-stroke-color:#FFFFFF;" data-v-3318092a></span><span class="promotion-banner-text hidden min-w-0 max-w-full truncate whitespace-nowrap text-26px leading-32px md:block" style="color:#DC2626;webkit-text-stroke-color:#FFC800;" data-v-3318092a>&nbsp;</span><!----></div><button type="button" class="close-btn absolute inset-y-0 right-17px z-3 my-auto hidden h-28px w-28px items-center justify-center rounded-full bg-[#F83765]/50 backdrop-blur-[3px] transition-all md:flex" aria-label="Close Banner" data-v-3318092a><img class="block h-20px w-20px" src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/tip-close.ebc36ea7.svg" alt="close" data-v-3318092a></button></div><!--]--></astro-island>
+  <head>
+  <link rel="preload" as="image" href="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/bannerbg.c62a358e.avif" fetchpriority="high" type="image/avif" media="(min-width: 768px)">
 </head>
 
-<body>
+<section class=" relative w-full flex flex-col items-center justify-center pt-135px md:pt-140px overflow-hidden text-center">
+  <!-- Background -->
+  <div class="absolute top-0 left-0 w-full h-full z-[-1]">
+    <img src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/banner-bg.16a068cb.avif" alt="background" class="w-full h-full object-cover" width="1920" height="982" decoding="async" fetchpriority="high">  
+  </div>
 
-<div class="main-container">
 
- <section class="player-section">
-  <div class="header-wrapper">
-   <div class="logo-header">PARVES TV</div>
-
-   <div class="header-server-switcher">
-    <div class="server-title" id="activeChannelName">চ্যানেল সিলেক্ট করুন</div>
-
-    <div class="server-stacked-notices">
-     <div class="server-inline-notice">
-      <marquee>📢 কোনো ভিডিও প্লে না হলে অন্য প্লেয়ার মোডে চেষ্টা করুন।</marquee>
-     </div>
-     <div class="server-inline-notice">
-      <marquee>💬 যেকোনো প্রয়োজনে নিচে যোগাযোগ করুন।</marquee>
-     </div>
+  <div class="page-scale w-full max-w-[1350px] flex flex-col items-center px-24px md:px-0">
+    <!-- Top Label -->
+    <div class="flex items-center justify-center gap-2 text-[#0270FE] font-normal text-14px md:text-16px mb-16px md:mb-8px">
+      <img src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/star.976b5a08.svg" alt="star" class="w-16px h-16px">
+      <span>Make PDF Easy</span>
     </div>
 
-    <div class="server-buttons-wrap" id="serverButtonsContainer"></div>
-   </div>
+    <!-- Main Title -->
+    <h1 class="font-semibold text-30px leading-normal md:leading-112px md:text-[90px] text-[#000000]">
+      <div class="home-banner-eyebrow gradient-text flex justify-center flex-wrap gap-x-3"><span data-text="AI-Powered">AI-Powered</span> PDF</div>
+    </h1>
+
+    <!-- Subtitle -->
+      <h2 class="font-medium text-28px leading-38px md:text-[44px] md:leading-[66px] text-[#000000] mt-4px  mb-8px md:mt-8px md:mb-24px">
+        Simplify Every Step of Your Document Workflow
+      </h2>
+
+    <!-- Description -->
+    <p class="font-normal text-14px md:text-20px  leading-26px md:text-[#2D2D33B2] text-[#000000B2] max-w-[1000px] md:mb-40px mb-24px">
+      Your all-in-one AI-powered PDF solution to edit, convert, annotate, sign, organize, chat, and more — available on Web, Mobile &amp; Desktop.
+    </p>
+
+    <!-- Buttons -->
+     <div class=" flex items-center md:flex-row flex-col justify-center md:gap-24px gap-12px md:mb-24px mb-13px">
+      <a href="/tools" class="explore-btn inline-flex min-w-250px max-w-full h-56px items-center justify-center gap-8px px-24px md:px-32px rounded-16px text-white font-medium text-18px leading-24px hover:brightness-[0.96] transition" style="background:linear-gradient(90deg, #028DFD 0%, #035EFE 100%);" data-v-a50d0239><span class="min-w-0 whitespace-nowrap" data-v-a50d0239>Explore All Tools</span><svg class="inline-block explore-btn__icon h-[30px] w-[30px] shrink-0" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-v-a50d0239><rect width="30" height="30" rx="15" fill="#fff"></rect><path d="M8 15h13" stroke="#0362FE" stroke-width="2" stroke-linecap="round"></path><path d="m16 20 5-5-5-5" stroke="#0362FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+      <astro-island uid="Z2o8uzv" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/HomeBannerDownload.03288980.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;showArrow&quot;:[0,false]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;HomeBannerDownload&quot;,&quot;value&quot;:true}" await-children=""><div class="home-banner-download-wrap home-banner-download-wrap" data-v-da42cbbe><!----><div class="hidden lg:block btn-desktop-only" data-v-da42cbbe><div class="group flex justify-center relative" data-v-da42cbbe data-v-f2bca94c><div class="w-fit h-fit" data-v-f2bca94c><a href="https://download.aoscdn.com/down.php?softid=lightpdfeditor" data-v-f2bca94c><!--[--><div class="home-banner-download-btn w-250px h-56px !rounded-16px !font-500 min-w-254px h-56px text-center box-border rounded-8px text-16px md:text-18px font-500 leading-normal md:leading-28px px-24px bg-gradient-to-r from-#035efe via-#028dfd to-#035efe bg-[length:200%_100%] bg-[position:100%_0] hover:bg-[position:0_0] font-semibold text-white transition-all ease-in-out duration-300 cursor-pointer flex items-center justify-center" data-v-f2bca94c><!----><!--[--><span data-v-f2bca94c>Download</span><!--]--><!----></div><!--]--></a></div><div class="download-popup group-hover:visible group-hover:opacity-[1] group-hover:pointer-events-auto pointer-events-none cursor-default invisible hidden md:flex flex-col items-center justify-between opacity-0 absolute w-[540px] h-[194px] rounded-[20px] shadow-[0px_8px_30px_0px_rgba(133,131,167,0.3)] py-[30px] px-[60px] text-center backdrop-blur-[10px] bg-[#fff] z-10 transition-all duration-300 ease-in left-[50%] translate-x-[-50%] top-full mt-8px" data-v-f2bca94c><div class="text-[15px] font-normal text-[#0270FE]" data-v-f2bca94c>Download LightPDF APP for Higher Productivity</div><div class="flex justify-between items-center" data-v-f2bca94c><!--[--><a rel="nofollow" id="homedownload" href="https://download.aoscdn.com/down.php?softid=lightpdfeditor" class="windows-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_self" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[32px] h-[32px] bg-[url(/src/assets/icons/icon-win.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div><div class="w-[40px] h-[40px] bg-[url(/src/assets/images/index/download.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-100 group-hover/item:scale-100 absolute opacity-0 scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>Windows</div><div class="text-[#222A41] text-[12px] absolute h-full left-[50%] top-[10px] translate-x-[-50%] whitespace-nowrap group-hover/item:translate-y-[-50%] duration-300 transition-all opacity-0 group-hover/item:opacity-[1]" data-v-f2bca94c>Click Here</div></div><!--]--></a><a rel="nofollow" id="homedownload" href="https://download.aoscdn.com/down.php?softid=lightpdfeditor" class="mac-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_self" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[32px] h-[32px] bg-[url(/src/assets/images/index/mac.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div><div class="w-[40px] h-[40px] bg-[url(/src/assets/images/index/download.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-100 group-hover/item:scale-100 absolute opacity-0 scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>Mac</div><div class="text-[#222A41] text-[12px] absolute h-full left-[50%] top-[10px] translate-x-[-50%] whitespace-nowrap group-hover/item:translate-y-[-50%] duration-300 transition-all opacity-0 group-hover/item:opacity-[1]" data-v-f2bca94c>Click Here</div></div><!--]--></a><a rel="nofollow" id="homedownload" href="https://apps.apple.com/app/lightpdf-edit-view-sign-pdf/id1622949837" class="iphone-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_blank" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[31px] h-[36px] bg-[url(/src/assets/images/index/apple.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>iPhone/iPad</div></div><div class="absolute w-[86px] h-[86px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-0 group-hover/item:scale-100 opacity-0 group-hover/item:opacity-100 transition-all duration-300 bg-[url(/src/assets/images/index/qr-download.png)] bg-no-repeat bg-center bg-cover" data-v-f2bca94c></div><!--]--></a><a rel="nofollow" id="homedownload" href="https://play.google.com/store/apps/details?id=com.wangxutech.lightpdfcloud" class="android-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_blank" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[31px] h-[36px] bg-[url(/src/assets/images/index/and.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>Android</div></div><div class="absolute w-[86px] h-[86px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-0 group-hover/item:scale-100 opacity-0 group-hover/item:opacity-100 transition-all duration-300 bg-[url(/src/assets/images/index/qr-download.png)] bg-no-repeat bg-center bg-cover" data-v-f2bca94c></div><!--]--></a><!--]--></div><div class="w-full h-20px bg-transparent absolute top-[-10px] left-0" data-v-f2bca94c></div></div></div></div></div></astro-island>
+     </div>
+
+     <img src="data:image/png;base64,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" alt="downloads" class="w-280px h-28px md:block hidden">
+
+    <!-- Hero Image：边框用内联样式，避免 Uno 未生成；box-border 避免边框把盒子撑出父级被 section overflow-hidden 裁切 -->
+    <img src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/mobilebanner.338b98f9.avif" alt="LightPDF mobile banner" class="w-full max-w-[375px] mb-51px block rounded-10px md:hidden" width="654" height="352" style="box-shadow: 0px 12px 40px 0px #00488833;">
+
+    <div class="hero-video-frame hidden aspect-[1300/691] box-border z-0 bg-transparent mt-20px md:mt-54px mb-50px md:mb-110px w-full max-w-[calc(100%-12px)] w-[1318px] md:block md:rounded-24px" style="box-shadow: 0px 24px 58px 0px #00488833;">
+      <img src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/bannerbg.c62a358e.avif" alt="" aria-hidden="true" class="hero-video-poster hidden w-full aspect-[1300/691] object-cover md:block rounded-15px" width="1300" height="691" loading="eager" fetchpriority="high" decoding="async">
+      <video class="hero-video hidden w-full aspect-[1300/691] md:block rounded-15px" data-src="https://cfcdn.apowersoft.info/video/lightpdf/home-video.mp4" preload="none" autoplay muted loop playsinline aria-label="LightPDF product introduction video">
+        <track kind="captions" src="/home-video-captions-en.vtt" srclang="en" label="English">
+      </video>
+    </div>
   </div>
-
-  <div class="video-box">
-   <video id="my-video" class="video-js vjs-big-play-centered" controls autoplay playsinline preload="auto"></video>
-   <div id="clappr-container" style="display:none"></div>
-   <video id="html5-video" controls autoplay playsinline preload="auto" style="display:none"></video>
-   <iframe id="custom-iframe" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen style="display:none"></iframe>
-  </div>
-
-  <div class="modes">
-   <button class="btn" onclick="switchMode('videojs')">Main Player</button>
-   <button class="btn" onclick="switchMode('clappr')">Clappr</button>
-   <button class="btn" onclick="switchMode('html5')">HTML5</button>
-   <button class="btn" onclick="switchMode('iframe')">Iframe</button>
-
-   <div class="quality-buttons-wrap">
-    <button class="q-btn active" onclick="setManualQualityByHeight(-1,this)">Auto</button>
-    <button class="q-btn" onclick="setManualQualityByHeight(1080,this)">1080p</button>
-    <button class="q-btn" onclick="setManualQualityByHeight(720,this)">720p</button>
-    <button class="q-btn" onclick="setManualQualityByHeight(480,this)">480p</button>
-    <button class="q-btn" onclick="setManualQualityByHeight(360,this)">360p</button>
-   </div>
-
-   <button class="btn pip-btn" onclick="togglePIP()">PIP Mode</button>
-  </div>
- </section>
-
- <section class="channel-list-container">
-  <div class="category-bar">
-   <button class="cat-btn active" onclick="filterCategory('all',this)">All</button>
-   <button class="cat-btn" onclick="filterCategory('sports',this)">Sports</button>
-   <button class="cat-btn" onclick="filterCategory('bangla',this)">Bangla</button>
-   <button class="cat-btn" onclick="filterCategory('indian_bangla',this)">Indian Bangla</button>
-   <button class="cat-btn" onclick="filterCategory('hindi',this)">Hindi</button>
-   <button class="cat-btn" onclick="filterCategory('music',this)">Music</button>
-   <button class="cat-btn" onclick="filterCategory('documentary',this)">Documentary</button>
-   <button class="cat-btn" onclick="filterCategory('cartoon',this)">Cartoon</button>
-  </div>
-
-  <div class="channel-list" id="channelContainer">
-   <p class="empty-message">চ্যানেল লোড হচ্ছে...</p>
-  </div>
-
-  <div class="social-footer">
-   <a href="https://t.me/00" target="_blank" rel="noopener" class="social-btn telegram-btn">📱 Telegram</a>
-   <a href="https://www.facebook.com/00" target="_blank" rel="noopener" class="social-btn facebook-btn">🌐 Facebook</a>
-   <a href="https://wa.me/8800000" target="_blank" rel="noopener" class="social-btn whatsapp-btn">💬 WhatsApp</a>
-  </div>
- </section>
-</div>
-
-<div class="input-box">
- <input type="text" id="customUrlInput" placeholder="লিঙ্ক এখানে দিন (M3U8, MPD বা URL)...">
- <button class="play-btn" onclick="playCustom()">প্লে করুন</button>
-</div>
+</section>
 
 <script>
-const videoEl=document.getElementById('my-video');
-const iframe=document.getElementById('custom-iframe');
-const clapprEl=document.getElementById('clappr-container');
-const html5El=document.getElementById('html5-video');
+  (() => {
+    const desktopMediaQuery = window.matchMedia("(min-width: 768px)");
+    const bannerFrame = document.querySelector(".hero-video-frame");
+    const bannerVideo = bannerFrame?.querySelector("video");
 
-let playerInstance=videojs('my-video',{autoplay:true});
-let clapprInstance=null,hls=null,dashPlayer=null;
-let currentMode='videojs',currentUrl='';
-let allChannels=[],currentFilter='all';
-let currentChannelObj=null,currentServerIndex=0;
-let stallCheckInterval=null;
+    if (!(bannerVideo instanceof HTMLVideoElement)) return;
 
-const FALLBACK_LOGO='https://i.postimg.cc/W1z5BGPZ/20240823_024712.png';
+    let hasUserInteraction = false;
+    let isListeningForInteraction = false;
+    const interactionEvents = ["pointermove", "pointerdown", "mousemove", "keydown", "wheel", "touchstart", "scroll"];
 
-function togglePIP(){
- const media=currentMode==='html5'?html5El:videoEl;
- if(document.pictureInPictureEnabled && media.readyState>0){
-  media.requestPictureInPicture().catch(()=>{});
- }
-}
+    const showPoster = () => {
+      bannerFrame?.classList.remove("is-video-ready");
+    };
 
-function switchMode(mode){
- if(currentUrl)loadChannelUrl(currentUrl,mode);
-}
+    const hidePoster = () => {
+      bannerFrame?.classList.add("is-video-ready");
+    };
 
-function loadChannel(ch){
- currentChannelObj=ch;
- currentServerIndex=0;
+    const removeInteractionListeners = () => {
+      isListeningForInteraction = false;
+      interactionEvents.forEach((eventName) => {
+        window.removeEventListener(eventName, loadBannerVideo);
+      });
+    };
 
- const box=document.getElementById('serverButtonsContainer');
- document.getElementById('activeChannelName').innerText=ch.name+' - সার্ভার পরিবর্তন করুন';
- box.innerHTML='';
+    const addInteractionListeners = () => {
+      if (isListeningForInteraction) return;
+      isListeningForInteraction = true;
+      interactionEvents.forEach((eventName) => {
+        window.addEventListener(eventName, loadBannerVideo, { passive: true });
+      });
+    };
 
- const urls=Array.isArray(ch.url)?ch.url:[ch.url];
+    const loadBannerVideo = () => {
+      if (hasUserInteraction || !desktopMediaQuery.matches) return;
+      hasUserInteraction = true;
+      removeInteractionListeners();
 
- urls.forEach((link,index)=>{
-  const btn=document.createElement('button');
-  btn.className='server-btn'+(index===0?' active':'');
-  btn.textContent='Server '+(index+1);
+      const nextSrc = bannerVideo.getAttribute("data-src");
+      if (!nextSrc) return;
 
-  btn.onclick=()=>{
-   currentServerIndex=index;
-   document.querySelectorAll('.server-btn').forEach(b=>b.classList.remove('active'));
-   btn.classList.add('active');
-   loadChannelUrl(link,currentMode);
-  };
-  box.appendChild(btn);
- });
+      bannerVideo.src = nextSrc;
+      bannerVideo.load();
+      void bannerVideo.play().catch(() => {});
+    };
 
- loadChannelUrl(urls[0],currentMode);
-}
+    const syncBannerVideoSource = () => {
+      if (!desktopMediaQuery.matches) {
+        if (bannerVideo.getAttribute("src")) {
+          bannerVideo.pause();
+          bannerVideo.removeAttribute("src");
+          bannerVideo.load();
+        }
+        showPoster();
+        hasUserInteraction = false;
+        addInteractionListeners();
+        return;
+      }
 
-function handleFallback(){
- if(!currentChannelObj)return;
- const urls=Array.isArray(currentChannelObj.url)?currentChannelObj.url:[currentChannelObj.url];
+      if (!bannerVideo.getAttribute("src")) {
+        showPoster();
+      }
+    };
 
- if(currentServerIndex<urls.length-1){
-  currentServerIndex++;
-  document.querySelectorAll('.server-btn').forEach((b,i)=>{
-   b.classList.toggle('active',i===currentServerIndex);
-  });
-  loadChannelUrl(urls[currentServerIndex],currentMode);
- }
-}
+    bannerVideo.addEventListener("playing", hidePoster);
+    bannerVideo.addEventListener("canplay", hidePoster);
+    syncBannerVideoSource();
+    addInteractionListeners();
 
-function setManualQualityByHeight(height,btn){
- document.querySelectorAll('.q-btn').forEach(b=>b.classList.remove('active'));
- if(btn)btn.classList.add('active');
-
- if(!hls)return;
-
- if(height===-1){
-  hls.currentLevel=-1;
-  return;
- }
-
- let closest=-1,diff=Infinity;
- hls.levels.forEach((level,index)=>{
-  if(level.height){
-   const d=Math.abs(level.height-height);
-   if(d<diff){diff=d;closest=index;}
-  }
- });
-
- if(closest!==-1)hls.currentLevel=closest;
-}
-
-function loadChannelUrl(url,mode){
- if(!url)return;
-
- currentUrl=url;
- currentMode=mode;
-
- [videoEl,iframe,clapprEl,html5El].forEach(el=>el.style.display='none');
-
- if(stallCheckInterval)clearInterval(stallCheckInterval);
- if(hls){hls.destroy();hls=null;}
- if(dashPlayer){dashPlayer.reset();dashPlayer=null;}
- if(clapprInstance){clapprInstance.destroy();clapprInstance=null;}
-
- playerInstance.pause();
- playerInstance.reset();
- html5El.pause();
- html5El.removeAttribute('src');
- html5El.load();
- iframe.src='about:blank';
-
- document.querySelectorAll('.q-btn').forEach((b,i)=>b.classList.toggle('active',i===0));
-
- const play=(media,isVjs=false)=>{
-  if(isVjs){
-   media.muted(false);
-   media.volume(1);
-   const p=media.play();
-   if(p)p.catch(()=>{
-    media.muted(true);
-    media.play().catch(()=>{});
-   });
-  }else{
-   media.muted=false;
-   media.volume=1;
-   const p=media.play();
-   if(p)p.catch(()=>{
-    media.muted=true;
-    media.play().catch(()=>{});
-   });
-  }
- };
-
- if(mode==='iframe'){
-  iframe.src=url;
-  iframe.style.display='block';
-  return;
- }
-
- if(mode==='clappr'){
-  clapprEl.style.display='block';
-  clapprInstance=new Clappr.Player({
-   source:url,parentId:'#clappr-container',
-   width:'100%',height:'100%',autoPlay:true,mute:false
-  });
-  return;
- }
-
- if(mode==='html5'){
-  html5El.style.display='block';
-  html5El.onerror=handleFallback;
-  html5El.src=url;
-  play(html5El);
-  return;
- }
-
- videoEl.style.display='block';
-
- if(/\.mpd($|\?)/i.test(url)||url.includes('dash')){
-  if(typeof dashjs!=='undefined'){
-   dashPlayer=dashjs.MediaPlayer().create();
-   dashPlayer.initialize(videoEl,url,true);
-  }else{
-   playerInstance.src({src:url,type:'application/dash+xml'});
-  }
-  return;
- }
-
- if(typeof Hls!=='undefined'&&Hls.isSupported()){
-  hls=new Hls({
-   enableWorker:true,
-   lowLatencyMode:false,
-   maxBufferLength:60,
-   maxMaxBufferLength:120,
-   maxBufferSize:60*1024*1024,
-   backBufferLength:30,
-   liveSyncDurationCount:6,
-   liveMaxLatencyDurationCount:15,
-   fragLoadingTimeOut:20000,
-   fragLoadingMaxRetry:4,
-   fragLoadingRetryDelay:1000
-  });
-
-  hls.loadSource(url);
-  hls.attachMedia(videoEl);
-
-  hls.on(Hls.Events.MANIFEST_PARSED,()=>play(playerInstance,true));
-
-  let lastTime=-1,stalls=0;
-  stallCheckInterval=setInterval(()=>{
-   if(!videoEl.paused){
-    if(videoEl.currentTime===lastTime){
-     if(++stalls>=3){
-      hls?.startLoad();
-      stalls=0;
-     }
-    }else{
-     stalls=0;
-     lastTime=videoEl.currentTime;
+    if (typeof desktopMediaQuery.addEventListener === "function") {
+      desktopMediaQuery.addEventListener("change", syncBannerVideoSource);
+    } else {
+      desktopMediaQuery.addListener(syncBannerVideoSource);
     }
-   }
-  },2000);
-
-  hls.on(Hls.Events.ERROR,(event,data)=>{
-   if(!data.fatal)return;
-
-   if(data.type===Hls.ErrorTypes.NETWORK_ERROR){
-    hls.startLoad();
-   }else if(data.type===Hls.ErrorTypes.MEDIA_ERROR){
-    hls.recoverMediaError();
-   }else{
-    handleFallback();
-   }
-  });
- }else if(videoEl.canPlayType('application/vnd.apple.mpegurl')){
-  playerInstance.src({src:url,type:'application/x-mpegURL'});
-  play(playerInstance,true);
- }else{
-  playerInstance.src({src:url,type:'application/x-mpegURL'});
-  play(playerInstance,true);
- }
-}
-
-function playCustom(){
- const url=document.getElementById('customUrlInput').value.trim();
- if(!url)return;
-
- document.getElementById('serverButtonsContainer').innerHTML='';
- document.getElementById('activeChannelName').innerText='Custom URL';
- currentChannelObj=null;
- loadChannelUrl(url,currentMode);
-}
-
-function normalizeCategory(group,title){
- const g=(group||'').toLowerCase().replace(/[\s-]+/g,'_');
- const t=(title||'').toLowerCase();
- const has=(...words)=>words.some(w=>g.includes(w)||t.includes(w));
-
- if(has('sport','cricket','football','willow','ten_sport','bein','dazn','tsn','tnt_sport','fifa','setanta','fox_sport','goal_tv'))return 'sports';
-
- if(has('documentary','docu','discovery','nat_geo','national_geo','animal_planet','history','science','earth','wild','investigation','crime','travel','weather'))return 'documentary';
-
- if(has('cartoon','kids','duronto','nick','pogo','hungama','disney','motu_patlu','tom_&_jerry','doraemon','sony_yay','rongeen'))return 'cartoon';
-
- if(has('music','9xm','mtv','zing','mastiii','sangeet'))return 'music';
-
- if(has('indian_bangla','indian','jalsha','zee_bangla','colors_bangla','sun_bangla','sananda','zb_cinema'))return 'indian_bangla';
-
- if(has('hindi','movies','movie_club','star_gold','sony_max','zee_tv','zee_cinema','bollywood','goldmines','pictures','shemaroo','b4u','hbo','cineplex','cinema','rishtey','star_plus','star_bharat','utv','bhojpuri','sony_sab','sony_pal'))return 'hindi';
-
- if(g.includes('bangla')||g.includes('bengali'))return 'bangla';
-
- return 'bangla';
-}
-
-function renderChannels(){
- const container=document.getElementById('channelContainer');
- container.innerHTML='';
-
- const filtered=allChannels.filter(ch=>
-  currentFilter==='all'||ch.group===currentFilter
- );
-
- if(!filtered.length){
-  container.innerHTML='<p class="empty-message">এই ক্যাটাগরিতে কোনো চ্যানেল পাওয়া যায়নি।</p>';
-  return;
- }
-
- filtered.forEach(ch=>{
-  const btn=document.createElement('div');
-  btn.className='ch-btn';
-
-  const img=document.createElement('img');
-  img.src=ch.logo||FALLBACK_LOGO;
-  img.alt=ch.name;
-  img.onerror=()=>{img.onerror=null;img.src=FALLBACK_LOGO;};
-
-  const name=document.createElement('strong');
-  name.textContent=ch.name;
-
-  btn.append(img,name);
-  btn.onclick=()=>loadChannel(ch);
-  container.appendChild(btn);
- });
-
- if(!currentUrl&&filtered.length)loadChannel(filtered[0]);
-}
-
-function filterCategory(category,btn){
- document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
- btn.classList.add('active');
- currentFilter=category;
- renderChannels();
-}
-
-const playlistUrl='https://raw.githubusercontent.com/bushmr263-ship-it/online-tv/main/playlist.m3u?t='+Date.now();
-
-fetch(playlistUrl,{cache:'no-store'})
-.then(response=>{
- if(!response.ok)throw new Error('Playlist not found');
- return response.text();
-})
-.then(data=>{
- const lines=data.split(/\r?\n/);
- let title='',logo=FALLBACK_LOGO,group='';
-
- for(const rawLine of lines){
-  const line=rawLine.trim();
-
-  if(line.startsWith('#EXTINF')){
-   const logoMatch=line.match(/tvg-logo="([^"]+)"/i);
-   const groupMatch=line.match(/group-title="([^"]+)"/i);
-   logo=logoMatch?logoMatch[1]:FALLBACK_LOGO;
-   group=groupMatch?groupMatch[1].trim():'';
-   title=line.substring(line.lastIndexOf(',')+1).trim();
-  }else if(line&&!line.startsWith('#')&&title){
-   const urls=line.match(/https?:\/\/[^\s]+/g)||[line];
-   allChannels.push({
-    name:title,
-    logo:logo,
-    url:urls.length===1?urls[0]:urls,
-    group:normalizeCategory(group,title)
-   });
-   title='';
-  }
- }
-
- if(!allChannels.length)throw new Error('No channels found');
- renderChannels();
-})
-.catch(error=>{
- console.error('Playlist error:',error);
- document.getElementById('channelContainer').innerHTML=
- '<p class="empty-message">প্লেলিস্ট লোড করা যায়নি। পরে আবার চেষ্টা করুন।</p>';
-});
+  })();
 </script>
-</body>
-</html>
+<astro-island uid="Z9dKVp" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/LazyToolSwiper.bcefd48b.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-JM7TGBEO&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;LazyToolSwiper&quot;,&quot;value&quot;:true}" await-children=""><div class="lazy-tool-swiper astro-JM7TGBEO" data-v-ef4fc334><!----></div></astro-island>
+<div class="mobile-bg relative astro-JM7TGBEO" data-home-bg-root data-home-bg-state="start" data-bg-mobile="data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAAGNbWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAsaWxvYwAAAABEAAACAAEAAAABAAACzQAAA1gAAgAAAAEAAAG1AAABGAAAAEJpaW5mAAAAAAACAAAAGmluZmUCAAAAAAEAAGF2MDFDb2xvcgAAAAAaaW5mZQIAAAAAAgAAYXYwMUFscGhhAAAAABppcmVmAAAAAAAAAA5hdXhsAAIAAQABAAAAw2lwcnAAAACdaXBjbwAAABRpc3BlAAAAAAAAAXcAAAvGAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQgMAAAAABNjb2xybmNseAACAAIAAYAAAAAOcGl4aQAAAAABCAAAAAxhdjFDgQgcAAAAADhhdXhDAAAAAHVybjptcGVnOm1wZWdCOmNpY3A6c3lzdGVtczphdXhpbGlhcnk6YWxwaGEAAAAAHmlwbWEAAAAAAAAAAgABBAECgwQAAgQBBYYHAAAEeG1kYXQSAAoHGiLu14rCoDKKAkRsAccUtJEbPSNQcdGOj9qBrG/LvgTH3vtz6W0rzW9mmYZwDPZaODoEVpyAQxCFhhSQ+IOy3o4/XnC3rG/dIAwnynlhvLTrOJ8KQY+xOUMCayOzi0TnOk8aVae6p/xNNV3MnTIHEA8KO74UO+psXK/v2AgRfPMjo94hfSmZm+6mEamNo+/YinJCYRmTRSFMo8AJWB4CA4iTWcsSFB270Wkkfer9pNYqRcA+wOIWDSso45ILhku5uGoULFgcdpwCvGzXBkSy6/YL033nV3lEkUA+8vuRgB4ZkcQShmJYbg7Ngzk2myZB0U69DywHyD+8pdplPCeq8ZrEG/x9tmG+OoHxhhzESK1Lsy4QEgAKChoi7teKwQICAYQyxwZEbABxxxxQtF8Wz38rA4XcjurEmYZLhtob3D/7pv8UkAdcrBrzY12Xkfign/obFjvH/7MaGoUEHvAy7K2I2SVPZlxtMqheLgNzW3MAY0yvtEQYv+bZS/3j0tx9alrA+wncAEENkNUPkAI8aheco7dLBfmqoFSfx0jFqFXeCOyXZ9IfYmhps2MameFat8VwLAP2dkWHYvOvxdee8llG6C8bd4uGS0QDtVUqRvUXEWwfwBHB6zLFGaLUfLU0oLOnEyysjSuoIGwvjLZZaDkLRZezuwtsdUIxwX7Jgc88sNHsECQoMI/0dZvfcn+s1uIghRIs0D14u48JoiuY7aHEpdDSS8vn5CaPXCAjNX7/YKKsGGmwrBGFYAAje3iuvJaJooQzn10AZzz6JApvwbtmCMIEjKEKG9Dt+JBJ4KuZZTiP43OT3QM2B0/Ijhp7EU29ffBnypO00hm1Nx3m4zhc7eKvegSSLJ7j2/rO4rxyhliExePtXD38O3vR20yX1VnUSE58SC//+kpfq/+HmrFlb0Cy5/UpwZmCMs6FZpkUDdqKLEAT2Te5/VuMaNDaWsxCTWxdjjuwZaeSgonP4DMD4/LZaICgpkw3zJln/FkIfgDN5kl89MZhfYHjF27UVBB908bIL2XeHZBfagwkWJQMj+MUQM9L+OoONWqdN/Rg9fs+vib13UL4lfe5uMX+WevasBCL9Adrr1VIwC+K0BBSwnhtvFBb3anBjrF2PStrdObGgI6lDTyxlv0yKNrxUwG8dGOOIvsDcpWIrUTAOX2kl8jr3s/u77XlfXa8flwcwFZk5KnusvHzBo7f4+a7W3bTBUbBAkpf/7qnafxtVn4exrW6GAM/2+MDEAz4WwlqZ7dQ+dq8Ae722xuSx7v89cu9lLWm6+x0N23Opr6+YF736MCPdoa+QvJKgUbRpyuqVpX2gULrUvc5kN97rVdKQk7XgvbhNBhnlmZjDTtxEXbPYVsUlYX/P571ii0xj6bpW1JzkPInBigAT6Dbs5QYGhRZ26v6hDes4zBst4lQrtNjfJHbJPeRgg/5uA43Wuu4NuYrX8Z4GZfNgnKSDVnUAzJKcO2jnC2/cjqkzJ1/vmyJUCCtJDM+Z2cOIQ==" style="--mobileBgUrl: url(data:image/avif;base64,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);">
+  <div class="home-bg-visual astro-JM7TGBEO" aria-hidden="true" style="--mobileBgUrl: url(data:image/avif;base64,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);">
+    <img data-home-bg-image data-src="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/bigbg.2193c8e6.avif" alt="home-bg" class="home-bg-visual__image astro-JM7TGBEO" style="--mobileBgUrl: url(data:image/avif;base64,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);">
+  </div>
+  <div class="home-section-bg astro-JM7TGBEO" style="--mobileBgUrl: url(data:image/avif;base64,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);">
+    <astro-island uid="HKatQ" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/LazyAipdf.7036497e.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-JM7TGBEO&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;LazyAipdf&quot;,&quot;value&quot;:true}" await-children=""><div class="lazy-aipdf astro-JM7TGBEO" data-v-6a73d3e0><!----></div></astro-island>
+  </div>
+  <div class="home-section-bg page-scale astro-JM7TGBEO" style="--mobileBgUrl: url(data:image/avif;base64,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);">
+    <astro-island uid="ZsvSCB" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/LazyAccordion.502102a4.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-JM7TGBEO&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;LazyAccordion&quot;,&quot;value&quot;:true}" await-children=""><div class="lazy-accordion astro-JM7TGBEO" data-v-23a34ad1><!----></div></astro-island>
+  </div>
+</div>
+<section class="page-scale w-full bg-white px-24px py-40px md:py-80px astro-7MEGX2B7">
+  <div class="mx-auto w-full max-w-[1400px] astro-7MEGX2B7">
+    <h2 class="home-gradient-title mb-32px md:mb-48px text-center title leading-normal astro-7MEGX2B7">What Makes LightPDF <span>Stand Out?</span></h2>
+
+    <div class="flex flex-col md:flex-row gap-[24px] md:gap-[30px] w-full astro-7MEGX2B7">
+      <!-- 左侧区域 -->
+      <div class="flex flex-col gap-[24px] md:gap-[40px] w-full md:w-[924px] md:flex-[924] astro-7MEGX2B7">
+        <!-- 左上两张图 -->
+        <div class="flex flex-col sm:flex-row gap-[24px] md:gap-[32px] w-full astro-7MEGX2B7">
+          <div class="what-lazy-bg what-adv-bg-0 md:h-320px h-230px w-full bg-center bg-no-repeat md:p-32px p-16px astro-7MEGX2B7" data-bg-mobile="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what1mobile.ccbfccc1.avif" data-bg-desktop="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what1.30529a32.avif">
+            <h3 class="font-poppins font-semibold  md:text-24px text-16px md:leading-30px leading-22px mb-8px astro-7MEGX2B7">
+              Ultimate Vaule, Half the Price
+            </h3>
+            <p class="font-poppins font-normal md:text-14px text-10px md:leading-normal leading-normal astro-7MEGX2B7">
+              Professional PDF editing + All AI tools included in one single Pro Plan. Get everything you need for half the cost of other editors.
+            </p>
+          </div>
+          <div class="what-lazy-bg what-adv-bg-1 md:h-320px h-230px w-full bg-center bg-no-repeat md:p-32px p-16px astro-7MEGX2B7" data-bg-mobile="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what2mobile.7b6aee7e.avif" data-bg-desktop="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what2.80f05ee7.avif">
+            <h3 class="font-poppins font-semibold  md:text-24px text-16px md:leading-30px leading-22px mb-8px astro-7MEGX2B7">
+              Lightning-Fast &amp; Lightweight
+            </h3>
+            <p class="font-poppins font-normal md:text-14px text-10px md:leading-normal leading-normal astro-7MEGX2B7">
+              Experience zero-lag editing and rapid batch processing. A simple, intuitive interface designed to handle your files in seconds.
+            </p>
+          </div>
+        </div>
+        <!-- 左下图 -->
+        <div class="order-3 relative isolate flex h-[248px] w-full min-h-[248px] overflow-hidden rounded-[15px] md:rounded-[24px] md:h-auto md:max-w-[924px] md:aspect-[924/320] astro-7MEGX2B7">
+          <div class="what-lazy-bg what-adv-bg-2 w-full md:h-320px h-240px bg-cover bg-center bg-no-repeat md:p-32px p-16px astro-7MEGX2B7" data-bg-mobile="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what3mobile.14397968.avif" data-bg-desktop="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what3.a43e5d0e.avif">
+            <h3 class="font-poppins font-semibold md:text-24px text-16px leading-30px leading-22px mb-8px md:w-400px astro-7MEGX2B7">
+              One Account, All Platforms
+            </h3>
+            <p class="md:mb-12px mb-8px font-poppins font-normal md:text-14px text-10px md:leading-normal leading-normal md:w-276px  astro-7MEGX2B7">
+              Seamlessly access your Pro benefits across Windows, Mac, iOS, Android, and Web. Stay synced and productive on any device.
+            </p>
+            <p class="flex font-400 md:gap-4px  gap-8px  text-10px leading-normal md:text-12px astro-7MEGX2B7">
+              <span class="astro-7MEGX2B7">Available for</span>
+              <img src="data:image/png;base64,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" alt="" aria-hidden="true" width="238" height="34" decoding="async" loading="lazy" class="md:w-119px w-90px md:h-17px h-13px astro-7MEGX2B7">
+            </p> 
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧图 -->
+      <div class="order-4 relative isolate flex min-h-[320px] w-full overflow-hidden rounded-[15px] md:min-h-0 md:rounded-[24px] md:aspect-[446/680] md:w-[446px] md:max-w-[446px] md:flex-[446] astro-7MEGX2B7">
+        <div class="what-lazy-bg what-adv-bg-3 w-full md:h-680px h-500px bg-cover bg-center bg-no-repeat md:p-32px p-16px astro-7MEGX2B7" data-bg-mobile="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what4mobile.14d1b650.avif" data-bg-desktop="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/what4.9d46becc.avif">
+          <h3 class="font-poppins font-semibold md:text-24px text-16px leading-30px leading-22px mb-8px astro-7MEGX2B7">
+            The Smarter AI PDF Editor
+          </h3>
+          <p class="font-poppins font-normal md:text-14px text-10px md:leading-normal leading-normal astro-7MEGX2B7">
+            Boost your productivity with our all-in-one AI PDF editor: read, edit, convert, organize and summarize any document with the power of advanced AI at your fingertips.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const loaded = new Set();
+
+    const applyBg = (el) => {
+      const url = mq.matches ? el.dataset.bgDesktop : el.dataset.bgMobile;
+      if (!url) return;
+      el.style.backgroundImage = `url(${url})`;
+      loaded.add(el);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          applyBg(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "320px 0px" }
+    );
+
+    document.querySelectorAll(".what-lazy-bg").forEach((el) => observer.observe(el));
+
+    const syncLoaded = () => {
+      loaded.forEach((el) => applyBg(el));
+    };
+
+    if (typeof mq.addEventListener === "function") {
+      mq.addEventListener("change", syncLoaded);
+    } else {
+      mq.addListener(syncLoaded);
+    }
+  })();
+</script>
+<astro-island uid="1McTSL" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/LazyUser.30577b56.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-JM7TGBEO&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;LazyUser&quot;,&quot;value&quot;:true}" await-children=""><div class="lazy-home-user astro-JM7TGBEO" data-v-91296779><!----></div></astro-island>
+<section class="cloud-section page-scale md:h-480px h-404px pt-80px md:pt-152px" data-bg-mobile="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/bgbotoommobile.8636c593.avif" data-bg-desktop="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/bgbotoom.234469d8.avif">
+
+  <div class="cloud-content">
+    <h2 class="title home-gradient-title">Your All-in-One PDF Toolkit, <span>Powered by AI</span></h2>
+
+    <p class="cloud-description w-327px md:w-auto text-[#000000] leading-normal">Edit, convert, sign, OCR, and more – make PDF tasks easier,  faster, and smarter.</p>
+
+    <div class="my-24px flex justify-center">
+      <astro-island uid="5gmK3" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/HomeBannerDownload.03288980.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;wrapperClass&quot;:[0,&quot;cloud-download-wrap&quot;],&quot;desktopButtonClass&quot;:[0,&quot;!rounded-18px&quot;],&quot;arrowVariant&quot;:[0,&quot;go&quot;],&quot;textArrowGap&quot;:[0,&quot;16px&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;HomeBannerDownload&quot;,&quot;value&quot;:true}" await-children=""><div class="cloud-download-wrap home-banner-download-wrap" data-v-da42cbbe><!----><div class="hidden lg:block btn-desktop-only" data-v-da42cbbe><div class="group flex justify-center relative" data-v-da42cbbe data-v-f2bca94c><div class="w-fit h-fit" data-v-f2bca94c><a href="https://download.aoscdn.com/down.php?softid=lightpdfeditor" data-v-f2bca94c><!--[--><div class="!rounded-18px min-w-254px h-56px text-center box-border rounded-8px text-16px md:text-18px font-500 leading-normal md:leading-28px px-24px bg-gradient-to-r from-#035efe via-#028dfd to-#035efe bg-[length:200%_100%] bg-[position:100%_0] hover:bg-[position:0_0] font-semibold text-white transition-all ease-in-out duration-300 cursor-pointer flex items-center justify-center" data-v-f2bca94c><!----><!--[--><span data-v-f2bca94c>Download</span><!--]--><svg class="inline-block hidden md:inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-2px" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left:16px;" data-v-f2bca94c><rect width="30" height="30" rx="15" fill="#fff"></rect><path d="M8 15h13" stroke="#0362FE" stroke-width="2" stroke-linecap="round"></path><path d="m16 20 5-5-5-5" stroke="#0362FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><!--]--></a></div><div class="download-popup group-hover:visible group-hover:opacity-[1] group-hover:pointer-events-auto pointer-events-none cursor-default invisible hidden md:flex flex-col items-center justify-between opacity-0 absolute w-[540px] h-[194px] rounded-[20px] shadow-[0px_8px_30px_0px_rgba(133,131,167,0.3)] py-[30px] px-[60px] text-center backdrop-blur-[10px] bg-[#fff] z-10 transition-all duration-300 ease-in left-[50%] translate-x-[-50%] top-full mt-8px" data-v-f2bca94c><div class="text-[15px] font-normal text-[#0270FE]" data-v-f2bca94c>Download LightPDF APP for Higher Productivity</div><div class="flex justify-between items-center" data-v-f2bca94c><!--[--><a rel="nofollow" id="homedownload" href="https://download.aoscdn.com/down.php?softid=lightpdfeditor" class="windows-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_self" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[32px] h-[32px] bg-[url(/src/assets/icons/icon-win.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div><div class="w-[40px] h-[40px] bg-[url(/src/assets/images/index/download.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-100 group-hover/item:scale-100 absolute opacity-0 scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>Windows</div><div class="text-[#222A41] text-[12px] absolute h-full left-[50%] top-[10px] translate-x-[-50%] whitespace-nowrap group-hover/item:translate-y-[-50%] duration-300 transition-all opacity-0 group-hover/item:opacity-[1]" data-v-f2bca94c>Click Here</div></div><!--]--></a><a rel="nofollow" id="homedownload" href="https://download.aoscdn.com/down.php?softid=lightpdfeditor" class="mac-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_self" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[32px] h-[32px] bg-[url(/src/assets/images/index/mac.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div><div class="w-[40px] h-[40px] bg-[url(/src/assets/images/index/download.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-100 group-hover/item:scale-100 absolute opacity-0 scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>Mac</div><div class="text-[#222A41] text-[12px] absolute h-full left-[50%] top-[10px] translate-x-[-50%] whitespace-nowrap group-hover/item:translate-y-[-50%] duration-300 transition-all opacity-0 group-hover/item:opacity-[1]" data-v-f2bca94c>Click Here</div></div><!--]--></a><a rel="nofollow" id="homedownload" href="https://apps.apple.com/app/lightpdf-edit-view-sign-pdf/id1622949837" class="iphone-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_blank" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[31px] h-[36px] bg-[url(/src/assets/images/index/apple.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>iPhone/iPad</div></div><div class="absolute w-[86px] h-[86px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-0 group-hover/item:scale-100 opacity-0 group-hover/item:opacity-100 transition-all duration-300 bg-[url(/src/assets/images/index/qr-download.png)] bg-no-repeat bg-center bg-cover" data-v-f2bca94c></div><!--]--></a><a rel="nofollow" id="homedownload" href="https://play.google.com/store/apps/details?id=com.wangxutech.lightpdfcloud" class="android-link group/item w-[102px] h-[102px] p-[5px] border-solid border-[#0270fe] hover:border-2 rounded-[8px] flex flex-col items-center justify-center relative group" target="_blank" data-v-f2bca94c><!--[--><div class="flex items-center justify-center h-[36px]" data-v-f2bca94c><div class="w-[31px] h-[36px] bg-[url(/src/assets/images/index/and.svg)] bg-no-repeat bg-center bg-cover group-hover/item:opacity-0 group-hover/item:scale-0 transition-all duration-300" data-v-f2bca94c></div></div><div class="relative mt-[10px]" data-v-f2bca94c><div class="opacity-[0.7] text-[#222A41] text-[12px] group-hover/item:translate-y-[-50%] transition-all duration-300 group-hover/item:opacity-0" data-v-f2bca94c>Android</div></div><div class="absolute w-[86px] h-[86px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-0 group-hover/item:scale-100 opacity-0 group-hover/item:opacity-100 transition-all duration-300 bg-[url(/src/assets/images/index/qr-download.png)] bg-no-repeat bg-center bg-cover" data-v-f2bca94c></div><!--]--></a><!--]--></div><div class="w-full h-20px bg-transparent absolute top-[-10px] left-0" data-v-f2bca94c></div></div></div></div></div></astro-island>
+    </div>
+    <div class="md:block hidden">
+      <svg class="inline-block cloud-platforms" width="184" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12.026 22 4.092-7.06a5.053 5.053 0 0 0-.546-6.518H21.3a9.94 9.94 0 0 1-.128 7.633 10.006 10.006 0 0 1-5.51 5.311c-1.174.394-2.4.607-3.637.634Zm-1.546-.09a10.002 10.002 0 0 1-3.663-1.318 9.956 9.956 0 0 1-2.876-2.614 9.907 9.907 0 0 1-1.827-7.384 8.69 8.69 0 0 1 1.183-3.35l4.09 7.062a5.1 5.1 0 0 0 2.503 2.45c1.1.497 2.338.59 3.5.265l-2.91 4.889Zm1.455-6.247a3.64 3.64 0 0 1-3.36-2.235 3.606 3.606 0 0 1 .788-3.946 3.642 3.642 0 0 1 5.596.549c.4.595.613 1.295.613 2.011a3.684 3.684 0 0 1-1.085 2.54 3.717 3.717 0 0 1-2.552 1.081Zm-5.001-4.888-2.82-4.979A9.905 9.905 0 0 1 7.88 2.861a9.95 9.95 0 0 1 9.262.614 9.887 9.887 0 0 1 3.34 3.408h-8.638A5.555 5.555 0 0 0 8.782 8.07a5.515 5.515 0 0 0-1.848 2.705ZM132.074 7.746c-.79 0-2.013-.898-3.301-.865-1.7.021-3.257.985-4.134 2.51-1.764 3.063-.455 7.587 1.266 10.076.844 1.212 1.84 2.575 3.16 2.532 1.266-.054 1.742-.822 3.28-.822 1.525 0 1.958.822 3.3.79 1.363-.022 2.23-1.234 3.063-2.457a10.863 10.863 0 0 0 1.385-2.846c-.033-.011-2.652-1.018-2.684-4.048-.022-2.532 2.067-3.744 2.164-3.798-1.19-1.742-3.02-1.937-3.658-1.98-1.666-.13-3.062.908-3.841.908Zm2.813-2.554c.704-.844 1.17-2.023 1.04-3.192-1.007.043-2.22.671-2.944 1.515-.65.747-1.212 1.948-1.06 3.095 1.114.087 2.26-.573 2.964-1.418ZM43 5.48l7.378-1.017v7.128H43V5.479Zm0 13.04 7.378 1.018v-7.04H43v6.024-.001Zm8.188 1.126L61 21v-8.502h-9.812v7.148Zm0-15.292v7.236H61V3l-9.812 1.354ZM92 2c5.523 0 10 4.477 10 10s-4.477 10-10 10-10-4.477-10-10S86.477 2 92 2Zm-3.177 13.343c-.395-.477-.886-.647-1.479-.509l-.15.041-.59 1.016a.823.823 0 0 0 1.366.916l.062-.093.79-1.371h.001ZM93.21 8.66c-.488.404-.98 1.597-.29 2.787l3.04 5.266a.824.824 0 0 0 1.476-.722l-.049-.1-.802-1.392h1.19a.82.82 0 0 0 .617-1.368.82.82 0 0 0-.515-.271l-.103-.006h-2.14L93.44 9.057l-.23-.396V8.66Zm.278-3.044a.825.825 0 0 0-1.063.21l-.062.092-.367.633-.359-.633a.824.824 0 0 0-1.476.722l.049.1.838 1.457-2.685 4.653h-2.097a.82.82 0 0 0-.822.822c0 .421.312.766.719.817l.103.006h7.48c.34-.64-.06-1.549-.81-1.638l-.121-.007h-2.553l3.528-6.11a.823.823 0 0 0-.302-1.124ZM167.044 4.771A8.065 8.065 0 0 1 172.1 3c1.912 0 3.67.662 5.056 1.771l1.308-1.307 1.273 1.272-1.308 1.308A8.066 8.066 0 0 1 180.2 11.1v.9H164v-.9c0-1.912.662-3.67 1.771-5.056l-1.308-1.307 1.273-1.273 1.308 1.307ZM164 13.8h16.2v6.3a.9.9 0 0 1-.9.9h-14.4a.897.897 0 0 1-.9-.9v-6.3Zm5.4-4.5a.897.897 0 0 0 .9-.9.9.9 0 1 0-.9.9Zm5.4 0a.897.897 0 0 0 .9-.9.9.9 0 1 0-.9.9Z" fill="#000"></path></svg>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  (() => {
+    const section = document.querySelector(".cloud-section");
+    if (!section) return;
+
+    const mq = window.matchMedia("(min-width: 768px)");
+    let hasLoaded = false;
+
+    const applyBg = () => {
+      const url = mq.matches ? section.dataset.bgDesktop : section.dataset.bgMobile;
+      if (!url) return;
+      section.style.backgroundImage = `url(${url})`;
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting) return;
+        hasLoaded = true;
+        applyBg();
+        observer.disconnect();
+      },
+      { rootMargin: "320px 0px" }
+    );
+
+    observer.observe(section);
+
+    const syncLoaded = () => {
+      if (!hasLoaded) return;
+      applyBg();
+    };
+
+    if (typeof mq.addEventListener === "function") {
+      mq.addEventListener("change", syncLoaded);
+    } else {
+      mq.addListener(syncLoaded);
+    }
+  })();
+</script>
+<astro-island uid="Z1SGHtt" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/LazyPromotionPopup.3736555f.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-JM7TGBEO&quot;]}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;LazyPromotionPopup&quot;,&quot;value&quot;:true}" await-children=""><!----></astro-island>
+	<astro-island uid="ZuUo30" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/LazyFooter.73234117.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;needSaasTools&quot;:[0,true]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;LazyFooter&quot;,&quot;value&quot;:true}" await-children=""><div class="lazy-footer" data-v-ca33b8e2><!----></div></astro-island>
+
+
+    
+
+    <script>window.sceneId = "home";</script>
+
+    
+
+
+    <astro-island uid="Z1vkUBz" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/GlobalStore.cd8110ef.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-WBW5VBLW&quot;]}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;GlobalStore&quot;,&quot;value&quot;:true}"></astro-island>
+    <astro-island uid="2hwC1Q" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/ProfitwellInitializer.c3686f89.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-WBW5VBLW&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ProfitwellInitializer&quot;,&quot;value&quot;:true}"></astro-island>
+  </html>
+  <script>window.wxLiveChatUrl="https://livechat.aoscdn.com/integrations/CnddT5FhbogqJuxKi7XB7CXY/embed";window.wxLiveChatActive=1;window.wxLiveChatDisable=0;</script>
+
+  <astro-island uid="1xTcg0" component-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/LazyCookie.3f1314d7.js" component-export="default" renderer-url="https://cfcdn.apowersoft.info/astro/lightpdf/_astro/client.6f363f60.js" props="{&quot;class&quot;:[0,&quot;astro-WBW5VBLW&quot;]}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;LazyCookie&quot;,&quot;value&quot;:true}" await-children=""><!----></astro-island>
+
+  
+
+  
+
+  
+
+<style is:global>
+      body {
+        color: #2d2d33;
+        font-family: 'Poppins', Arial, sans-serif;
+        overflow-x: hidden;
+      }
+    </style><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"59fd47ad555b44c0ae49acee0a803bd2","r":1,"spa":2}' crossorigin="anonymous"></script>
